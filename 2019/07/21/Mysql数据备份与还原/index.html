@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | yayaya99</title>
+  <title>Mysql数据备份与还原 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天天气真好 好就好在好个锤子">
-<meta name="keywords" content="test2">
+  <meta name="description" content="数据备份  1.整库备份    利用mysqldump进行sql备份    语法：mysqldump.exe -hPup 数据库名字 &amp;gt; 备份路径 mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql2.单表备份    语法：mysqldump.exe -hPup 数据库名字 表">
+<meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2019/07/18/我的第一篇博客/index.html">
+<meta property="og:title" content="Mysql数据备份与还原">
+<meta property="og:url" content="http://yoursite.com/2019/07/21/Mysql数据备份与还原/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="今天天气真好 好就好在好个锤子">
+<meta property="og:description" content="数据备份  1.整库备份    利用mysqldump进行sql备份    语法：mysqldump.exe -hPup 数据库名字 &amp;gt; 备份路径 mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql2.单表备份    语法：mysqldump.exe -hPup 数据库名字 表">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T13:27:08.108Z">
+<meta property="og:updated_time" content="2019-07-21T05:30:35.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="今天天气真好 好就好在好个锤子">
+<meta name="twitter:title" content="Mysql数据备份与还原">
+<meta name="twitter:description" content="数据备份  1.整库备份    利用mysqldump进行sql备份    语法：mysqldump.exe -hPup 数据库名字 &amp;gt; 备份路径 mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql2.单表备份    语法：mysqldump.exe -hPup 数据库名字 表">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -145,27 +145,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mysql数据备份与还原" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      Mysql数据备份与还原
     </h1>
   
 
         
-        <a href="/2019/07/18/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-07-18T12:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/07/21/Mysql数据备份与还原/" class="archive-article-date">
+  	<time datetime="2019-07-21T05:22:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="今天天气真好"><a href="#今天天气真好" class="headerlink" title="今天天气真好"></a>今天天气真好</h2><p> 好就好在好个锤子</p>
+        <ul>
+<li><h2 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h2></li>
+</ul>
+<p>1.整库备份<br>    利用mysqldump进行sql备份<br>    语法：mysqldump.exe -hPup 数据库名字 &gt; 备份路径</p>
+<pre><code>mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql</code></pre><p>2.单表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 &gt; 备份路径</p>
+<pre><code>mysqldump -uroot -proot mydatabase my_int &gt; c:/server/int.sql</code></pre><p>3.多表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 表名 .. &gt; 备份路径</p>
+<pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre><ul>
+<li><h2 id="数据还原"><a href="#数据还原" class="headerlink" title="数据还原"></a>数据还原</h2></li>
+</ul>
+<p>1.利用mysql.exe客户端<br>     在cmd中直接对数据还原<br>     语法：mysql -hPup 数据库 &lt; 文件路径</p>
+<pre><code>mysql -uroot -proot mydatabse &lt; c:/server/mydatabase.sql</code></pre><p>2.利用sql指令<br>     登录mysql客户端并进入对应数据库<br>    语法：source 文件路径（注意后面会有； 因为这里是在mysql中输入的sql指令）</p>
+<pre><code>source c:/server/int.sql;</code></pre><p>3.复制粘贴</p>
 
       
 
@@ -200,13 +211,24 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">test2</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Mysql备份还原//" class="article-tag-list-link color5">Mysql备份还原</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -256,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/18/我的第一篇博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/21/Mysql数据备份与还原/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,15 +292,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/19/博客文章添加图片/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          博客文章添加图片、音乐、视频
-        
-      </div>
-    </a>
   
+    <a href="/2019/07/19/博客文章添加图片/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客文章添加图片、音乐、视频</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

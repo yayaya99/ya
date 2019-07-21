@@ -142,6 +142,102 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mysql数据备份与还原" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/21/Mysql数据备份与还原/">Mysql数据备份与还原</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/21/Mysql数据备份与还原/" class="archive-article-date">
+  	<time datetime="2019-07-21T05:22:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h2 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h2></li>
+</ul>
+<p>1.整库备份<br>    利用mysqldump进行sql备份<br>    语法：mysqldump.exe -hPup 数据库名字 &gt; 备份路径</p>
+<pre><code>mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql</code></pre><p>2.单表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 &gt; 备份路径</p>
+<pre><code>mysqldump -uroot -proot mydatabase my_int &gt; c:/server/int.sql</code></pre><p>3.多表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 表名 .. &gt; 备份路径</p>
+<pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre><ul>
+<li><h2 id="数据还原"><a href="#数据还原" class="headerlink" title="数据还原"></a>数据还原</h2></li>
+</ul>
+<p>1.利用mysql.exe客户端<br>     在cmd中直接对数据还原<br>     语法：mysql -hPup 数据库 &lt; 文件路径</p>
+<pre><code>mysql -uroot -proot mydatabse &lt; c:/server/mydatabase.sql</code></pre><p>2.利用sql指令<br>     登录mysql客户端并进入对应数据库<br>    语法：source 文件路径（注意后面会有； 因为这里是在mysql中输入的sql指令）</p>
+<pre><code>source c:/server/int.sql;</code></pre><p>3.复制粘贴</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Mysql备份还原//" class="article-tag-list-link color5">Mysql备份还原</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/21/Mysql数据备份与还原/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-博客文章添加图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -403,6 +499,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
