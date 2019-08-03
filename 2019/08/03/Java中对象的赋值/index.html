@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yayaya99">
 <meta property="og:description" content="Java 操作符 赋值  在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。  但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。  基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-03T09:47:39.004Z">
+<meta property="og:updated_time" content="2019-08-03T09:50:20.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中对象的赋值">
 <meta name="twitter:description" content="Java 操作符 赋值  在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。  但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。  基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的">
@@ -167,21 +167,9 @@
       
         <h2 id="Java-操作符"><a href="#Java-操作符" class="headerlink" title="Java 操作符"></a>Java 操作符</h2><ul>
 <li><h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><p>  在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>  但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>  基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
-<p>  但在为对象赋值的时候，情况却不一样。<br>  对一个对象进行操作时，我们真正操作的是对对象的引用。<br>  “”<br>  class Tank{</p>
-<pre><code>int level;</code></pre><p>  }</p>
-<p>  public class Test{</p>
-<pre><code>public static void main(String[] arg) {
-    Tank t1 = new Tank();
-    Tank t2 = new Tank();
-    t1.level = 9;
-    t2.level = 47;
-    System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);
-    t1 = t2;
-    System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);
-    t1.level = 27;
-    System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);
+<p>  但在为对象赋值的时候，情况却不一样。<br>  对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-}</code></pre><p>  }<br>  “”</p>
 </li>
 </ul>
 
@@ -428,11 +416,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
               </li>
              
               <li class="article-tag-list-item">
