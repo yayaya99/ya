@@ -142,6 +142,184 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java短路与" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/Java短路与/">Java短路与</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/Java短路与/" class="archive-article-date">
+  	<time datetime="2019-08-04T04:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>test(0)<br>result: true<br>test(2)<br>result: false<br>expression is false</p>
+</blockquote>
+<p>可以发现test1与test2比较后直接输出，不会对test3进行比较，这就是&amp;和&amp;&amp;的不同之处。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/04/Java短路与/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java编程思想练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/Java编程思想练习/">Java编程思想练习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/Java编程思想练习/" class="archive-article-date">
+  	<time datetime="2019-08-04T01:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
+</blockquote>
+<h3 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h3><p>编写一个程序，模拟扔硬币的结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">class Coin&#123;</span><br><span class="line">	static void test() &#123;</span><br><span class="line">		Random r = new Random();</span><br><span class="line">		System.out.println(r.nextInt(2) == 1?&quot;正面&quot;:&quot;反面&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Coin.test();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习8："><a href="#练习8：" class="headerlink" title="练习8："></a>练习8：</h3><p>展示用16进制和8进制记数法（字面值）来操作long值（赋值），用Long.toBinaryString()来显示其结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		long l1=0xC2B;</span><br><span class="line">		long l2=0777;</span><br><span class="line">		System.out.println(Long.toBinaryString(l1));</span><br><span class="line">		System.out.println(Long.toBinaryString(l2));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习9："><a href="#练习9：" class="headerlink" title="练习9："></a>练习9：</h3><p>分别显示用float和double指数计数法所能表示的最大和最小的数字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		</span><br><span class="line">		float floatmax = Float.MAX_VALUE;</span><br><span class="line">		float floatmin = Float.MIN_VALUE;</span><br><span class="line">		double doublemax = Double.MAX_VALUE;</span><br><span class="line">		double doublemin = Double.MIN_VALUE;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;floatmax = &quot; + floatmax);</span><br><span class="line">		System.out.println(&quot;floatmin = &quot; + floatmin);</span><br><span class="line">		System.out.println(&quot;doublemax = &quot; + doublemax);</span><br><span class="line">		System.out.println(&quot;doublemin = &quot; + doublemin);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>floatmax = 3.4028235E38<br>floatmin = 1.4E-45<br>doublemax = 1.7976931348623157E308<br>doublemin = 4.9E-324</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/04/Java编程思想练习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java中对象的赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -683,6 +861,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
