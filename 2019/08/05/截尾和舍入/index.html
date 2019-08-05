@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>categories | yayaya99</title>
+  <title>截尾和舍入 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？12345678910public class CastingNumbers &amp;#123;	public static void main(String[] args) &amp;#123;		double above = 0.7,below = 0.4;		float fabove = 0.7f,fbelow">
+<meta name="keywords" content="Java,编程思想,数据类型转换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="截尾和舍入">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/截尾和舍入/index.html">
 <meta property="og:site_name" content="yayaya99">
+<meta property="og:description" content="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？12345678910public class CastingNumbers &amp;#123;	public static void main(String[] args) &amp;#123;		double above = 0.7,below = 0.4;		float fabove = 0.7f,fbelow">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T12:19:15.098Z">
+<meta property="og:updated_time" content="2019-08-05T08:59:04.414Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="截尾和舍入">
+<meta name="twitter:description" content="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？12345678910public class CastingNumbers &amp;#123;	public static void main(String[] args) &amp;#123;		double above = 0.7,below = 0.4;		float fabove = 0.7f,fbelow">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -141,27 +145,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-截尾和舍入" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      截尾和舍入
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-07-18T12:18:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/08/05/截尾和舍入/" class="archive-article-date">
+  	<time datetime="2019-08-05T08:55:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"><a href="#在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？" class="headerlink" title="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"></a>在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;(int)above: &quot;+(int)above);</span><br><span class="line">		System.out.println(&quot;(int)below: &quot;+(int)below);</span><br><span class="line">		System.out.println(&quot;(int)fabove: &quot;+(int)fabove);</span><br><span class="line">		System.out.println(&quot;(int)fbelow: &quot;+(int)fbelow);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>(int)above: 0<br>(int)below: 0<br>(int)fabove: 0<br>(int)fbelow: 0</p>
+</blockquote>
+<p><strong>运行结果发现，在将float和double转型为整数值时，总是对该数字执行截尾。如果想要得到舍入的结果，就需要使用java.lang.Math中的round()方法。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;Math.round(above): &quot;+Math.round(above));</span><br><span class="line">		System.out.println(&quot;Math.round(below): &quot;+Math.round(below));</span><br><span class="line">		System.out.println(&quot;Math.round(fabove): &quot;+Math.round(fabove));</span><br><span class="line">		System.out.println(&quot;Math.round(fbelow): &quot;+Math.round(fbelow));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果:<br>Math.round(above): 1<br>Math.round(below): 0<br>Math.round(fabove): 1<br>Math.round(fbelow): 0</p>
+</blockquote>
+<p><strong>由于round()是java.lang的一部分，因此在使用它时不需要额外地导入。</strong></p>
+
       
 
       
@@ -190,6 +206,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据类型转换</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -240,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/05/截尾和舍入/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -252,6 +287,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/05/涉及按位操作的所有操作符（求二进制）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">涉及按位操作的所有操作符（求二进制）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -302,7 +347,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

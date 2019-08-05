@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yayaya99">
 <meta property="og:description" content="第三章练习5：创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。练习6：创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。 12345678910111213141516171819202122232425262">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-04T04:09:23.500Z">
+<meta property="og:updated_time" content="2019-08-05T07:54:39.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想练习">
 <meta name="twitter:description" content="第三章练习5：创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。练习6：创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。 12345678910111213141516171819202122232425262">
@@ -182,6 +182,23 @@
 
 <blockquote>
 <p>运行及结果：<br>floatmax = 3.4028235E38<br>floatmin = 1.4E-45<br>doublemax = 1.7976931348623157E308<br>doublemin = 4.9E-324</p>
+</blockquote>
+<h3 id="练习10："><a href="#练习10：" class="headerlink" title="练习10："></a>练习10：</h3><p>编写一个具有两个常量值的程序,一个具有交替的二进制位1和0,其中最低有效位为0,另一个也具有交替的二进制位1和0,其中最低有效位为1.取这两个值,用按位操作符以所有可能的方式结合运算它们,然后用Integer.toBinaryString()显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int a = 0xaaaaaaaa;</span><br><span class="line">		int b = 0x55555555;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;  a: &quot;+Integer.toBinaryString(a));</span><br><span class="line">		System.out.println(&quot;  b: &quot;+Integer.toBinaryString(b));</span><br><span class="line">		System.out.println(&quot; ~a: &quot;+Integer.toBinaryString(~a));</span><br><span class="line">		System.out.println(&quot; ~b: &quot;+Integer.toBinaryString(~b));</span><br><span class="line">		System.out.println(&quot;a&amp;a: &quot;+Integer.toBinaryString(a&amp;a));</span><br><span class="line">		System.out.println(&quot;a|a: &quot;+Integer.toBinaryString(a|a));</span><br><span class="line">		System.out.println(&quot;a^a: &quot;+Integer.toBinaryString(a^a));</span><br><span class="line">		System.out.println(&quot;a&amp;b: &quot;+Integer.toBinaryString(a&amp;b));</span><br><span class="line">		System.out.println(&quot;a|b: &quot;+Integer.toBinaryString(a|b));</span><br><span class="line">		System.out.println(&quot;a^b: &quot;+Integer.toBinaryString(a^b));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br> a: 10101010101010101010101010101010<br> b: 1010101010101010101010101010101<br>~a: 1010101010101010101010101010101<br>~b: 10101010101010101010101010101010<br>a&amp;a: 10101010101010101010101010101010<br>a|a: 10101010101010101010101010101010<br>a^a: 0<br>a&amp;b: 0<br>a|b: 11111111111111111111111111111111<br>a^b: 11111111111111111111111111111111</p>
+</blockquote>
+<h3 id="练习11："><a href="#练习11：" class="headerlink" title="练习11："></a>练习11：</h3><p>以一个最高有效位为1的二进制数开始,用有符号右移操作符对其进行右移,直至所有的二进制位都被移出为止,每移一位都显示二进制字符串效果.<br>练习12：<br>以一个所有位都为1的二进制数字开始,先左移它,然后用无符号右移操作符对其进行右移,直至所有二进制位都移出为止,每移一位都要显示二进制字符串效果.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int number = 0xaaaaa;</span><br><span class="line">		while(number != 0) &#123;</span><br><span class="line">			number &gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;====================&quot;);</span><br><span class="line">		</span><br><span class="line">		int number2 = 0xff;</span><br><span class="line">		number2 &lt;&lt;= 1;</span><br><span class="line">		</span><br><span class="line">		while(number2 != 0) &#123;</span><br><span class="line">			number2 &gt;&gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number2));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">运行及结果：</span><br><span class="line">1010101010101010101</span><br><span class="line">101010101010101010</span><br><span class="line">10101010101010101</span><br><span class="line">1010101010101010</span><br><span class="line">101010101010101</span><br><span class="line">10101010101010</span><br><span class="line">1010101010101</span><br><span class="line">101010101010</span><br><span class="line">10101010101</span><br><span class="line">1010101010</span><br><span class="line">101010101</span><br><span class="line">10101010</span><br><span class="line">1010101</span><br><span class="line">101010</span><br><span class="line">10101</span><br><span class="line">1010</span><br><span class="line">101</span><br><span class="line">10</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">====================</span><br><span class="line">11111111</span><br><span class="line">1111111</span><br><span class="line">111111</span><br><span class="line">11111</span><br><span class="line">1111</span><br><span class="line">111</span><br><span class="line">11</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习13："><a href="#练习13：" class="headerlink" title="练习13："></a>练习13：</h3><p>编写一个方法,它以二进制形式显示char类型的值.使用多个不同的字符来展示它.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class TestChar&#123;</span><br><span class="line">	static void Conversion(char c) &#123;</span><br><span class="line">		System.out.println(Integer.toBinaryString((int)c));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		TestChar.Conversion(&apos;a&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;b&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;c&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;$&apos;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>1100001<br>1100010<br>1100011<br>100100</p>
 </blockquote>
 
       
@@ -432,15 +449,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,11 +461,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,15 +477,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">十进制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
               </li>
             
             <div class="clearfix"></div>
@@ -535,7 +564,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">片刻之欢愉&lt;br&gt;不如须臾之宁静&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">sdyangrunke@163.com</div>
   	  	
     	</section>
     
