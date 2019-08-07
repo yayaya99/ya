@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>categories | yayaya99</title>
+  <title>Java编程思想第四章练习 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="第四章练习1：写一个程序，打印从1到100的值。 1234567public class Test&amp;#123;	public static void main(String[] args) &amp;#123;		for(int i=1;i&amp;lt;=100;i++) &amp;#123;			System.out.println(i);		&amp;#125;	&amp;#125;&amp;#125;  练习2：写一个程序,产生25个i">
+<meta name="keywords" content="Java,Java编程思想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java编程思想第四章练习">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/Java编程思想第四章练习/index.html">
 <meta property="og:site_name" content="yayaya99">
+<meta property="og:description" content="第四章练习1：写一个程序，打印从1到100的值。 1234567public class Test&amp;#123;	public static void main(String[] args) &amp;#123;		for(int i=1;i&amp;lt;=100;i++) &amp;#123;			System.out.println(i);		&amp;#125;	&amp;#125;&amp;#125;  练习2：写一个程序,产生25个i">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T12:19:15.098Z">
+<meta property="og:updated_time" content="2019-08-07T07:57:04.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Java编程思想第四章练习">
+<meta name="twitter:description" content="第四章练习1：写一个程序，打印从1到100的值。 1234567public class Test&amp;#123;	public static void main(String[] args) &amp;#123;		for(int i=1;i&amp;lt;=100;i++) &amp;#123;			System.out.println(i);		&amp;#125;	&amp;#125;&amp;#125;  练习2：写一个程序,产生25个i">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -153,27 +157,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Java编程思想第四章练习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      Java编程思想第四章练习
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-07-18T12:18:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/08/07/Java编程思想第四章练习/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h3><p>写一个程序，打印从1到100的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=100;i++) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习2："><a href="#练习2：" class="headerlink" title="练习2："></a>练习2：</h3><p>写一个程序,产生25个int类型的随机数.对于每一个随机值,使用if-else语句来讲其分类为大于，小于,或等于紧随它产生的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int num[] =new int[25];</span><br><span class="line">        for (int i=0;i&lt;25;i++)&#123;</span><br><span class="line">            num[i]=(int)(Math.random()*100);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (int j=0;j&lt;num.length-1;j++)&#123;//一共产生了25个数，需要比较24次，所以j的循环次数是num.length-1次。</span><br><span class="line">            if (num[j]&gt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;大于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else if (num[j]&lt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;小于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                System.out.println(num[j]+&quot;等于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>39小于后面的数70<br>70大于后面的数30<br>30小于后面的数61<br>61大于后面的数57<br>57小于后面的数76<br>76小于后面的数83<br>83大于后面的数13<br>13大于后面的数3<br>3小于后面的数38<br>38小于后面的数60<br>60大于后面的数57<br>57小于后面的数75<br>75大于后面的数12<br>12小于后面的数52<br>52小于后面的数62<br>62小于后面的数84<br>84大于后面的数51<br>51大于后面的数18<br>18小于后面的数59<br>59小于后面的数64<br>64大于后面的数41<br>41小于后面的数98<br>98大于后面的数54<br>54大于后面的数51</p>
+</blockquote>
+<h3 id="练习4："><a href="#练习4：" class="headerlink" title="练习4："></a>练习4：</h3><p>写一个程序,使用两个嵌套的for循环和取余操作符来探测和打印素数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	boolean flog;</span><br><span class="line">    	for(int i=2;i&lt;=100;i++) &#123;</span><br><span class="line">    		flog=true;</span><br><span class="line">    		for(int j=2;j&lt;i;j++) &#123;</span><br><span class="line">    			if(i%j==0) &#123;</span><br><span class="line">    				flog=false;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		if(flog==true) &#123;</span><br><span class="line">    			System.out.println(i+&quot; &quot;);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">2 </span><br><span class="line">3 </span><br><span class="line">5 </span><br><span class="line">7 </span><br><span class="line">11 </span><br><span class="line">13 </span><br><span class="line">17 </span><br><span class="line">19 </span><br><span class="line">23 </span><br><span class="line">29 </span><br><span class="line">31 </span><br><span class="line">37 </span><br><span class="line">41 </span><br><span class="line">43 </span><br><span class="line">47 </span><br><span class="line">53 </span><br><span class="line">59 </span><br><span class="line">61 </span><br><span class="line">67 </span><br><span class="line">71 </span><br><span class="line">73 </span><br><span class="line">79 </span><br><span class="line">83 </span><br><span class="line">89 </span><br><span class="line">97</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>重复第三章中的练习10，不要用Integer.toBinaryString()方法，而是用三元操作符和按位操作符来显示二进制0和1. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emmmmmmmmmm</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h2><p>修改本章练习1，通过使用break关键词（或者return关键词），使其只输出范围为1~99的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;100;i++) &#123;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    		if(i==99)</span><br><span class="line">    			break; //return</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -202,6 +226,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -252,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/07/Java编程思想第四章练习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,6 +303,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/08/07/Java标签/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java标签
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/07/Java中break和continue的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java中break和continue的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -314,7 +372,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

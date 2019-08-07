@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java编程思想练习 | yayaya99</title>
+  <title>Tag: break | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第三章练习5：创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。练习6：创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。 12345678910111213141516171819202122232425262">
-<meta name="keywords" content="Java,Java编程思想">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java编程思想练习">
-<meta property="og:url" content="http://yoursite.com/2019/08/04/Java编程思想练习/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="yayaya99">
+<meta property="og:url" content="http://yoursite.com/tags/break/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="第三章练习5：创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。练习6：创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。 12345678910111213141516171819202122232425262">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T07:54:39.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java编程思想练习">
-<meta name="twitter:description" content="第三章练习5：创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。练习6：创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。 12345678910111213141516171819202122232425262">
+<meta name="twitter:title" content="yayaya99">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -157,90 +152,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java编程思想练习" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Java编程思想练习
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/07/Java中break和continue的区别/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/07/Java中break和continue的区别/">Java中break和continue的区别</a>
     </h1>
   
 
-        
-        <a href="/2019/08/04/Java编程思想练习/" class="archive-article-date">
-  	<time datetime="2019-08-04T01:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
-</blockquote>
-<h3 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h3><p>编写一个程序，模拟扔硬币的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">class Coin&#123;</span><br><span class="line">	static void test() &#123;</span><br><span class="line">		Random r = new Random();</span><br><span class="line">		System.out.println(r.nextInt(2) == 1?&quot;正面&quot;:&quot;反面&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Coin.test();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习8："><a href="#练习8：" class="headerlink" title="练习8："></a>练习8：</h3><p>展示用16进制和8进制记数法（字面值）来操作long值（赋值），用Long.toBinaryString()来显示其结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		long l1=0xC2B;</span><br><span class="line">		long l2=0777;</span><br><span class="line">		System.out.println(Long.toBinaryString(l1));</span><br><span class="line">		System.out.println(Long.toBinaryString(l2));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习9："><a href="#练习9：" class="headerlink" title="练习9："></a>练习9：</h3><p>分别显示用float和double指数计数法所能表示的最大和最小的数字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		</span><br><span class="line">		float floatmax = Float.MAX_VALUE;</span><br><span class="line">		float floatmin = Float.MIN_VALUE;</span><br><span class="line">		double doublemax = Double.MAX_VALUE;</span><br><span class="line">		double doublemin = Double.MIN_VALUE;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;floatmax = &quot; + floatmax);</span><br><span class="line">		System.out.println(&quot;floatmin = &quot; + floatmin);</span><br><span class="line">		System.out.println(&quot;doublemax = &quot; + doublemax);</span><br><span class="line">		System.out.println(&quot;doublemin = &quot; + doublemin);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>floatmax = 3.4028235E38<br>floatmin = 1.4E-45<br>doublemax = 1.7976931348623157E308<br>doublemin = 4.9E-324</p>
-</blockquote>
-<h3 id="练习10："><a href="#练习10：" class="headerlink" title="练习10："></a>练习10：</h3><p>编写一个具有两个常量值的程序,一个具有交替的二进制位1和0,其中最低有效位为0,另一个也具有交替的二进制位1和0,其中最低有效位为1.取这两个值,用按位操作符以所有可能的方式结合运算它们,然后用Integer.toBinaryString()显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int a = 0xaaaaaaaa;</span><br><span class="line">		int b = 0x55555555;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;  a: &quot;+Integer.toBinaryString(a));</span><br><span class="line">		System.out.println(&quot;  b: &quot;+Integer.toBinaryString(b));</span><br><span class="line">		System.out.println(&quot; ~a: &quot;+Integer.toBinaryString(~a));</span><br><span class="line">		System.out.println(&quot; ~b: &quot;+Integer.toBinaryString(~b));</span><br><span class="line">		System.out.println(&quot;a&amp;a: &quot;+Integer.toBinaryString(a&amp;a));</span><br><span class="line">		System.out.println(&quot;a|a: &quot;+Integer.toBinaryString(a|a));</span><br><span class="line">		System.out.println(&quot;a^a: &quot;+Integer.toBinaryString(a^a));</span><br><span class="line">		System.out.println(&quot;a&amp;b: &quot;+Integer.toBinaryString(a&amp;b));</span><br><span class="line">		System.out.println(&quot;a|b: &quot;+Integer.toBinaryString(a|b));</span><br><span class="line">		System.out.println(&quot;a^b: &quot;+Integer.toBinaryString(a^b));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br> a: 10101010101010101010101010101010<br> b: 1010101010101010101010101010101<br>~a: 1010101010101010101010101010101<br>~b: 10101010101010101010101010101010<br>a&amp;a: 10101010101010101010101010101010<br>a|a: 10101010101010101010101010101010<br>a^a: 0<br>a&amp;b: 0<br>a|b: 11111111111111111111111111111111<br>a^b: 11111111111111111111111111111111</p>
-</blockquote>
-<h3 id="练习11："><a href="#练习11：" class="headerlink" title="练习11："></a>练习11：</h3><p>以一个最高有效位为1的二进制数开始,用有符号右移操作符对其进行右移,直至所有的二进制位都被移出为止,每移一位都显示二进制字符串效果.<br>练习12：<br>以一个所有位都为1的二进制数字开始,先左移它,然后用无符号右移操作符对其进行右移,直至所有二进制位都移出为止,每移一位都要显示二进制字符串效果.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int number = 0xaaaaa;</span><br><span class="line">		while(number != 0) &#123;</span><br><span class="line">			number &gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;====================&quot;);</span><br><span class="line">		</span><br><span class="line">		int number2 = 0xff;</span><br><span class="line">		number2 &lt;&lt;= 1;</span><br><span class="line">		</span><br><span class="line">		while(number2 != 0) &#123;</span><br><span class="line">			number2 &gt;&gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number2));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">运行及结果：</span><br><span class="line">1010101010101010101</span><br><span class="line">101010101010101010</span><br><span class="line">10101010101010101</span><br><span class="line">1010101010101010</span><br><span class="line">101010101010101</span><br><span class="line">10101010101010</span><br><span class="line">1010101010101</span><br><span class="line">101010101010</span><br><span class="line">10101010101</span><br><span class="line">1010101010</span><br><span class="line">101010101</span><br><span class="line">10101010</span><br><span class="line">1010101</span><br><span class="line">101010</span><br><span class="line">10101</span><br><span class="line">1010</span><br><span class="line">101</span><br><span class="line">10</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">====================</span><br><span class="line">11111111</span><br><span class="line">1111111</span><br><span class="line">111111</span><br><span class="line">11111</span><br><span class="line">1111</span><br><span class="line">111</span><br><span class="line">11</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习13："><a href="#练习13：" class="headerlink" title="练习13："></a>练习13：</h3><p>编写一个方法,它以二进制形式显示char类型的值.使用多个不同的字符来展示它.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class TestChar&#123;</span><br><span class="line">	static void Conversion(char c) &#123;</span><br><span class="line">		System.out.println(Integer.toBinaryString((int)c));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		TestChar.Conversion(&apos;a&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;b&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;c&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;$&apos;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>1100001<br>1100010<br>1100011<br>100100</p>
-</blockquote>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -250,121 +191,29 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">break</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">continue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/04/Java编程思想练习/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/04/Java短路与/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java短路与
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/08/03/Java中对象的赋值/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java中对象的赋值</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -387,9 +236,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -461,6 +310,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">break</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">continue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Integer</a>
               </li>
              
@@ -473,11 +334,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,6 +347,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,15 +370,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

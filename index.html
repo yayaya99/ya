@@ -154,6 +154,370 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/07/Java标签/">Java标签</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/07/Java标签/" class="archive-article-date">
+  	<time datetime="2019-08-07T10:56:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在（1）中，break中断内部迭代。<br>在（2）中，continue使执行点移回内部迭代的起始值。<br>在（3）中，continue label1同时中断内部迭代以及外部迭代，直接转到label1处；随后，它实际上是继续迭代过程，但却从外部迭代开始。<br>在（4）中，break label1也会中断所有迭代，并回到label1处，但并不重新进入迭代。也就是说，它实际是完全中止了两个迭代。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		for(;true;) &#123;</span><br><span class="line">    			inner:</span><br><span class="line">    				for(;i&lt;10;i++) &#123;</span><br><span class="line">    					System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    					if(i==2) &#123;</span><br><span class="line">    						System.out.println(&quot;continue&quot;);</span><br><span class="line">    						continue;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==3) &#123;</span><br><span class="line">    						System.out.println(&quot;break&quot;);</span><br><span class="line">    						i++;    //由于break跳过了递增表达式，所以这里添加了递增运算</span><br><span class="line">    						break;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==7) &#123;</span><br><span class="line">    						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">    						i++;    //添加了递增运算</span><br><span class="line">    						continue outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==8) &#123;</span><br><span class="line">    						System.out.println(&quot;break outer&quot;);</span><br><span class="line">    						break outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					for(int k=0;k&lt;5;k++) &#123;</span><br><span class="line">    						if(k==3) &#123;</span><br><span class="line">    							System.out.println(&quot;continue inner&quot;);</span><br><span class="line">    							continue inner;</span><br><span class="line">    						&#125;</span><br><span class="line">    					&#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Output:<br>i= 0<br>continue inner<br>i= 1<br>continue inner<br>i= 2<br>continue<br>i= 3<br>break<br>i= 4<br>continue inner<br>i= 5<br>continue inner<br>i= 6<br>continue inner<br>i= 7<br>continue outer<br>i= 8<br>break outer</p>
+</blockquote>
+<p><strong><em>break和continue本身只能中断最内层的循环</em></strong></p>
+<h2 id="带标签的break以及continue语句在while循环中的用法："><a href="#带标签的break以及continue语句在while循环中的用法：" class="headerlink" title="带标签的break以及continue语句在while循环中的用法："></a>带标签的break以及continue语句在while循环中的用法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		while(true) &#123;</span><br><span class="line">    			System.out.println(&quot;Outer while loop&quot;);</span><br><span class="line">    			while(true) &#123;</span><br><span class="line">    				i++;</span><br><span class="line">    				System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    				if(i==1) &#123;</span><br><span class="line">    					System.out.println(&quot;continue&quot;);</span><br><span class="line">    					continue;</span><br><span class="line">    				&#125;</span><br><span class="line">    				if(i==3) &#123;</span><br><span class="line">						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">						continue outer;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==5) &#123;</span><br><span class="line">						System.out.println(&quot;break&quot;);</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==7) &#123;</span><br><span class="line">						System.out.println(&quot;break outer&quot;);</span><br><span class="line">						break outer;</span><br><span class="line">					&#125;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Output:<br>Outer while loop<br>i= 1<br>continue<br>i= 2<br>i= 3<br>continue outer<br>Outer while loop<br>i= 4<br>i= 5<br>break<br>Outer while loop<br>i= 6<br>i= 7<br>break outer</p>
+</blockquote>
+<p>同样的规则亦适用于while:<br>1、一般的continue会退出最内层循环开头（顶部），并继续执行。<br>2、带标签的continue会到达标签的位置，并重新进入紧接在那个标签后面的循环。<br>3、一般的break会中断并跳出当前循环。<br>4、带标签的break会中断并跳出标签所指的循环。</p>
+<h2 id="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"><a href="#在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。" class="headerlink" title="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"></a>在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">标签</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/07/Java标签/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java编程思想第四章练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/07/Java编程思想第四章练习/">Java编程思想第四章练习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/07/Java编程思想第四章练习/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h3><p>写一个程序，打印从1到100的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=100;i++) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习2："><a href="#练习2：" class="headerlink" title="练习2："></a>练习2：</h3><p>写一个程序,产生25个int类型的随机数.对于每一个随机值,使用if-else语句来讲其分类为大于，小于,或等于紧随它产生的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int num[] =new int[25];</span><br><span class="line">        for (int i=0;i&lt;25;i++)&#123;</span><br><span class="line">            num[i]=(int)(Math.random()*100);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (int j=0;j&lt;num.length-1;j++)&#123;//一共产生了25个数，需要比较24次，所以j的循环次数是num.length-1次。</span><br><span class="line">            if (num[j]&gt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;大于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else if (num[j]&lt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;小于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                System.out.println(num[j]+&quot;等于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>39小于后面的数70<br>70大于后面的数30<br>30小于后面的数61<br>61大于后面的数57<br>57小于后面的数76<br>76小于后面的数83<br>83大于后面的数13<br>13大于后面的数3<br>3小于后面的数38<br>38小于后面的数60<br>60大于后面的数57<br>57小于后面的数75<br>75大于后面的数12<br>12小于后面的数52<br>52小于后面的数62<br>62小于后面的数84<br>84大于后面的数51<br>51大于后面的数18<br>18小于后面的数59<br>59小于后面的数64<br>64大于后面的数41<br>41小于后面的数98<br>98大于后面的数54<br>54大于后面的数51</p>
+</blockquote>
+<h3 id="练习4："><a href="#练习4：" class="headerlink" title="练习4："></a>练习4：</h3><p>写一个程序,使用两个嵌套的for循环和取余操作符来探测和打印素数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	boolean flog;</span><br><span class="line">    	for(int i=2;i&lt;=100;i++) &#123;</span><br><span class="line">    		flog=true;</span><br><span class="line">    		for(int j=2;j&lt;i;j++) &#123;</span><br><span class="line">    			if(i%j==0) &#123;</span><br><span class="line">    				flog=false;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		if(flog==true) &#123;</span><br><span class="line">    			System.out.println(i+&quot; &quot;);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">2 </span><br><span class="line">3 </span><br><span class="line">5 </span><br><span class="line">7 </span><br><span class="line">11 </span><br><span class="line">13 </span><br><span class="line">17 </span><br><span class="line">19 </span><br><span class="line">23 </span><br><span class="line">29 </span><br><span class="line">31 </span><br><span class="line">37 </span><br><span class="line">41 </span><br><span class="line">43 </span><br><span class="line">47 </span><br><span class="line">53 </span><br><span class="line">59 </span><br><span class="line">61 </span><br><span class="line">67 </span><br><span class="line">71 </span><br><span class="line">73 </span><br><span class="line">79 </span><br><span class="line">83 </span><br><span class="line">89 </span><br><span class="line">97</span><br></pre></td></tr></table></figure>
+
+<h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>重复第三章中的练习10，不要用Integer.toBinaryString()方法，而是用三元操作符和按位操作符来显示二进制0和1. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emmmmmmmmmm</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h2><p>修改本章练习1，通过使用break关键词（或者return关键词），使其只输出范围为1~99的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;100;i++) &#123;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    		if(i==99)</span><br><span class="line">    			break; //return</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/07/Java编程思想第四章练习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java中break和continue的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/07/Java中break和continue的区别/">Java中break和continue的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/07/Java中break和continue的区别/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			break;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	System.out.println(&quot;===============&quot;);</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			continue;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>0<br>1<br>2<br>分隔符<br>0<br>1<br>2<br>4<br>5</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">break</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">continue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/07/Java中break和continue的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Foreach语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/07/Foreach语句/">Foreach语句</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/07/Foreach语句/" class="archive-article-date">
+  	<time datetime="2019-08-07T06:28:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>0.72711575<br>0.39982635<br>0.5309454<br>0.0534122<br>0.16020656<br>0.57799757<br>0.18847865<br>0.4170137<br>0.51660204<br>0.73734957</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        for(char c:&quot;An African Swallow&quot;.toCharArray())</span><br><span class="line">        	System.out.print(c+&quot; &quot;);	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>A n   A f r i c a n   S w a l l o w </p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Foreach</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/07/Foreach语句/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-截尾和舍入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -776,378 +1140,6 @@
 
 
   
-    <article id="post-Java短路与" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Java短路与/">Java短路与</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/04/Java短路与/" class="archive-article-date">
-  	<time datetime="2019-08-04T04:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>test(0)<br>result: true<br>test(2)<br>result: false<br>expression is false</p>
-</blockquote>
-<p>可以发现test1与test2比较后直接输出，不会对test3进行比较，这就是&amp;和&amp;&amp;的不同之处。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/Java短路与/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java编程思想练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Java编程思想练习/">Java编程思想练习</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/04/Java编程思想练习/" class="archive-article-date">
-  	<time datetime="2019-08-04T01:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
-</blockquote>
-<h3 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h3><p>编写一个程序，模拟扔硬币的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">class Coin&#123;</span><br><span class="line">	static void test() &#123;</span><br><span class="line">		Random r = new Random();</span><br><span class="line">		System.out.println(r.nextInt(2) == 1?&quot;正面&quot;:&quot;反面&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Coin.test();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习8："><a href="#练习8：" class="headerlink" title="练习8："></a>练习8：</h3><p>展示用16进制和8进制记数法（字面值）来操作long值（赋值），用Long.toBinaryString()来显示其结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		long l1=0xC2B;</span><br><span class="line">		long l2=0777;</span><br><span class="line">		System.out.println(Long.toBinaryString(l1));</span><br><span class="line">		System.out.println(Long.toBinaryString(l2));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习9："><a href="#练习9：" class="headerlink" title="练习9："></a>练习9：</h3><p>分别显示用float和double指数计数法所能表示的最大和最小的数字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		</span><br><span class="line">		float floatmax = Float.MAX_VALUE;</span><br><span class="line">		float floatmin = Float.MIN_VALUE;</span><br><span class="line">		double doublemax = Double.MAX_VALUE;</span><br><span class="line">		double doublemin = Double.MIN_VALUE;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;floatmax = &quot; + floatmax);</span><br><span class="line">		System.out.println(&quot;floatmin = &quot; + floatmin);</span><br><span class="line">		System.out.println(&quot;doublemax = &quot; + doublemax);</span><br><span class="line">		System.out.println(&quot;doublemin = &quot; + doublemin);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>floatmax = 3.4028235E38<br>floatmin = 1.4E-45<br>doublemax = 1.7976931348623157E308<br>doublemin = 4.9E-324</p>
-</blockquote>
-<h3 id="练习10："><a href="#练习10：" class="headerlink" title="练习10："></a>练习10：</h3><p>编写一个具有两个常量值的程序,一个具有交替的二进制位1和0,其中最低有效位为0,另一个也具有交替的二进制位1和0,其中最低有效位为1.取这两个值,用按位操作符以所有可能的方式结合运算它们,然后用Integer.toBinaryString()显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int a = 0xaaaaaaaa;</span><br><span class="line">		int b = 0x55555555;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;  a: &quot;+Integer.toBinaryString(a));</span><br><span class="line">		System.out.println(&quot;  b: &quot;+Integer.toBinaryString(b));</span><br><span class="line">		System.out.println(&quot; ~a: &quot;+Integer.toBinaryString(~a));</span><br><span class="line">		System.out.println(&quot; ~b: &quot;+Integer.toBinaryString(~b));</span><br><span class="line">		System.out.println(&quot;a&amp;a: &quot;+Integer.toBinaryString(a&amp;a));</span><br><span class="line">		System.out.println(&quot;a|a: &quot;+Integer.toBinaryString(a|a));</span><br><span class="line">		System.out.println(&quot;a^a: &quot;+Integer.toBinaryString(a^a));</span><br><span class="line">		System.out.println(&quot;a&amp;b: &quot;+Integer.toBinaryString(a&amp;b));</span><br><span class="line">		System.out.println(&quot;a|b: &quot;+Integer.toBinaryString(a|b));</span><br><span class="line">		System.out.println(&quot;a^b: &quot;+Integer.toBinaryString(a^b));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br> a: 10101010101010101010101010101010<br> b: 1010101010101010101010101010101<br>~a: 1010101010101010101010101010101<br>~b: 10101010101010101010101010101010<br>a&amp;a: 10101010101010101010101010101010<br>a|a: 10101010101010101010101010101010<br>a^a: 0<br>a&amp;b: 0<br>a|b: 11111111111111111111111111111111<br>a^b: 11111111111111111111111111111111</p>
-</blockquote>
-<h3 id="练习11："><a href="#练习11：" class="headerlink" title="练习11："></a>练习11：</h3><p>以一个最高有效位为1的二进制数开始,用有符号右移操作符对其进行右移,直至所有的二进制位都被移出为止,每移一位都显示二进制字符串效果.<br>练习12：<br>以一个所有位都为1的二进制数字开始,先左移它,然后用无符号右移操作符对其进行右移,直至所有二进制位都移出为止,每移一位都要显示二进制字符串效果.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int number = 0xaaaaa;</span><br><span class="line">		while(number != 0) &#123;</span><br><span class="line">			number &gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;====================&quot;);</span><br><span class="line">		</span><br><span class="line">		int number2 = 0xff;</span><br><span class="line">		number2 &lt;&lt;= 1;</span><br><span class="line">		</span><br><span class="line">		while(number2 != 0) &#123;</span><br><span class="line">			number2 &gt;&gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number2));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">运行及结果：</span><br><span class="line">1010101010101010101</span><br><span class="line">101010101010101010</span><br><span class="line">10101010101010101</span><br><span class="line">1010101010101010</span><br><span class="line">101010101010101</span><br><span class="line">10101010101010</span><br><span class="line">1010101010101</span><br><span class="line">101010101010</span><br><span class="line">10101010101</span><br><span class="line">1010101010</span><br><span class="line">101010101</span><br><span class="line">10101010</span><br><span class="line">1010101</span><br><span class="line">101010</span><br><span class="line">10101</span><br><span class="line">1010</span><br><span class="line">101</span><br><span class="line">10</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">====================</span><br><span class="line">11111111</span><br><span class="line">1111111</span><br><span class="line">111111</span><br><span class="line">11111</span><br><span class="line">1111</span><br><span class="line">111</span><br><span class="line">11</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习13："><a href="#练习13：" class="headerlink" title="练习13："></a>练习13：</h3><p>编写一个方法,它以二进制形式显示char类型的值.使用多个不同的字符来展示它.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class TestChar&#123;</span><br><span class="line">	static void Conversion(char c) &#123;</span><br><span class="line">		System.out.println(Integer.toBinaryString((int)c));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		TestChar.Conversion(&apos;a&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;b&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;c&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;$&apos;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>1100001<br>1100010<br>1100011<br>100100</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/Java编程思想练习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java中对象的赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/03/Java中对象的赋值/">Java中对象的赋值</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/03/Java中对象的赋值/" class="archive-article-date">
-  	<time datetime="2019-08-03T09:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
-<p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>运行及结果：<br>1: t1.level: 9,t2.level: 47<br>2: t1.level: 47,t2.level: 47<br>3: t1.level: 27,t2.level: 27</p>
-</blockquote>
-<p>每个Tank类对象的level域都赋予了一个不同的值，然后，将t2赋给t1。<br>我们可能会期望t1和t2总是相互独立的。<br>但由于赋值操作的是一个对象的引用，t1和t2包含的引用相同,所以修改t1的同时也改变了t2。<br>这种特殊现象称为”别名现象“。</p>
-<blockquote>
-<p>避免方式：<br>t1.level = t2.level;</p>
-</blockquote>
-<hr>
-<h2 id="方法调用中的别名问题"><a href="#方法调用中的别名问题" class="headerlink" title="方法调用中的别名问题"></a>方法调用中的别名问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;		</span><br><span class="line">	char c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test&#123;</span><br><span class="line">	static void f(Tank y) &#123;</span><br><span class="line">		y.c = &apos;z&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t = new Tank();</span><br><span class="line">		t.c = &apos;a&apos;;</span><br><span class="line">		System.out.println(&quot;1: t.c: &quot; + t.c);</span><br><span class="line">		f(t);</span><br><span class="line">		System.out.println(&quot;2: t.c: &quot; + t.c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>运行及结果：<br>1: t.c: a<br>2: t.c: z</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">赋值</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/03/Java中对象的赋值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java中局部变量的初始化问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/02/java中局部变量的初始化问题/">java中局部变量的初始化问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/02/java中局部变量的初始化问题/" class="archive-article-date">
-  	<time datetime="2019-08-02T08:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java中局部变量必须初始化但成员变量不必须初始化"><a href="#Java中局部变量必须初始化但成员变量不必须初始化" class="headerlink" title="Java中局部变量必须初始化但成员变量不必须初始化"></a>Java中局部变量必须初始化但成员变量不必须初始化</h2><p>其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。</p>
-<p>JVM在初始化对象时就可以初始化成员变量。</p>
-<p>在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。<br>而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。</p>
-<p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">局部变量</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/02/java中局部变量的初始化问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1249,6 +1241,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">break</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">continue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Integer</a>
               </li>
              
@@ -1261,11 +1265,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1274,6 +1278,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1293,15 +1301,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

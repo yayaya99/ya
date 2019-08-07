@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>categories | yayaya99</title>
+  <title>Java中break和continue的区别 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代 123456789101112131415161718public class Test&amp;#123;    public static void main(String[] a">
+<meta name="keywords" content="Java,break,continue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中break和continue的区别">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/Java中break和continue的区别/index.html">
 <meta property="og:site_name" content="yayaya99">
+<meta property="og:description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代 123456789101112131415161718public class Test&amp;#123;    public static void main(String[] a">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T12:19:15.098Z">
+<meta property="og:updated_time" content="2019-08-07T07:43:52.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Java中break和continue的区别">
+<meta name="twitter:description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代 123456789101112131415161718public class Test&amp;#123;    public static void main(String[] a">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -153,27 +157,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Java中break和continue的区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      Java中break和continue的区别
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-07-18T12:18:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/08/07/Java中break和continue的区别/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			break;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	System.out.println(&quot;===============&quot;);</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			continue;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>0<br>1<br>2<br>分隔符<br>0<br>1<br>2<br>4<br>5</p>
+</blockquote>
+
       
 
       
@@ -202,6 +213,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">break</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">continue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -252,7 +282,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/07/Java中break和continue的区别/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,6 +294,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/08/07/Java编程思想第四章练习/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java编程思想第四章练习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/07/Foreach语句/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Foreach语句</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -314,7 +363,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

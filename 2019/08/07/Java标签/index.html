@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>categories | yayaya99</title>
+  <title>Java标签 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)12345678910111213label1:outer-iteration&amp;#123;    inner-iteration&amp;#123;        //...        break; //(1)        //...        continue; //(2)        //...        c">
+<meta name="keywords" content="Java,标签">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java标签">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/Java标签/index.html">
 <meta property="og:site_name" content="yayaya99">
+<meta property="og:description" content="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)12345678910111213label1:outer-iteration&amp;#123;    inner-iteration&amp;#123;        //...        break; //(1)        //...        continue; //(2)        //...        c">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T12:19:15.098Z">
+<meta property="og:updated_time" content="2019-08-07T11:00:35.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Java标签">
+<meta name="twitter:description" content="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)12345678910111213label1:outer-iteration&amp;#123;    inner-iteration&amp;#123;        //...        break; //(1)        //...        continue; //(2)        //...        c">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -153,27 +157,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-Java标签" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      Java标签
     </h1>
   
 
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2019-07-18T12:18:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+        <a href="/2019/08/07/Java标签/" class="archive-article-date">
+  	<time datetime="2019-08-07T10:56:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在（1）中，break中断内部迭代。<br>在（2）中，continue使执行点移回内部迭代的起始值。<br>在（3）中，continue label1同时中断内部迭代以及外部迭代，直接转到label1处；随后，它实际上是继续迭代过程，但却从外部迭代开始。<br>在（4）中，break label1也会中断所有迭代，并回到label1处，但并不重新进入迭代。也就是说，它实际是完全中止了两个迭代。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		for(;true;) &#123;</span><br><span class="line">    			inner:</span><br><span class="line">    				for(;i&lt;10;i++) &#123;</span><br><span class="line">    					System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    					if(i==2) &#123;</span><br><span class="line">    						System.out.println(&quot;continue&quot;);</span><br><span class="line">    						continue;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==3) &#123;</span><br><span class="line">    						System.out.println(&quot;break&quot;);</span><br><span class="line">    						i++;    //由于break跳过了递增表达式，所以这里添加了递增运算</span><br><span class="line">    						break;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==7) &#123;</span><br><span class="line">    						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">    						i++;    //添加了递增运算</span><br><span class="line">    						continue outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==8) &#123;</span><br><span class="line">    						System.out.println(&quot;break outer&quot;);</span><br><span class="line">    						break outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					for(int k=0;k&lt;5;k++) &#123;</span><br><span class="line">    						if(k==3) &#123;</span><br><span class="line">    							System.out.println(&quot;continue inner&quot;);</span><br><span class="line">    							continue inner;</span><br><span class="line">    						&#125;</span><br><span class="line">    					&#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Output:<br>i= 0<br>continue inner<br>i= 1<br>continue inner<br>i= 2<br>continue<br>i= 3<br>break<br>i= 4<br>continue inner<br>i= 5<br>continue inner<br>i= 6<br>continue inner<br>i= 7<br>continue outer<br>i= 8<br>break outer</p>
+</blockquote>
+<p><strong><em>break和continue本身只能中断最内层的循环</em></strong></p>
+<h2 id="带标签的break以及continue语句在while循环中的用法："><a href="#带标签的break以及continue语句在while循环中的用法：" class="headerlink" title="带标签的break以及continue语句在while循环中的用法："></a>带标签的break以及continue语句在while循环中的用法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		while(true) &#123;</span><br><span class="line">    			System.out.println(&quot;Outer while loop&quot;);</span><br><span class="line">    			while(true) &#123;</span><br><span class="line">    				i++;</span><br><span class="line">    				System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    				if(i==1) &#123;</span><br><span class="line">    					System.out.println(&quot;continue&quot;);</span><br><span class="line">    					continue;</span><br><span class="line">    				&#125;</span><br><span class="line">    				if(i==3) &#123;</span><br><span class="line">						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">						continue outer;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==5) &#123;</span><br><span class="line">						System.out.println(&quot;break&quot;);</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==7) &#123;</span><br><span class="line">						System.out.println(&quot;break outer&quot;);</span><br><span class="line">						break outer;</span><br><span class="line">					&#125;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Output:<br>Outer while loop<br>i= 1<br>continue<br>i= 2<br>i= 3<br>continue outer<br>Outer while loop<br>i= 4<br>i= 5<br>break<br>Outer while loop<br>i= 6<br>i= 7<br>break outer</p>
+</blockquote>
+<p>同样的规则亦适用于while:<br>1、一般的continue会退出最内层循环开头（顶部），并继续执行。<br>2、带标签的continue会到达标签的位置，并重新进入紧接在那个标签后面的循环。<br>3、一般的break会中断并跳出当前循环。<br>4、带标签的break会中断并跳出标签所指的循环。</p>
+<h2 id="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"><a href="#在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。" class="headerlink" title="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"></a>在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。</h2>
       
 
       
@@ -202,6 +221,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">标签</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -252,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/07/Java标签/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,6 +298,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/07/Java编程思想第四章练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java编程思想第四章练习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -314,7 +358,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
