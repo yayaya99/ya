@@ -154,6 +154,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-负数的二进制表示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/负数的二进制表示/">负数的二进制表示</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/负数的二进制表示/" class="archive-article-date">
+  	<time datetime="2019-08-04T08:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>了解负数的二进制表示</p>
+<p>计算机中，负数以其正值的补码形式表示</p>
+<p>比如2的二进制为10，但int类型的数占用4字节（32位），就写为00000000 00000000 00000000 00000010</p>
+<p>求-2的二进制就要求出原码、补码、反码</p>
+        
+          <a class="article-more-a" href="/2019/08/04/负数的二进制表示/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二进制</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/04/负数的二进制表示/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java短路与" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,12 +258,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>test(0)<br>result: true<br>test(2)<br>result: false<br>expression is false</p>
-</blockquote>
-<p>可以发现test1与test2比较后直接输出，不会对test3进行比较，这就是&amp;和&amp;&amp;的不同之处。</p>
-
+        
+          <a class="article-more-a" href="/2019/08/04/Java短路与/#more">more >></a>
+        
       
 
       
@@ -258,41 +338,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
-</blockquote>
-<h3 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h3><p>编写一个程序，模拟扔硬币的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">class Coin&#123;</span><br><span class="line">	static void test() &#123;</span><br><span class="line">		Random r = new Random();</span><br><span class="line">		System.out.println(r.nextInt(2) == 1?&quot;正面&quot;:&quot;反面&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Coin.test();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习8："><a href="#练习8：" class="headerlink" title="练习8："></a>练习8：</h3><p>展示用16进制和8进制记数法（字面值）来操作long值（赋值），用Long.toBinaryString()来显示其结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		long l1=0xC2B;</span><br><span class="line">		long l2=0777;</span><br><span class="line">		System.out.println(Long.toBinaryString(l1));</span><br><span class="line">		System.out.println(Long.toBinaryString(l2));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习9："><a href="#练习9：" class="headerlink" title="练习9："></a>练习9：</h3><p>分别显示用float和double指数计数法所能表示的最大和最小的数字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		</span><br><span class="line">		float floatmax = Float.MAX_VALUE;</span><br><span class="line">		float floatmin = Float.MIN_VALUE;</span><br><span class="line">		double doublemax = Double.MAX_VALUE;</span><br><span class="line">		double doublemin = Double.MIN_VALUE;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;floatmax = &quot; + floatmax);</span><br><span class="line">		System.out.println(&quot;floatmin = &quot; + floatmin);</span><br><span class="line">		System.out.println(&quot;doublemax = &quot; + doublemax);</span><br><span class="line">		System.out.println(&quot;doublemin = &quot; + doublemin);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>floatmax = 3.4028235E38<br>floatmin = 1.4E-45<br>doublemax = 1.7976931348623157E308<br>doublemin = 4.9E-324</p>
-</blockquote>
-<h3 id="练习10："><a href="#练习10：" class="headerlink" title="练习10："></a>练习10：</h3><p>编写一个具有两个常量值的程序,一个具有交替的二进制位1和0,其中最低有效位为0,另一个也具有交替的二进制位1和0,其中最低有效位为1.取这两个值,用按位操作符以所有可能的方式结合运算它们,然后用Integer.toBinaryString()显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int a = 0xaaaaaaaa;</span><br><span class="line">		int b = 0x55555555;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;  a: &quot;+Integer.toBinaryString(a));</span><br><span class="line">		System.out.println(&quot;  b: &quot;+Integer.toBinaryString(b));</span><br><span class="line">		System.out.println(&quot; ~a: &quot;+Integer.toBinaryString(~a));</span><br><span class="line">		System.out.println(&quot; ~b: &quot;+Integer.toBinaryString(~b));</span><br><span class="line">		System.out.println(&quot;a&amp;a: &quot;+Integer.toBinaryString(a&amp;a));</span><br><span class="line">		System.out.println(&quot;a|a: &quot;+Integer.toBinaryString(a|a));</span><br><span class="line">		System.out.println(&quot;a^a: &quot;+Integer.toBinaryString(a^a));</span><br><span class="line">		System.out.println(&quot;a&amp;b: &quot;+Integer.toBinaryString(a&amp;b));</span><br><span class="line">		System.out.println(&quot;a|b: &quot;+Integer.toBinaryString(a|b));</span><br><span class="line">		System.out.println(&quot;a^b: &quot;+Integer.toBinaryString(a^b));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br> a: 10101010101010101010101010101010<br> b: 1010101010101010101010101010101<br>~a: 1010101010101010101010101010101<br>~b: 10101010101010101010101010101010<br>a&amp;a: 10101010101010101010101010101010<br>a|a: 10101010101010101010101010101010<br>a^a: 0<br>a&amp;b: 0<br>a|b: 11111111111111111111111111111111<br>a^b: 11111111111111111111111111111111</p>
-</blockquote>
-<h3 id="练习11："><a href="#练习11：" class="headerlink" title="练习11："></a>练习11：</h3><p>以一个最高有效位为1的二进制数开始,用有符号右移操作符对其进行右移,直至所有的二进制位都被移出为止,每移一位都显示二进制字符串效果.<br>练习12：<br>以一个所有位都为1的二进制数字开始,先左移它,然后用无符号右移操作符对其进行右移,直至所有二进制位都移出为止,每移一位都要显示二进制字符串效果.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int number = 0xaaaaa;</span><br><span class="line">		while(number != 0) &#123;</span><br><span class="line">			number &gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;====================&quot;);</span><br><span class="line">		</span><br><span class="line">		int number2 = 0xff;</span><br><span class="line">		number2 &lt;&lt;= 1;</span><br><span class="line">		</span><br><span class="line">		while(number2 != 0) &#123;</span><br><span class="line">			number2 &gt;&gt;&gt;= 1;</span><br><span class="line">			System.out.println(Integer.toBinaryString(number2));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">运行及结果：</span><br><span class="line">1010101010101010101</span><br><span class="line">101010101010101010</span><br><span class="line">10101010101010101</span><br><span class="line">1010101010101010</span><br><span class="line">101010101010101</span><br><span class="line">10101010101010</span><br><span class="line">1010101010101</span><br><span class="line">101010101010</span><br><span class="line">10101010101</span><br><span class="line">1010101010</span><br><span class="line">101010101</span><br><span class="line">10101010</span><br><span class="line">1010101</span><br><span class="line">101010</span><br><span class="line">10101</span><br><span class="line">1010</span><br><span class="line">101</span><br><span class="line">10</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">====================</span><br><span class="line">11111111</span><br><span class="line">1111111</span><br><span class="line">111111</span><br><span class="line">11111</span><br><span class="line">1111</span><br><span class="line">111</span><br><span class="line">11</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习13："><a href="#练习13：" class="headerlink" title="练习13："></a>练习13：</h3><p>编写一个方法,它以二进制形式显示char类型的值.使用多个不同的字符来展示它.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class TestChar&#123;</span><br><span class="line">	static void Conversion(char c) &#123;</span><br><span class="line">		System.out.println(Integer.toBinaryString((int)c));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		TestChar.Conversion(&apos;a&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;b&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;c&apos;);</span><br><span class="line">		TestChar.Conversion(&apos;$&apos;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>1100001<br>1100010<br>1100011<br>100100</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2019/08/04/Java编程思想第三章练习/#more">more >></a>
+        
       
 
       
@@ -371,24 +419,9 @@
       
         <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
 <p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>运行及结果：<br>1: t1.level: 9,t2.level: 47<br>2: t1.level: 47,t2.level: 47<br>3: t1.level: 27,t2.level: 27</p>
-</blockquote>
-<p>每个Tank类对象的level域都赋予了一个不同的值，然后，将t2赋给t1。<br>我们可能会期望t1和t2总是相互独立的。<br>但由于赋值操作的是一个对象的引用，t1和t2包含的引用相同,所以修改t1的同时也改变了t2。<br>这种特殊现象称为”别名现象“。</p>
-<blockquote>
-<p>避免方式：<br>t1.level = t2.level;</p>
-</blockquote>
-<hr>
-<h2 id="方法调用中的别名问题"><a href="#方法调用中的别名问题" class="headerlink" title="方法调用中的别名问题"></a>方法调用中的别名问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;		</span><br><span class="line">	char c;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test&#123;</span><br><span class="line">	static void f(Tank y) &#123;</span><br><span class="line">		y.c = &apos;z&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t = new Tank();</span><br><span class="line">		t.c = &apos;a&apos;;</span><br><span class="line">		System.out.println(&quot;1: t.c: &quot; + t.c);</span><br><span class="line">		f(t);</span><br><span class="line">		System.out.println(&quot;2: t.c: &quot; + t.c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>运行及结果：<br>1: t.c: a<br>2: t.c: z</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2019/08/03/Java中对象的赋值/#more">more >></a>
+        
       
 
       
@@ -552,13 +585,10 @@
 <p>1.整库备份<br>    利用mysqldump进行sql备份<br>    语法：mysqldump.exe -hPup 数据库名字 &gt; 备份路径</p>
 <pre><code>mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql</code></pre><p>2.单表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 &gt; 备份路径</p>
 <pre><code>mysqldump -uroot -proot mydatabase my_int &gt; c:/server/int.sql</code></pre><p>3.多表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 表名 .. &gt; 备份路径</p>
-<pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre><ul>
-<li><h2 id="数据还原"><a href="#数据还原" class="headerlink" title="数据还原"></a>数据还原</h2></li>
-</ul>
-<p>1.利用mysql.exe客户端<br>     在cmd中直接对数据还原<br>     语法：mysql -hPup 数据库 &lt; 文件路径</p>
-<pre><code>mysql -uroot -proot mydatabse &lt; c:/server/mydatabase.sql</code></pre><p>2.利用sql指令<br>     登录mysql客户端并进入对应数据库<br>    语法：source 文件路径（注意后面会有； 因为这里是在mysql中输入的sql指令）</p>
-<pre><code>source c:/server/int.sql;</code></pre><p>3.复制粘贴</p>
-
+<pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre>
+        
+          <a class="article-more-a" href="/2019/07/21/Mysql数据备份与还原/#more">more >></a>
+        
       
 
       
@@ -644,24 +674,9 @@
       
         <h2 id="首先修改配置-config-yml"><a href="#首先修改配置-config-yml" class="headerlink" title="首先修改配置_config.yml"></a>首先修改配置_config.yml</h2><p> 将post_asset_folder: false改为post_asset_folder: true</p>
 <h2 id="然后安装一个图片插件"><a href="#然后安装一个图片插件" class="headerlink" title="然后安装一个图片插件"></a>然后安装一个图片插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
-
-
-
-<p>新建一个博文后就会发现在/source/_posts目录下会生成同名文件夹<br>将图片扔里面</p>
-<h2 id="添加本地图片"><a href="#添加本地图片" class="headerlink" title="添加本地图片"></a>添加本地图片</h2><p> 在博文中插入代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](文件夹/h1.jpg)</span><br></pre></td></tr></table></figure>
-
-<p>例:<br><img src="/2019/07/19/博客文章添加图片/s1.gif" alt="图片描述"></p>
-<h2 id="添加外部连接"><a href="#添加外部连接" class="headerlink" title="添加外部连接"></a>添加外部连接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](<span class="string">"图片地址"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>例:<br><img src="https://tse3-mm.cn.bing.net/th?id=OIP.-KRAMGIepQ5rXOFgZPCPggHaHa&w=141&h=150&c=7&o=5&dpr=1.1&pid=1.7" alt="图片描述"></p>
-<h2 id="插入音乐"><a href="#插入音乐" class="headerlink" title="插入音乐"></a>插入音乐</h2><p>直接粘贴代码到博文：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 </span><br><span class="line">	src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5263408&amp;auto=0&amp;height=66&quot;&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h2><p>直接粘贴代码到博文：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe </span><br><span class="line">	height=300 width=510 </span><br><span class="line">	src=&quot;视频链接&quot; </span><br><span class="line">	frameborder=0 allowfullscreen&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <a class="article-more-a" href="/2019/07/19/博客文章添加图片/#more">more >></a>
+        
       
 
       
@@ -913,6 +928,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
@@ -922,14 +945,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -949,15 +964,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
               </li>
             
             <div class="clearfix"></div>

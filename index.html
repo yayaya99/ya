@@ -154,6 +154,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java方法重载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/08/Java方法重载/">Java方法重载</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/08/Java方法重载/" class="archive-article-date">
+  	<time datetime="2019-08-08T03:37:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="示范重载构造器和重载的方法"><a href="#示范重载构造器和重载的方法" class="headerlink" title="示范重载构造器和重载的方法"></a>示范重载构造器和重载的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class Tree&#123;</span><br><span class="line">	int height;</span><br><span class="line">	Tree()&#123;</span><br><span class="line">		System.out.println(&quot;Planting a seedling&quot;);</span><br><span class="line">		height= 0;</span><br><span class="line">	&#125;</span><br><span class="line">	Tree(int initialHeight)&#123;</span><br><span class="line">		height = initialHeight;</span><br><span class="line">		System.out.println(&quot;Creating new Tree that is &quot;+height+&quot; feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info() &#123;</span><br><span class="line">		System.out.println(&quot;Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info(String s) &#123;</span><br><span class="line">		System.out.println(s+&quot;:Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Overloading &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=0;i&lt;5;i++) &#123;</span><br><span class="line">			Tree t = new Tree(i);</span><br><span class="line">			t.info();</span><br><span class="line">			t.info(&quot;overloaded method&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		new Tree();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;/*Output:</span><br><span class="line">Creating new Tree that is 0 feet tall</span><br><span class="line">Tree is 0feet tall</span><br><span class="line">overloaded method:Tree is 0feet tall</span><br><span class="line">Creating new Tree that is 1 feet tall</span><br><span class="line">Tree is 1feet tall</span><br><span class="line">overloaded method:Tree is 1feet tall</span><br><span class="line">Creating new Tree that is 2 feet tall</span><br><span class="line">Tree is 2feet tall</span><br><span class="line">overloaded method:Tree is 2feet tall</span><br><span class="line">Creating new Tree that is 3 feet tall</span><br><span class="line">Tree is 3feet tall</span><br><span class="line">overloaded method:Tree is 3feet tall</span><br><span class="line">Creating new Tree that is 4 feet tall</span><br><span class="line">Tree is 4feet tall</span><br><span class="line">overloaded method:Tree is 4feet tall</span><br><span class="line">Planting a seedling</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/08/08/Java方法重载/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">重载</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/08/Java方法重载/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java标签" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,21 +259,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在（1）中，break中断内部迭代。<br>在（2）中，continue使执行点移回内部迭代的起始值。<br>在（3）中，continue label1同时中断内部迭代以及外部迭代，直接转到label1处；随后，它实际上是继续迭代过程，但却从外部迭代开始。<br>在（4）中，break label1也会中断所有迭代，并回到label1处，但并不重新进入迭代。也就是说，它实际是完全中止了两个迭代。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		for(;true;) &#123;</span><br><span class="line">    			inner:</span><br><span class="line">    				for(;i&lt;10;i++) &#123;</span><br><span class="line">    					System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    					if(i==2) &#123;</span><br><span class="line">    						System.out.println(&quot;continue&quot;);</span><br><span class="line">    						continue;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==3) &#123;</span><br><span class="line">    						System.out.println(&quot;break&quot;);</span><br><span class="line">    						i++;    //由于break跳过了递增表达式，所以这里添加了递增运算</span><br><span class="line">    						break;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==7) &#123;</span><br><span class="line">    						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">    						i++;    //添加了递增运算</span><br><span class="line">    						continue outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					if(i==8) &#123;</span><br><span class="line">    						System.out.println(&quot;break outer&quot;);</span><br><span class="line">    						break outer;</span><br><span class="line">    					&#125;</span><br><span class="line">    					for(int k=0;k&lt;5;k++) &#123;</span><br><span class="line">    						if(k==3) &#123;</span><br><span class="line">    							System.out.println(&quot;continue inner&quot;);</span><br><span class="line">    							continue inner;</span><br><span class="line">    						&#125;</span><br><span class="line">    					&#125;</span><br><span class="line">    				&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Output:<br>i= 0<br>continue inner<br>i= 1<br>continue inner<br>i= 2<br>continue<br>i= 3<br>break<br>i= 4<br>continue inner<br>i= 5<br>continue inner<br>i= 6<br>continue inner<br>i= 7<br>continue outer<br>i= 8<br>break outer</p>
-</blockquote>
-<p><strong><em>break和continue本身只能中断最内层的循环</em></strong></p>
-<h2 id="带标签的break以及continue语句在while循环中的用法："><a href="#带标签的break以及continue语句在while循环中的用法：" class="headerlink" title="带标签的break以及continue语句在while循环中的用法："></a>带标签的break以及continue语句在while循环中的用法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	int i=0;</span><br><span class="line">    	outer:</span><br><span class="line">    		while(true) &#123;</span><br><span class="line">    			System.out.println(&quot;Outer while loop&quot;);</span><br><span class="line">    			while(true) &#123;</span><br><span class="line">    				i++;</span><br><span class="line">    				System.out.println(&quot;i= &quot;+i);</span><br><span class="line">    				if(i==1) &#123;</span><br><span class="line">    					System.out.println(&quot;continue&quot;);</span><br><span class="line">    					continue;</span><br><span class="line">    				&#125;</span><br><span class="line">    				if(i==3) &#123;</span><br><span class="line">						System.out.println(&quot;continue outer&quot;);</span><br><span class="line">						continue outer;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==5) &#123;</span><br><span class="line">						System.out.println(&quot;break&quot;);</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">    				if(i==7) &#123;</span><br><span class="line">						System.out.println(&quot;break outer&quot;);</span><br><span class="line">						break outer;</span><br><span class="line">					&#125;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Output:<br>Outer while loop<br>i= 1<br>continue<br>i= 2<br>i= 3<br>continue outer<br>Outer while loop<br>i= 4<br>i= 5<br>break<br>Outer while loop<br>i= 6<br>i= 7<br>break outer</p>
-</blockquote>
-<p>同样的规则亦适用于while:<br>1、一般的continue会退出最内层循环开头（顶部），并继续执行。<br>2、带标签的continue会到达标签的位置，并重新进入紧接在那个标签后面的循环。<br>3、一般的break会中断并跳出当前循环。<br>4、带标签的break会中断并跳出标签所指的循环。</p>
-<h2 id="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"><a href="#在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。" class="headerlink" title="在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。"></a>在Java里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中break或continue。</h2>
+        
+          <a class="article-more-a" href="/2019/08/07/Java标签/#more">more >></a>
+        
       
 
       
@@ -268,25 +340,9 @@
       
         <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h3><p>写一个程序，打印从1到100的值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=100;i++) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习2："><a href="#练习2：" class="headerlink" title="练习2："></a>练习2：</h3><p>写一个程序,产生25个int类型的随机数.对于每一个随机值,使用if-else语句来讲其分类为大于，小于,或等于紧随它产生的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int num[] =new int[25];</span><br><span class="line">        for (int i=0;i&lt;25;i++)&#123;</span><br><span class="line">            num[i]=(int)(Math.random()*100);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (int j=0;j&lt;num.length-1;j++)&#123;//一共产生了25个数，需要比较24次，所以j的循环次数是num.length-1次。</span><br><span class="line">            if (num[j]&gt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;大于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else if (num[j]&lt;num[j+1])&#123;</span><br><span class="line">                System.out.println(num[j]+&quot;小于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                System.out.println(num[j]+&quot;等于&quot;+&quot;后面的数&quot;+num[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>39小于后面的数70<br>70大于后面的数30<br>30小于后面的数61<br>61大于后面的数57<br>57小于后面的数76<br>76小于后面的数83<br>83大于后面的数13<br>13大于后面的数3<br>3小于后面的数38<br>38小于后面的数60<br>60大于后面的数57<br>57小于后面的数75<br>75大于后面的数12<br>12小于后面的数52<br>52小于后面的数62<br>62小于后面的数84<br>84大于后面的数51<br>51大于后面的数18<br>18小于后面的数59<br>59小于后面的数64<br>64大于后面的数41<br>41小于后面的数98<br>98大于后面的数54<br>54大于后面的数51</p>
-</blockquote>
-<h3 id="练习4："><a href="#练习4：" class="headerlink" title="练习4："></a>练习4：</h3><p>写一个程序,使用两个嵌套的for循环和取余操作符来探测和打印素数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	boolean flog;</span><br><span class="line">    	for(int i=2;i&lt;=100;i++) &#123;</span><br><span class="line">    		flog=true;</span><br><span class="line">    		for(int j=2;j&lt;i;j++) &#123;</span><br><span class="line">    			if(i%j==0) &#123;</span><br><span class="line">    				flog=false;</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		if(flog==true) &#123;</span><br><span class="line">    			System.out.println(i+&quot; &quot;);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">2 </span><br><span class="line">3 </span><br><span class="line">5 </span><br><span class="line">7 </span><br><span class="line">11 </span><br><span class="line">13 </span><br><span class="line">17 </span><br><span class="line">19 </span><br><span class="line">23 </span><br><span class="line">29 </span><br><span class="line">31 </span><br><span class="line">37 </span><br><span class="line">41 </span><br><span class="line">43 </span><br><span class="line">47 </span><br><span class="line">53 </span><br><span class="line">59 </span><br><span class="line">61 </span><br><span class="line">67 </span><br><span class="line">71 </span><br><span class="line">73 </span><br><span class="line">79 </span><br><span class="line">83 </span><br><span class="line">89 </span><br><span class="line">97</span><br></pre></td></tr></table></figure>
-
-<h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>重复第三章中的练习10，不要用Integer.toBinaryString()方法，而是用三元操作符和按位操作符来显示二进制0和1. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emmmmmmmmmm</span><br></pre></td></tr></table></figure>
-
-<h2 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h2><p>修改本章练习1，通过使用break关键词（或者return关键词），使其只输出范围为1~99的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;100;i++) &#123;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    		if(i==99)</span><br><span class="line">    			break; //return</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
+          <a class="article-more-a" href="/2019/08/07/Java编程思想第四章练习/#more">more >></a>
+        
       
 
       
@@ -365,12 +421,9 @@
       
         <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
 <h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			break;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	System.out.println(&quot;===============&quot;);</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			continue;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>0<br>1<br>2<br>分隔符<br>0<br>1<br>2<br>4<br>5</p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2019/08/07/Java中break和continue的区别/#more">more >></a>
+        
       
 
       
@@ -452,16 +505,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>0.72711575<br>0.39982635<br>0.5309454<br>0.0534122<br>0.16020656<br>0.57799757<br>0.18847865<br>0.4170137<br>0.51660204<br>0.73734957</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        for(char c:&quot;An African Swallow&quot;.toCharArray())</span><br><span class="line">        	System.out.print(c+&quot; &quot;);	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>A n   A f r i c a n   S w a l l o w </p>
-</blockquote>
-
+        
+          <a class="article-more-a" href="/2019/08/07/Foreach语句/#more">more >></a>
+        
       
 
       
@@ -539,18 +585,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"><a href="#在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？" class="headerlink" title="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"></a>在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;(int)above: &quot;+(int)above);</span><br><span class="line">		System.out.println(&quot;(int)below: &quot;+(int)below);</span><br><span class="line">		System.out.println(&quot;(int)fabove: &quot;+(int)fabove);</span><br><span class="line">		System.out.println(&quot;(int)fbelow: &quot;+(int)fbelow);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>(int)above: 0<br>(int)below: 0<br>(int)fabove: 0<br>(int)fbelow: 0</p>
-</blockquote>
-<p><strong>运行结果发现，在将float和double转型为整数值时，总是对该数字执行截尾。如果想要得到舍入的结果，就需要使用java.lang.Math中的round()方法。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;Math.round(above): &quot;+Math.round(above));</span><br><span class="line">		System.out.println(&quot;Math.round(below): &quot;+Math.round(below));</span><br><span class="line">		System.out.println(&quot;Math.round(fabove): &quot;+Math.round(fabove));</span><br><span class="line">		System.out.println(&quot;Math.round(fbelow): &quot;+Math.round(fbelow));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果:<br>Math.round(above): 1<br>Math.round(below): 0<br>Math.round(fabove): 1<br>Math.round(fbelow): 0</p>
-</blockquote>
-<p><strong>由于round()是java.lang的一部分，因此在使用它时不需要额外地导入。</strong></p>
-
+        
+          <a class="article-more-a" href="/2019/08/05/截尾和舍入/#more">more >></a>
+        
       
 
       
@@ -632,12 +669,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class BitManipulation&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Random rand = new Random(47);</span><br><span class="line">		int i = rand.nextInt();</span><br><span class="line">		int j = rand.nextInt();</span><br><span class="line">		printBinaryInt(&quot;-1&quot;,-1);</span><br><span class="line">		printBinaryInt(&quot;+1&quot;,+1);</span><br><span class="line">		int maxpos = 2147483647;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxpos);</span><br><span class="line">		int maxneg = -2147483648;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxneg);</span><br><span class="line">		printBinaryInt(&quot;i&quot;,i);</span><br><span class="line">		printBinaryInt(&quot;~i&quot;,~i);</span><br><span class="line">		printBinaryInt(&quot;-i&quot;,-i);</span><br><span class="line">		printBinaryInt(&quot;j&quot;,j);</span><br><span class="line">		printBinaryInt(&quot;i&amp;j&quot;,i&amp;j);</span><br><span class="line">		printBinaryInt(&quot;i|j&quot;,i|j);</span><br><span class="line">		printBinaryInt(&quot;i^j&quot;,i^j); //不同为1，相同为0</span><br><span class="line">		printBinaryInt(&quot;i&lt;&lt;5&quot;,i&lt;&lt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;5&quot;,i&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;5&quot;,(~i)&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;&gt;5&quot;,i&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;&gt;5&quot;,(~i)&gt;&gt;&gt;5);</span><br><span class="line">		</span><br><span class="line">		long l = rand.nextLong();</span><br><span class="line">		long m = rand.nextLong();</span><br><span class="line">		printBinaryLong(&quot;-1L&quot;,-1L);</span><br><span class="line">		printBinaryLong(&quot;+1L&quot;,+1L);</span><br><span class="line">		long ll = 9223372036854775807L;</span><br><span class="line">		printBinaryLong(&quot;maxpos&quot;,ll);</span><br><span class="line">		long lln = -9223372036854775808L;</span><br><span class="line">		printBinaryLong(&quot;maxneg&quot;,lln);</span><br><span class="line">		printBinaryLong(&quot;l&quot;,l);</span><br><span class="line">		printBinaryLong(&quot;~l&quot;,~l);</span><br><span class="line">		printBinaryLong(&quot;-l&quot;,-l);</span><br><span class="line">		printBinaryLong(&quot;m&quot;,m);</span><br><span class="line">		printBinaryLong(&quot;l&amp;m&quot;,l&amp;m);</span><br><span class="line">		printBinaryLong(&quot;l|m&quot;,l|m);</span><br><span class="line">		printBinaryLong(&quot;l^m&quot;,l^m);</span><br><span class="line">		printBinaryLong(&quot;l&lt;&lt;5&quot;,l&lt;&lt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;5&quot;,l&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;5&quot;,(~l)&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;&gt;5&quot;,l&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;&gt;5&quot;,(~l)&gt;&gt;&gt;5);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	static void printBinaryInt(String s, int i) &#123;</span><br><span class="line">		System.out.println(s+&quot;,int: &quot;+i+&quot;.binary:\n &quot;+Integer.toBinaryString(i));</span><br><span class="line">	&#125;</span><br><span class="line">	static void printBinaryLong(String s, long l) &#123;</span><br><span class="line">		System.out.println(s+&quot;,long: &quot;+l+&quot;.binary:\n &quot;+Long.toBinaryString(l));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行及结果：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">-1,int: -1.binary:</span><br><span class="line"> 11111111111111111111111111111111</span><br><span class="line">+1,int: 1.binary:</span><br><span class="line"> 1</span><br><span class="line">maxpos,int: 2147483647.binary:</span><br><span class="line"> 1111111111111111111111111111111</span><br><span class="line">maxpos,int: -2147483648.binary:</span><br><span class="line"> 10000000000000000000000000000000</span><br><span class="line">i,int: -1172028779.binary:</span><br><span class="line"> 10111010001001000100001010010101</span><br><span class="line">~i,int: 1172028778.binary:</span><br><span class="line"> 1000101110110111011110101101010</span><br><span class="line">-i,int: 1172028779.binary:</span><br><span class="line"> 1000101110110111011110101101011</span><br><span class="line">j,int: 1717241110.binary:</span><br><span class="line"> 1100110010110110000010100010110</span><br><span class="line">i&amp;j,int: 570425364.binary:</span><br><span class="line"> 100010000000000000000000010100</span><br><span class="line">i|j,int: -25213033.binary:</span><br><span class="line"> 11111110011111110100011110010111</span><br><span class="line">i^j,int: -595638397.binary:</span><br><span class="line"> 11011100011111110100011110000011</span><br><span class="line">i&lt;&lt;5,int: 1149784736.binary:</span><br><span class="line"> 1000100100010000101001010100000</span><br><span class="line">i&gt;&gt;5,int: -36625900.binary:</span><br><span class="line"> 11111101110100010010001000010100</span><br><span class="line">(~i)&gt;&gt;5,int: 36625899.binary:</span><br><span class="line"> 10001011101101110111101011</span><br><span class="line">i&gt;&gt;&gt;5,int: 97591828.binary:</span><br><span class="line"> 101110100010010001000010100</span><br><span class="line">(~i)&gt;&gt;&gt;5,int: 36625899.binary:</span><br><span class="line"> 10001011101101110111101011</span><br><span class="line">-1L,long: -1.binary:</span><br><span class="line"> 1111111111111111111111111111111111111111111111111111111111111111</span><br><span class="line">+1L,long: 1.binary:</span><br><span class="line"> 1</span><br><span class="line">maxpos,long: 9223372036854775807.binary:</span><br><span class="line"> 111111111111111111111111111111111111111111111111111111111111111</span><br><span class="line">maxneg,long: -9223372036854775808.binary:</span><br><span class="line"> 1000000000000000000000000000000000000000000000000000000000000000</span><br><span class="line">l,long: -8652529054300476342.binary:</span><br><span class="line"> 1000011111101100000010101010101100001101101011000110110001001010</span><br><span class="line">~l,long: 8652529054300476341.binary:</span><br><span class="line"> 111100000010011111101010101010011110010010100111001001110110101</span><br><span class="line">-l,long: 8652529054300476342.binary:</span><br><span class="line"> 111100000010011111101010101010011110010010100111001001110110110</span><br><span class="line">m,long: 2955289354441303771.binary:</span><br><span class="line"> 10100100000011010011000000001010010011111101111010011011011011</span><br><span class="line">l&amp;m,long: 72066398748419146.binary:</span><br><span class="line"> 100000000000010000000001000000001101001000010010001001010</span><br><span class="line">l|m,long: -5769306098607591717.binary:</span><br><span class="line"> 1010111111101111010011101010101110011111111111111110111011011011</span><br><span class="line">l^m,long: -5841372497356010863.binary:</span><br><span class="line"> 1010111011101111010001101010100110011110010110111100101010010001</span><br><span class="line">l&lt;&lt;5,long: -179768631971968704.binary:</span><br><span class="line"> 1111110110000001010101010110000110110101100011011000100101000000</span><br><span class="line">l&gt;&gt;5,long: -270391532946889886.binary:</span><br><span class="line"> 1111110000111111011000000101010101011000011011010110001101100010</span><br><span class="line">(~l)&gt;&gt;5,long: 270391532946889885.binary:</span><br><span class="line"> 1111000000100111111010101010100111100100101001110010011101</span><br><span class="line">l&gt;&gt;&gt;5,long: 306069219356533602.binary:</span><br><span class="line"> 10000111111011000000101010101011000011011010110001101100010</span><br><span class="line">(~l)&gt;&gt;&gt;5,long: 270391532946889885.binary:</span><br><span class="line"> 1111000000100111111010101010100111100100101001110010011101</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意高位表示符号：0为正，1为负。</strong></p>
-
+        
+          <a class="article-more-a" href="/2019/08/05/涉及按位操作的所有操作符（求二进制）/#more">more >></a>
+        
       
 
       
@@ -725,54 +759,9 @@
         <h3 id="内容转载于-https-blog-csdn-net-xy2204-article-details-50522075"><a href="#内容转载于-https-blog-csdn-net-xy2204-article-details-50522075" class="headerlink" title="内容转载于 https://blog.csdn.net/xy2204/article/details/50522075"></a>内容转载于 <a href="https://blog.csdn.net/xy2204/article/details/50522075" target="_blank" rel="noopener">https://blog.csdn.net/xy2204/article/details/50522075</a></h3><p>如果你是搞网络的，我觉得你一定要记住以下几种二进制数的转换值。你是一个网络工程 师，当看到一串二进制数时，你不要告诉我你会拿出笔纸或掰手指算半天才知道它转化成十进制的数值。要想快，那就记下下面几种常见的二进制–十进制转换：</p>
 <p>以8位 来演示:</p>
 <p>1.第一种:</p>
-<p>   00000001      1</p>
-<p>   00000010      2</p>
-<p>   00000100      4</p>
-<p>   00001000      8</p>
-<p>   00010000      16</p>
-<p>   00100000      32</p>
-<p>   01000000      64</p>
-<p>   10000000      128</p>
-<p>2.第二种：</p>
-<p>  00000001      1</p>
-<p>  00000011      3</p>
-<p>  00000111      7</p>
-<p>  00001111      15</p>
-<p>  00011111      31</p>
-<p>  00111111      63</p>
-<p>  01111111      127</p>
-<p>3.第三种：</p>
-<p>  10000000     128</p>
-<p>  11000000     192</p>
-<p>  11100000     224</p>
-<p>  11110000     240</p>
-<p>  11111000     248</p>
-<p>  11111100     252</p>
-<p>  11111110     254</p>
-<p>举个例子：  11101011     </p>
-<pre><code>可分为：
-
-11100000（上面第三种类型）   224
-
-00001000（上面第一种类型）   8
-
-00000011（上面第二种类型）   3</code></pre><p>我们通过记住上面三种类型的转换，再用加 法（加法口算你会吧）立即得到结果：235</p>
-<p>==================================================================================</p>
-<p>方法二：</p>
-<p>熟记以下排列，其实很Easy了，从右往 左，依次是前一个数的2倍：</p>
-<p>256      128      64       32      16      8        4         2         1</p>
-<p>随便写个数字比如48</p>
-<p>48 = 32 + 16,所以在32 和 16所在的位置为1，其余为0，</p>
-<p>转为2进制就是</p>
-<p>256  128  64  32  16  8   4   2   1</p>
-<p>0      0       0    1    1   0   0   0   0</p>
-<p>二进制转十进制就更简单了，</p>
-<p>比如随便写的一串 01111101</p>
-<p>先写上 ：  0         1           1         1         1         1          0          1</p>
-<p>然后填充 128      64        32       16        8          4          2          1</p>
-<p>十进制为 64+32+16+8+4+1=125</p>
-<p>转载地址：<a href="http://blog.163.com/kongdelu2009@yeah/blog/static/111995207201037105051259/" target="_blank" rel="noopener">http://blog.163.com/kongdelu2009@yeah/blog/static/111995207201037105051259/</a></p>
-
+        
+          <a class="article-more-a" href="/2019/08/05/二进制转十进制快速方法/#more">more >></a>
+        
       
 
       
@@ -856,26 +845,9 @@
         <h3 id="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："><a href="#移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：" class="headerlink" title="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："></a>移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：</h3><p>1.左移位（&lt;&lt;）：将操作符左侧的操作数向左移动操作符右侧指定的位数。移动的规则是在二进制的低位补0。</p>
 <p>2.有符号右移位（&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，如果被操作数的符号为正，则在二进制的高位补0；如果被操作数的符号为负，则在二进制的高位补1。</p>
 <p>3.无符号右移位（&gt;&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，无论被操作数的符号是正是负，都在二进制位的高位补0。</p>
-<h3 id="再来考虑一种情况，当要移位的位数大于被操作数对应数据类型所能表示的最大位数时，结果会是怎样呢？"><a href="#再来考虑一种情况，当要移位的位数大于被操作数对应数据类型所能表示的最大位数时，结果会是怎样呢？" class="headerlink" title="再来考虑一种情况，当要移位的位数大于被操作数对应数据类型所能表示的最大位数时，结果会是怎样呢？"></a>再来考虑一种情况，当要移位的位数大于被操作数对应数据类型所能表示的最大位数时，结果会是怎样呢？</h3><p>1、byte、short、char在做移位运算之前，会被自动转换为int类型，然后再进行运算。</p>
-<p>2、byte、short、int、char类型的数据经过移位运算后结果都为int型。</p>
-<p>3、long经过移位运算后结果为long型。</p>
-<p>4、在左移位（&lt;&lt;）运算时，如果要移位的位数大于被操作数对应数据类型所能表示的最大位数，那么先将要求移位数对该类型所能表示的最大位数求余后，再将被操作数移位所得余数对应的数值，效果不变。比如1&lt;&lt;35=1&lt;&lt;(35%32)=1&lt;&lt;3=8。</p>
-<p>5、对于有符号右移位（&gt;&gt;）运算和无符号右移位（&gt;&gt;&gt;）运算，当要移位的位数大于被操作数对应数据类型所能表示的最大位数时，那么先将要求移位数对该类型所能表示的最大位数求余后，再将被操作数移位所得余数对应的数值，效果不变。。比如100&gt;&gt;35=100&gt;&gt;(35%32)=100&gt;&gt;3=12。</p>
-<h3 id="在编程思想中有这么一句话：”移位“可与”等号“（-lt-lt-或-gt-gt-或-gt-gt-gt-）组合使用"><a href="#在编程思想中有这么一句话：”移位“可与”等号“（-lt-lt-或-gt-gt-或-gt-gt-gt-）组合使用" class="headerlink" title="在编程思想中有这么一句话：”移位“可与”等号“（&lt;&lt;=或&gt;&gt;=或&gt;&gt;&gt;=）组合使用"></a>在编程思想中有这么一句话：”移位“可与”等号“（&lt;&lt;=或&gt;&gt;=或&gt;&gt;&gt;=）组合使用</h3><p>但是在进行这样的移位赋值操作时，可能会遇到一个问题：如果byte或short值进行这样的移位运算，得到的可能不是正确的结果。</p>
-<p>它们会先被转换成int类型，再进行右移操作，然后被截断，赋值给原来的类型，在这种情况下可能得到-1的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int i = -1;</span><br><span class="line">		System.out.println(Integer.toBinaryString(i));</span><br><span class="line">		i &gt;&gt;&gt;=10;</span><br><span class="line">		System.out.println(Integer.toBinaryString(i));</span><br><span class="line">		long l = -1;</span><br><span class="line">		System.out.println(Long.toBinaryString(l));</span><br><span class="line">		l &gt;&gt;&gt;= 10;</span><br><span class="line">		System.out.println(Long.toBinaryString(l));</span><br><span class="line">		short s = -1;</span><br><span class="line">		System.out.println(Integer.toBinaryString(s));</span><br><span class="line">		s &gt;&gt;&gt;= 10;</span><br><span class="line">		System.out.println(Integer.toBinaryString(s));</span><br><span class="line">		byte b = -1;</span><br><span class="line">		System.out.println(Integer.toBinaryString(b));</span><br><span class="line">		b &gt;&gt;&gt;= 10;</span><br><span class="line">		System.out.println(Integer.toBinaryString(b));</span><br><span class="line">		b = -1;</span><br><span class="line">		System.out.println(Integer.toBinaryString(b));</span><br><span class="line">		System.out.println(Integer.toBinaryString(b&gt;&gt;&gt;10));</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>11111111111111111111111111111111<br>1111111111111111111111<br>1111111111111111111111111111111111111111111111111111111111111111<br>111111111111111111111111111111111111111111111111111111<br>11111111111111111111111111111111<br>11111111111111111111111111111111<br>11111111111111111111111111111111<br>11111111111111111111111111111111<br>11111111111111111111111111111111<br>1111111111111111111111</p>
-</blockquote>
-<p>运行会发现s&gt;&gt;&gt;=10和b&gt;&gt;&gt;=10的输出结果是错误的。<br>而没有赋值的b&gt;&gt;&gt;=10的输出正确。</p>
-<h3 id="内容转载于-http-blog-sina-com-cn-s-blog-6ca0f5eb0102vlha-html"><a href="#内容转载于-http-blog-sina-com-cn-s-blog-6ca0f5eb0102vlha-html" class="headerlink" title="内容转载于 http://blog.sina.com.cn/s/blog_6ca0f5eb0102vlha.html"></a>内容转载于 <a href="http://blog.sina.com.cn/s/blog_6ca0f5eb0102vlha.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_6ca0f5eb0102vlha.html</a></h3><p>晚上纠结了很久这个问题，不懂为什么低5位才有用，怎么就2^5等于32位，跟int的32位挂上钩了，思考了很久终于明白了。</p>
-<p>这段话有两个出处，一个是Java编程思想3.11移位操作符中出现，原话是“只有数值右端的低5位才有用”。一个是Java解惑中谜题27：变幻莫测的i值，原话是“移位操作符只使用其右操作数的低5位作为移位长度”。</p>
-<p>弄清这句话首先需要弄清楚移位操作符，移位操作符是一个二元操作符，两个操作数分别位于移位操作两边形如：左操作数 移位操作符 右操作数 这样的结构，其含义是，将左操作数按照移位操作符指定的移位方向，进行右操作数指定的次数的移位。然后对照出处二，Java解惑中所描述的，就豁然开朗了。</p>
-<p>首先，移位操作符能操作的数只有int类型和long类型，这个是指左操作数的类型。对于int类型而言，int在Java中占4字节，一共32位，也就是说，对于一个在Java中的int数据，做32次移位，那么这个int数据就完全变了，以左移为例，左移是补0，那么对于任意一个int类型数据，做32次移位，那么int数据变成32位全0的数据，Java不允许一次性移位左操作数的所有位，也就是右操作数不能大于32。于是回到上述的句子，其指的是右操作数的低5位，5位二进制所代表的最大值为2^5-1，为31，所以取右操作数的低5位，就是只看右操作数的二进制的低5位，其数值不会超过2^5次方，也就是int的32位。因此，移位操作符进行移位的实际次数，其实是右操作数2的次数。</p>
-<p>对于Java编程思想中的翻译，“只有数值右端的低5位才有用”，真是莫名其妙了。其英语原文为：Only the five low-order bits of the right-hand side will be used.看到英文原文，可就明白了这句话的意思，鉴于现在的英译中的书籍参差不齐，建议阅读的时候配一本英文版的电子书在手边以备不时之需。</p>
-<p>简而言之，移位操作符执行的次数，只取右操作数的低5位（其数值不会大于2^5=32，也就是移位次数不会超过32位，因为32位是int型的位数）作为移位的次数。</p>
-
+        
+          <a class="article-more-a" href="/2019/08/04/Java移位操作符/#more">more >></a>
+        
       
 
       
@@ -892,11 +864,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移位操作符</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移位操作符</a>
         		</li>
       		
 		</ul>
@@ -962,30 +934,9 @@
 <li>Integer实际是对象的引用，当new一个integer时，实际上是生成一个指针指向对象；而int则是直接存储数据值</li>
 <li>Integer的默认值是null，int的默认值是0</li>
 </ol>
-<p>延伸：<br>关于Integer和int的比较<br>1.由于Integer变量实际上是对一个Integer对象的引用，所以两个通过new生成的Integer变量永远是不相等的（因为new生成的是两个对象，其内存地址不同）。</p>
-<blockquote>
-<p>Integer i = new Integer(100);<br>Integer j = new Integer(100);<br>System.out.print(i == j); //false</p>
-</blockquote>
-<p>2.Integer变量和int变量比较时，只要两个变量的值是向等的，则结果为true（因为包装类Integer和基本数据类型int比较时，java会自动拆包装为int，然后进行比较，实际上就变为两个int变量的比较）</p>
-<blockquote>
-<p>Integer i = new Integer(100);<br>int j = 100;<br>System.out.print(i == j); //true</p>
-</blockquote>
-<p>3.非new生成的Integer变量和new Integer()生成的变量比较时，结果为false。（因为非new生成的Integer变量指向的是java常量池中的对象，而new Integer()生成的变量指向堆中新建的对象，两者在内存中的地址不同）</p>
-<blockquote>
-<p>Integer i = new Integer(100);<br>Integer j = 100;<br>System.out.print(i == j); //false</p>
-</blockquote>
-<p>4.对于两个非new生成的Integer对象，进行比较时，如果两个变量的值在区间-128到127之间，则比较结果为true，如果两个变量的值不在此区间，则比较结果为false</p>
-<blockquote>
-<p>Integer i = 100;<br>Integer j = 100;<br>System.out.print(i == j); //true</p>
-</blockquote>
-<blockquote>
-<p>Integer i = 128;<br>Integer j = 128;<br>System.out.print(i == j); //false</p>
-</blockquote>
-<p>对于第4条的原因：<br>java在编译Integer i = 100 ;时，会翻译成为Integer i = Integer.valueOf(100)；，而java API中对Integer类型的valueOf的<br>定义如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static Integer valueOf(int i)&#123;</span><br><span class="line">    assert IntegerCache.high &gt;= 127;</span><br><span class="line">    if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= &gt;IntegerCache.high)&#123;</span><br><span class="line">        return IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">    &#125;</span><br><span class="line">    return new Integer(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>java对于-128到127之间的数，会进行缓存，Integer i = 127时，会将127进行缓存，下次再写Integer j = 127时，就会直接从缓存中取，就不会new了</p>
-
+        
+          <a class="article-more-a" href="/2019/08/04/Integer和int的区别/#more">more >></a>
+        
       
 
       
@@ -1017,100 +968,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/04/Integer和int的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-负数的二进制表示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/负数的二进制表示/">负数的二进制表示</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/04/负数的二进制表示/" class="archive-article-date">
-  	<time datetime="2019-08-04T08:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>了解负数的二进制表示</p>
-<p>计算机中，负数以其正值的补码形式表示</p>
-<p>比如2的二进制为10，但int类型的数占用4字节（32位），就写为00000000 00000000 00000000 00000010</p>
-<p>求-2的二进制就要求出原码、补码、反码</p>
-<p>原码：将整数的绝对值大小转换为二进制，称为原码。</p>
-<blockquote>
-<p>00000000 00000000 00000000 00000010</p>
-</blockquote>
-<p>反码：将原码按位取反，所得为反码。（1变0，0变1）。</p>
-<blockquote>
-<p>11111111 11111111 11111111 11111101</p>
-</blockquote>
-<p>补码：反码加1为补码。</p>
-<blockquote>
-<p>11111111 11111111 11111111 11111110</p>
-</blockquote>
-<p>-2的二进制为11111111 11111111 11111111 11111110</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二进制</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/负数的二进制表示/">展开全文 >></a>
         </p>
       
 
@@ -1265,6 +1122,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
@@ -1274,14 +1139,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1301,15 +1158,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
               </li>
             
             <div class="clearfix"></div>
