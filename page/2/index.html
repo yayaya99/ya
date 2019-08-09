@@ -25,7 +25,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -57,7 +57,7 @@
 	        
 				<li><a href="/archives">归档</a></li>
 	        
-				<li><a href="/about">mail</a></li>
+				<li><a href="/notes">notes</a></li>
 	        
 			</ul>
 		</nav>
@@ -83,7 +83,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -124,7 +124,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -137,7 +137,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/about">mail</a></li>
+					<li style="width: 33.333333333333336%"><a href="/notes">notes</a></li>
 		        
 				</ul>
 			</nav>
@@ -178,8 +178,6 @@
 <p>2.有符号右移位（&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，如果被操作数的符号为正，则在二进制的高位补0；如果被操作数的符号为负，则在二进制的高位补1。</p>
 <p>3.无符号右移位（&gt;&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，无论被操作数的符号是正是负，都在二进制位的高位补0。</p>
         
-          <a class="article-more-a" href="/2019/08/04/Java移位操作符/#more">more >></a>
-        
       
 
       
@@ -200,7 +198,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		
 		</ul>
@@ -260,14 +258,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="内容转载于-https-www-cnblogs-com-guodongdidi-p-6953217-html"><a href="#内容转载于-https-www-cnblogs-com-guodongdidi-p-6953217-html" class="headerlink" title="内容转载于 https://www.cnblogs.com/guodongdidi/p/6953217.html"></a>内容转载于 <a href="https://www.cnblogs.com/guodongdidi/p/6953217.html" target="_blank" rel="noopener">https://www.cnblogs.com/guodongdidi/p/6953217.html</a></h4><ol>
+        <p>内容转载于 <a href="https://www.cnblogs.com/guodongdidi/p/6953217.html" target="_blank" rel="noopener">https://www.cnblogs.com/guodongdidi/p/6953217.html</a></p>
+<ol>
 <li>Integer是int的包装类，int则是java的一种基本数据类型</li>
 <li>Integer变量必需实例化后才能使用，而int变量不需要</li>
 <li>Integer实际是对象的引用，当new一个integer时，实际上是生成一个指针指向对象；而int则是直接存储数据值</li>
 <li>Integer的默认值是null，int的默认值是0</li>
 </ol>
-        
-          <a class="article-more-a" href="/2019/08/04/Integer和int的区别/#more">more >></a>
         
       
 
@@ -353,8 +350,19 @@
 <p>计算机中，负数以其正值的补码形式表示</p>
 <p>比如2的二进制为10，但int类型的数占用4字节（32位），就写为00000000 00000000 00000000 00000010</p>
 <p>求-2的二进制就要求出原码、补码、反码</p>
-        
-          <a class="article-more-a" href="/2019/08/04/负数的二进制表示/#more">more >></a>
+<p>原码：将整数的绝对值大小转换为二进制，称为原码。</p>
+<blockquote>
+<p>00000000 00000000 00000000 00000010</p>
+</blockquote>
+<p>反码：将原码按位取反，所得为反码。（1变0，0变1）。</p>
+<blockquote>
+<p>11111111 11111111 11111111 11111101</p>
+</blockquote>
+<p>补码：反码加1为补码。</p>
+<blockquote>
+<p>11111111 11111111 11111111 11111110</p>
+</blockquote>
+<p>-2的二进制为11111111 11111111 11111111 11111110</p>
         
       
 
@@ -434,8 +442,6 @@
       
         <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/08/04/Java短路与/#more">more >></a>
-        
       
 
       
@@ -513,8 +519,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
-        
-          <a class="article-more-a" href="/2019/08/04/Java编程思想第三章练习/#more">more >></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
+</blockquote>
         
       
 
@@ -532,7 +541,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		
 		</ul>
@@ -594,8 +603,6 @@
       
         <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
 <p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
-        
-          <a class="article-more-a" href="/2019/08/03/Java中对象的赋值/#more">more >></a>
         
       
 
@@ -677,7 +684,7 @@
 <p>JVM在初始化对象时就可以初始化成员变量。</p>
 <p>在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。<br>而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。</p>
 <p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
-
+        
       
 
       
@@ -761,8 +768,6 @@
 <pre><code>mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql</code></pre><p>2.单表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 &gt; 备份路径</p>
 <pre><code>mysqldump -uroot -proot mydatabase my_int &gt; c:/server/int.sql</code></pre><p>3.多表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 表名 .. &gt; 备份路径</p>
 <pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre>
-        
-          <a class="article-more-a" href="/2019/07/21/Mysql数据备份与还原/#more">more >></a>
         
       
 
@@ -850,8 +855,6 @@
         <h2 id="首先修改配置-config-yml"><a href="#首先修改配置-config-yml" class="headerlink" title="首先修改配置_config.yml"></a>首先修改配置_config.yml</h2><p> 将post_asset_folder: false改为post_asset_folder: true</p>
 <h2 id="然后安装一个图片插件"><a href="#然后安装一个图片插件" class="headerlink" title="然后安装一个图片插件"></a>然后安装一个图片插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/07/19/博客文章添加图片/#more">more >></a>
-        
       
 
       
@@ -925,7 +928,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="今天天气真好"><a href="#今天天气真好" class="headerlink" title="今天天气真好"></a>今天天气真好</h2><p> 好就好在好个锤子</p>
-
+        
       
 
       
@@ -1088,14 +1091,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">break</a>
               </li>
              
@@ -1104,15 +1099,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,15 +1115,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1136,19 +1127,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1160,7 +1143,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

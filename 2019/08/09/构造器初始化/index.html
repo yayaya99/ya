@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Java编程思想 | yayaya99</title>
+  <title>构造器初始化 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yayaya99">
-<meta property="og:url" content="http://yoursite.com/tags/Java编程思想/index.html">
+  <meta name="description" content="初始化顺序在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。123456789101112131415161718192021222324252627282930class Window&amp;#123;	Window(int marker)&amp;#123;		System.out.println(&amp;quot;Window">
+<meta name="keywords" content="Java,初始化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="构造器初始化">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/构造器初始化/index.html">
 <meta property="og:site_name" content="yayaya99">
+<meta property="og:description" content="初始化顺序在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。123456789101112131415161718192021222324252627282930class Window&amp;#123;	Window(int marker)&amp;#123;		System.out.println(&amp;quot;Window">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-09T06:47:32.326Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yayaya99">
+<meta name="twitter:title" content="构造器初始化">
+<meta name="twitter:description" content="初始化顺序在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。123456789101112131415161718192021222324252627282930class Window&amp;#123;	Window(int marker)&amp;#123;		System.out.println(&amp;quot;Window">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -152,36 +157,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-构造器初始化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/04/Java短路与/" class="archive-article-date">
-  	<time datetime="2019-08-04T04:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/04/Java短路与/">Java短路与</a>
+    <h1 class="article-title" itemprop="name">
+      构造器初始化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/09/构造器初始化/" class="archive-article-date">
+  	<time datetime="2019-08-09T00:24:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h2><h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a> 
+<p><strong><em>w3这个引用会被初始化两次：一次在调用构造器前，一次在调用期间（第一次引用的对象将被丢弃，并作为垃圾回收）</em></strong></p>
+<h2 id="静态数据的初始化"><a href="#静态数据的初始化" class="headerlink" title="静态数据的初始化"></a>静态数据的初始化</h2><p>1、无论创建多少个对象，静态数据都只占用一份存储区域。<br>2、static关键字不能应用于局部变量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">class Bowl&#123;</span><br><span class="line">	Bowl(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Bowl(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void f1(int marker) &#123;</span><br><span class="line">		System.out.println(&quot;f1(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Table&#123;</span><br><span class="line">	static Bowl bowl1 = new Bowl(1);</span><br><span class="line">	Table()&#123;</span><br><span class="line">		System.out.println(&quot;Table()&quot;);</span><br><span class="line">		bowl2.f1(1);</span><br><span class="line">	&#125;</span><br><span class="line">	void f2(int marker) &#123;</span><br><span class="line">		System.out.println(&quot;f2(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	static Bowl bowl2 = new Bowl(2);</span><br><span class="line">&#125;</span><br><span class="line">class Cupboard&#123;</span><br><span class="line">	Bowl bowl3 = new Bowl(3);</span><br><span class="line">	static Bowl bowl4 = new Bowl(4);</span><br><span class="line">	Cupboard()&#123;</span><br><span class="line">		System.out.println(&quot;Cupboard()&quot;);</span><br><span class="line">		bowl4.f1(2);</span><br><span class="line">	&#125;</span><br><span class="line">	void f3(int marker) &#123;</span><br><span class="line">		System.out.println(&quot;f3(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	static Bowl bowl5 = new Bowl(5);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;Creating new Cupboard() in main&quot;);</span><br><span class="line">		new Cupboard();</span><br><span class="line">		System.out.println(&quot;Creating new Cupboard() in main&quot;);</span><br><span class="line">		new Cupboard();</span><br><span class="line">		table.f2(1);</span><br><span class="line">		cupboard.f3(1);</span><br><span class="line">	&#125;</span><br><span class="line">	static Table table = new Table();</span><br><span class="line">	static Cupboard cupboard = new Cupboard();</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Bowl(1)</span><br><span class="line">Bowl(2)</span><br><span class="line">Table()</span><br><span class="line">f1(1)</span><br><span class="line">Bowl(4)</span><br><span class="line">Bowl(5)</span><br><span class="line">Bowl(3)</span><br><span class="line">Cupboard()</span><br><span class="line">f1(2)</span><br><span class="line">Creating new Cupboard() in main</span><br><span class="line">Bowl(3)</span><br><span class="line">Cupboard()</span><br><span class="line">f1(2)</span><br><span class="line">Creating new Cupboard() in main</span><br><span class="line">Bowl(3)</span><br><span class="line">Cupboard()</span><br><span class="line">f1(2)</span><br><span class="line">f2(1)</span><br><span class="line">f3(1)</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>初始化时静态对象会先初始化，而后是非静态对象</em></strong></p>
+<h2 id="总结对象的创建过程"><a href="#总结对象的创建过程" class="headerlink" title="总结对象的创建过程"></a>总结对象的创建过程</h2><p>1、即使没有显式地使用static关键字，构造器实际上也是静态方法。因此，当首次创建类型为Dog的对象时（构造器可以看成静态方法），或者Dog类的静态方法/静态域首次被访问时，Java解释器必须查找类路径，以定位Dog.class文件。<br>2、然后载入Dog.class，有关静态初始化的所有动作都会执行。因此，静态初始化只在Class对象首次加载的时候进行一次。<br>3、当用new Dog()创建对象的时候，首先将在堆上为Dog对象分配足够的存储空间。<br>4、这块存储空间会被清零，这就自动地将Dog对象中地所有基本类型数据设置成了默认值（对数字来说就是0，对布尔型和字符型也相同），而引用则被设置成了null。<br>5、执行所有出现于字段定义处地初始化动作。<br>6、执行构造器。</p>
+<h2 id="显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）"><a href="#显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）" class="headerlink" title="显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）"></a>显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Cup&#123;</span><br><span class="line">	Cup(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Cup(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void f(int marker) &#123;</span><br><span class="line">		System.out.println(&quot;f(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Cups&#123;</span><br><span class="line">	static Cup cup1;</span><br><span class="line">	static Cup cup2;</span><br><span class="line">	static &#123;</span><br><span class="line">		cup1 = new Cup(1);</span><br><span class="line">		cup2 = new Cup(2);</span><br><span class="line">	&#125;</span><br><span class="line">	Cups()&#123;</span><br><span class="line">		System.out.println(&quot;Cups()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;Inside main()&quot;);</span><br><span class="line">		Cups.cup1.f(99);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Inside main()</span><br><span class="line">Cup(1)</span><br><span class="line">Cup(2)</span><br><span class="line">f(99)</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,25 +231,112 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">初始化</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/09/构造器初始化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/09/this关键字/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">this关键字</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -233,9 +360,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

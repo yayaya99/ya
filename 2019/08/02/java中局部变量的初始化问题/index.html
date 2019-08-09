@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yayaya99">
 <meta property="og:description" content="Java中局部变量必须初始化但成员变量不必须初始化其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。 JVM在初始化对象时就可以初始化成员变量。 在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。 还有种情况为：定义的局部变量没有赋值，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T08:55:34.639Z">
+<meta property="og:updated_time" content="2019-08-09T06:48:35.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中局部变量的初始化问题">
 <meta name="twitter:description" content="Java中局部变量必须初始化但成员变量不必须初始化其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。 JVM在初始化对象时就可以初始化成员变量。 在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。 还有种情况为：定义的局部变量没有赋值，">
@@ -30,7 +30,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -62,7 +62,7 @@
 	        
 				<li><a href="/archives">归档</a></li>
 	        
-				<li><a href="/about">mail</a></li>
+				<li><a href="/notes">notes</a></li>
 	        
 			</ul>
 		</nav>
@@ -88,7 +88,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -129,7 +129,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -142,7 +142,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/about">mail</a></li>
+					<li style="width: 33.333333333333336%"><a href="/notes">notes</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,6 +181,7 @@
 <p>JVM在初始化对象时就可以初始化成员变量。</p>
 <p>在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。<br>而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。</p>
 <p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
+<a id="more"></a> 
 
       
 
@@ -196,6 +197,11 @@
                 <span class="tooltip-inner">
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
                     
                     
                   </div>
@@ -439,14 +445,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">break</a>
               </li>
              
@@ -455,15 +453,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -471,15 +469,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,19 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,7 +497,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

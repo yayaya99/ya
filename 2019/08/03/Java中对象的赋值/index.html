@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yayaya99">
 <meta property="og:description" content="Java中对象赋值出现的问题在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-08T04:03:26.112Z">
+<meta property="og:updated_time" content="2019-08-09T06:49:43.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中对象的赋值">
 <meta name="twitter:description" content="Java中对象赋值出现的问题在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。">
@@ -30,7 +30,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -62,7 +62,7 @@
 	        
 				<li><a href="/archives">归档</a></li>
 	        
-				<li><a href="/about">mail</a></li>
+				<li><a href="/notes">notes</a></li>
 	        
 			</ul>
 		</nav>
@@ -88,7 +88,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -129,7 +129,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -142,7 +142,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/about">mail</a></li>
+					<li style="width: 33.333333333333336%"><a href="/notes">notes</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,12 +181,8 @@
 <p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">1: t1.level: 9,t2.level: 47</span><br><span class="line">2: t1.level: 47,t2.level: 47</span><br><span class="line">3: t1.level: 27,t2.level: 27</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
 
-
-<blockquote>
-<p>运行及结果：<br>1: t1.level: 9,t2.level: 47<br>2: t1.level: 47,t2.level: 47<br>3: t1.level: 27,t2.level: 27</p>
-</blockquote>
 <p>每个Tank类对象的level域都赋予了一个不同的值，然后，将t2赋给t1。<br>我们可能会期望t1和t2总是相互独立的。<br>但由于赋值操作的是一个对象的引用，t1和t2包含的引用相同,所以修改t1的同时也改变了t2。<br>这种特殊现象称为”别名现象“。</p>
 <blockquote>
 <p>避免方式：<br>t1.level = t2.level;</p>
@@ -213,6 +209,11 @@
                 <span class="tooltip-inner">
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
                     
                     
                   </div>
@@ -456,14 +457,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">break</a>
               </li>
              
@@ -472,15 +465,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -488,15 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -504,19 +493,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,7 +509,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

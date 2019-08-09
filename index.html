@@ -25,7 +25,7 @@
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -57,7 +57,7 @@
 	        
 				<li><a href="/archives">归档</a></li>
 	        
-				<li><a href="/about">mail</a></li>
+				<li><a href="/notes">notes</a></li>
 	        
 			</ul>
 		</nav>
@@ -83,7 +83,7 @@
 		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 			</div>
 		</nav>
@@ -124,7 +124,7 @@
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/qq" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2576649106&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 				</div>
 			</nav>
@@ -137,7 +137,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/about">mail</a></li>
+					<li style="width: 33.333333333333336%"><a href="/notes">notes</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,19 +154,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java初始化顺序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-构造器初始化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/09/Java初始化顺序/">Java初始化顺序</a>
+      <a class="article-title" href="/2019/08/09/构造器初始化/">构造器初始化</a>
     </h1>
   
 
         
-        <a href="/2019/08/09/Java初始化顺序/" class="archive-article-date">
+        <a href="/2019/08/09/构造器初始化/" class="archive-article-date">
   	<time datetime="2019-08-09T00:24:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
@@ -174,10 +174,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>w3这个引用会被初始化两次：一次在调用构造器前，一次在调用期间（第一次引用的对象将被丢弃，并作为垃圾回收）</em></strong></p>
-
+        <h2 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h2><h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+        
       
 
       
@@ -204,7 +202,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/09/Java初始化顺序/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/09/构造器初始化/">展开全文 >></a>
         </p>
       
 
@@ -257,10 +255,7 @@
         <h2 id="圣经第五章5-4中-这一段代码看着有点懵逼，记下来"><a href="#圣经第五章5-4中-这一段代码看着有点懵逼，记下来" class="headerlink" title="圣经第五章5.4中,这一段代码看着有点懵逼，记下来"></a>圣经第五章5.4中,这一段代码看着有点懵逼，记下来</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">	void eat(Apple apple) &#123;</span><br><span class="line">		Apple peeled =apple.getPeeled();</span><br><span class="line">		System.out.println(&quot;Yummy&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Peeler&#123;</span><br><span class="line">	static Apple peel(Apple apple) &#123;</span><br><span class="line">		return apple;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Apple&#123;</span><br><span class="line">	Apple getPeeled() &#123;</span><br><span class="line">		return Peeler.peel(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Leaf &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new Person().eat(new Apple());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong><em>Apple需要调用Peeler.peel（）方法，它是一个外部的工具方法，将执行由于某种原因而必须放在Apple外部的操作。为了将自身传递给外部方法，Apple必须使用this关键字。</em></strong></p>
-<h2 id="在构造器中调用构造器"><a href="#在构造器中调用构造器" class="headerlink" title="在构造器中调用构造器"></a>在构造器中调用构造器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class Flower&#123;</span><br><span class="line">	int petalCount = 0;</span><br><span class="line">	String s=&quot;initial value&quot;;</span><br><span class="line">	Flower(int petals)&#123;</span><br><span class="line">		petalCount = petals;</span><br><span class="line">		System.out.println(&quot;Constructor w/ int arg only,petalCount= &quot;+petalCount);</span><br><span class="line">	&#125;</span><br><span class="line">	Flower(String ss)&#123;</span><br><span class="line">		System.out.println(&quot;Constructor w/ String arg only,s= &quot;+ss);</span><br><span class="line">		s=ss;</span><br><span class="line">	&#125;</span><br><span class="line">	Flower(String s,int petals)&#123;</span><br><span class="line">		this(petals);</span><br><span class="line">		//this(s); //Can&apos;t call two!</span><br><span class="line">		this.s=s;</span><br><span class="line">		System.out.println(&quot;String &amp; int args&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Flower()&#123;</span><br><span class="line">		this(&quot;hi&quot;,47);</span><br><span class="line">		System.out.println(&quot;default constructor (no args)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void printPetalCount() &#123;</span><br><span class="line">		//this(11); //Not inside non-constructor!</span><br><span class="line">		System.out.println(&quot;petalCount = &quot;+petalCount+&quot; s= &quot;+s);</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Flower x = new Flower();</span><br><span class="line">		x.printPetalCount();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Constructor w/ int arg only,petalCount= 47</span><br><span class="line">String &amp; int args</span><br><span class="line">default constructor (no args)</span><br><span class="line">petalCount = 47 s= hi</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>this调用构造器不能调用两个。</em></strong><br><strong><em>构造器调用必须置于起始值。</em></strong><br><strong><em>调用构造器只能在构造器中调用</em></strong></p>
-
+        
       
 
       
@@ -339,8 +334,6 @@
       
         <h2 id="示范重载构造器和重载的方法"><a href="#示范重载构造器和重载的方法" class="headerlink" title="示范重载构造器和重载的方法"></a>示范重载构造器和重载的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class Tree&#123;</span><br><span class="line">	int height;</span><br><span class="line">	Tree()&#123;</span><br><span class="line">		System.out.println(&quot;Planting a seedling&quot;);</span><br><span class="line">		height= 0;</span><br><span class="line">	&#125;</span><br><span class="line">	Tree(int initialHeight)&#123;</span><br><span class="line">		height = initialHeight;</span><br><span class="line">		System.out.println(&quot;Creating new Tree that is &quot;+height+&quot; feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info() &#123;</span><br><span class="line">		System.out.println(&quot;Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info(String s) &#123;</span><br><span class="line">		System.out.println(s+&quot;:Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Overloading &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=0;i&lt;5;i++) &#123;</span><br><span class="line">			Tree t = new Tree(i);</span><br><span class="line">			t.info();</span><br><span class="line">			t.info(&quot;overloaded method&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		new Tree();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;/*Output:</span><br><span class="line">Creating new Tree that is 0 feet tall</span><br><span class="line">Tree is 0feet tall</span><br><span class="line">overloaded method:Tree is 0feet tall</span><br><span class="line">Creating new Tree that is 1 feet tall</span><br><span class="line">Tree is 1feet tall</span><br><span class="line">overloaded method:Tree is 1feet tall</span><br><span class="line">Creating new Tree that is 2 feet tall</span><br><span class="line">Tree is 2feet tall</span><br><span class="line">overloaded method:Tree is 2feet tall</span><br><span class="line">Creating new Tree that is 3 feet tall</span><br><span class="line">Tree is 3feet tall</span><br><span class="line">overloaded method:Tree is 3feet tall</span><br><span class="line">Creating new Tree that is 4 feet tall</span><br><span class="line">Tree is 4feet tall</span><br><span class="line">overloaded method:Tree is 4feet tall</span><br><span class="line">Planting a seedling</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/08/08/Java方法重载/#more">more >></a>
-        
       
 
       
@@ -357,7 +350,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -421,9 +414,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Java编程思想第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Java编程思想第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/07/Java标签/#more">more >></a>
+        <h2 id="Java标签-博文内容剽窃于Thinking-in-Java第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Thinking-in-Java第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Thinking in Java第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Thinking in Java第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
 
@@ -504,8 +495,6 @@
         <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h3><p>写一个程序，打印从1到100的值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=100;i++) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/08/07/Java编程思想第四章练习/#more">more >></a>
-        
       
 
       
@@ -522,7 +511,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		
 		</ul>
@@ -584,8 +573,6 @@
       
         <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
 <h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
-        
-          <a class="article-more-a" href="/2019/08/07/Java中break和continue的区别/#more">more >></a>
         
       
 
@@ -668,8 +655,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/07/Foreach语句/#more">more >></a>
+
+<blockquote>
+<p>运行及结果：<br>0.72711575<br>0.39982635<br>0.5309454<br>0.0534122<br>0.16020656<br>0.57799757<br>0.18847865<br>0.4170137<br>0.51660204<br>0.73734957</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        for(char c:&quot;An African Swallow&quot;.toCharArray())</span><br><span class="line">        	System.out.print(c+&quot; &quot;);	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果：<br>A n   A f r i c a n   S w a l l o w </p>
+</blockquote>
         
       
 
@@ -748,8 +742,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"><a href="#在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？" class="headerlink" title="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"></a>在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;(int)above: &quot;+(int)above);</span><br><span class="line">		System.out.println(&quot;(int)below: &quot;+(int)below);</span><br><span class="line">		System.out.println(&quot;(int)fabove: &quot;+(int)fabove);</span><br><span class="line">		System.out.println(&quot;(int)fbelow: &quot;+(int)fbelow);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/05/截尾和舍入/#more">more >></a>
+
+<blockquote>
+<p>运行及结果：<br>(int)above: 0<br>(int)below: 0<br>(int)fabove: 0<br>(int)fbelow: 0</p>
+</blockquote>
+<p><strong>运行结果发现，在将float和double转型为整数值时，总是对该数字执行截尾。如果想要得到舍入的结果，就需要使用java.lang.Math中的round()方法。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;Math.round(above): &quot;+Math.round(above));</span><br><span class="line">		System.out.println(&quot;Math.round(below): &quot;+Math.round(below));</span><br><span class="line">		System.out.println(&quot;Math.round(fabove): &quot;+Math.round(fabove));</span><br><span class="line">		System.out.println(&quot;Math.round(fbelow): &quot;+Math.round(fbelow));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行及结果:<br>Math.round(above): 1<br>Math.round(below): 0<br>Math.round(fabove): 1<br>Math.round(fbelow): 0</p>
+</blockquote>
+<p><strong>由于round()是java.lang的一部分，因此在使用它时不需要额外地导入。</strong></p>
         
       
 
@@ -767,7 +770,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -832,8 +835,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class BitManipulation&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Random rand = new Random(47);</span><br><span class="line">		int i = rand.nextInt();</span><br><span class="line">		int j = rand.nextInt();</span><br><span class="line">		printBinaryInt(&quot;-1&quot;,-1);</span><br><span class="line">		printBinaryInt(&quot;+1&quot;,+1);</span><br><span class="line">		int maxpos = 2147483647;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxpos);</span><br><span class="line">		int maxneg = -2147483648;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxneg);</span><br><span class="line">		printBinaryInt(&quot;i&quot;,i);</span><br><span class="line">		printBinaryInt(&quot;~i&quot;,~i);</span><br><span class="line">		printBinaryInt(&quot;-i&quot;,-i);</span><br><span class="line">		printBinaryInt(&quot;j&quot;,j);</span><br><span class="line">		printBinaryInt(&quot;i&amp;j&quot;,i&amp;j);</span><br><span class="line">		printBinaryInt(&quot;i|j&quot;,i|j);</span><br><span class="line">		printBinaryInt(&quot;i^j&quot;,i^j); //不同为1，相同为0</span><br><span class="line">		printBinaryInt(&quot;i&lt;&lt;5&quot;,i&lt;&lt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;5&quot;,i&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;5&quot;,(~i)&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;&gt;5&quot;,i&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;&gt;5&quot;,(~i)&gt;&gt;&gt;5);</span><br><span class="line">		</span><br><span class="line">		long l = rand.nextLong();</span><br><span class="line">		long m = rand.nextLong();</span><br><span class="line">		printBinaryLong(&quot;-1L&quot;,-1L);</span><br><span class="line">		printBinaryLong(&quot;+1L&quot;,+1L);</span><br><span class="line">		long ll = 9223372036854775807L;</span><br><span class="line">		printBinaryLong(&quot;maxpos&quot;,ll);</span><br><span class="line">		long lln = -9223372036854775808L;</span><br><span class="line">		printBinaryLong(&quot;maxneg&quot;,lln);</span><br><span class="line">		printBinaryLong(&quot;l&quot;,l);</span><br><span class="line">		printBinaryLong(&quot;~l&quot;,~l);</span><br><span class="line">		printBinaryLong(&quot;-l&quot;,-l);</span><br><span class="line">		printBinaryLong(&quot;m&quot;,m);</span><br><span class="line">		printBinaryLong(&quot;l&amp;m&quot;,l&amp;m);</span><br><span class="line">		printBinaryLong(&quot;l|m&quot;,l|m);</span><br><span class="line">		printBinaryLong(&quot;l^m&quot;,l^m);</span><br><span class="line">		printBinaryLong(&quot;l&lt;&lt;5&quot;,l&lt;&lt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;5&quot;,l&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;5&quot;,(~l)&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;&gt;5&quot;,l&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;&gt;5&quot;,(~l)&gt;&gt;&gt;5);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	static void printBinaryInt(String s, int i) &#123;</span><br><span class="line">		System.out.println(s+&quot;,int: &quot;+i+&quot;.binary:\n &quot;+Integer.toBinaryString(i));</span><br><span class="line">	&#125;</span><br><span class="line">	static void printBinaryLong(String s, long l) &#123;</span><br><span class="line">		System.out.println(s+&quot;,long: &quot;+l+&quot;.binary:\n &quot;+Long.toBinaryString(l));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/05/涉及按位操作的所有操作符（求二进制）/#more">more >></a>
         
       
 
@@ -920,10 +921,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="内容转载于-https-blog-csdn-net-xy2204-article-details-50522075"><a href="#内容转载于-https-blog-csdn-net-xy2204-article-details-50522075" class="headerlink" title="内容转载于 https://blog.csdn.net/xy2204/article/details/50522075"></a>内容转载于 <a href="https://blog.csdn.net/xy2204/article/details/50522075" target="_blank" rel="noopener">https://blog.csdn.net/xy2204/article/details/50522075</a></h3><p>如果你是搞网络的，我觉得你一定要记住以下几种二进制数的转换值。你是一个网络工程 师，当看到一串二进制数时，你不要告诉我你会拿出笔纸或掰手指算半天才知道它转化成十进制的数值。要想快，那就记下下面几种常见的二进制–十进制转换：</p>
-<p>以8位 来演示:</p>
-<p>1.第一种:</p>
-        
-          <a class="article-more-a" href="/2019/08/05/二进制转十进制快速方法/#more">more >></a>
         
       
 
@@ -1095,14 +1092,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">break</a>
               </li>
              
@@ -1111,15 +1100,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1127,15 +1116,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,19 +1128,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1167,7 +1144,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
