@@ -154,6 +154,169 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java初始化顺序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/Java初始化顺序/">Java初始化顺序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/09/Java初始化顺序/" class="archive-article-date">
+  	<time datetime="2019-08-09T00:24:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>w3这个引用会被初始化两次：一次在调用构造器前，一次在调用期间（第一次引用的对象将被丢弃，并作为垃圾回收）</em></strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">初始化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/09/Java初始化顺序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-this关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/09/this关键字/">this关键字</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/09/this关键字/" class="archive-article-date">
+  	<time datetime="2019-08-09T00:24:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="圣经第五章5-4中-这一段代码看着有点懵逼，记下来"><a href="#圣经第五章5-4中-这一段代码看着有点懵逼，记下来" class="headerlink" title="圣经第五章5.4中,这一段代码看着有点懵逼，记下来"></a>圣经第五章5.4中,这一段代码看着有点懵逼，记下来</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">	void eat(Apple apple) &#123;</span><br><span class="line">		Apple peeled =apple.getPeeled();</span><br><span class="line">		System.out.println(&quot;Yummy&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Peeler&#123;</span><br><span class="line">	static Apple peel(Apple apple) &#123;</span><br><span class="line">		return apple;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Apple&#123;</span><br><span class="line">	Apple getPeeled() &#123;</span><br><span class="line">		return Peeler.peel(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Leaf &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new Person().eat(new Apple());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>Apple需要调用Peeler.peel（）方法，它是一个外部的工具方法，将执行由于某种原因而必须放在Apple外部的操作。为了将自身传递给外部方法，Apple必须使用this关键字。</em></strong></p>
+<h2 id="在构造器中调用构造器"><a href="#在构造器中调用构造器" class="headerlink" title="在构造器中调用构造器"></a>在构造器中调用构造器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class Flower&#123;</span><br><span class="line">	int petalCount = 0;</span><br><span class="line">	String s=&quot;initial value&quot;;</span><br><span class="line">	Flower(int petals)&#123;</span><br><span class="line">		petalCount = petals;</span><br><span class="line">		System.out.println(&quot;Constructor w/ int arg only,petalCount= &quot;+petalCount);</span><br><span class="line">	&#125;</span><br><span class="line">	Flower(String ss)&#123;</span><br><span class="line">		System.out.println(&quot;Constructor w/ String arg only,s= &quot;+ss);</span><br><span class="line">		s=ss;</span><br><span class="line">	&#125;</span><br><span class="line">	Flower(String s,int petals)&#123;</span><br><span class="line">		this(petals);</span><br><span class="line">		//this(s); //Can&apos;t call two!</span><br><span class="line">		this.s=s;</span><br><span class="line">		System.out.println(&quot;String &amp; int args&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Flower()&#123;</span><br><span class="line">		this(&quot;hi&quot;,47);</span><br><span class="line">		System.out.println(&quot;default constructor (no args)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void printPetalCount() &#123;</span><br><span class="line">		//this(11); //Not inside non-constructor!</span><br><span class="line">		System.out.println(&quot;petalCount = &quot;+petalCount+&quot; s= &quot;+s);</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Flower x = new Flower();</span><br><span class="line">		x.printPetalCount();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Constructor w/ int arg only,petalCount= 47</span><br><span class="line">String &amp; int args</span><br><span class="line">default constructor (no args)</span><br><span class="line">petalCount = 47 s= hi</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>this调用构造器不能调用两个。</em></strong><br><strong><em>构造器调用必须置于起始值。</em></strong><br><strong><em>调用构造器只能在构造器中调用</em></strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">this</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/09/this关键字/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java方法重载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -194,11 +357,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">重载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">重载</a>
         		</li>
       		
 		</ul>
@@ -822,181 +985,6 @@
 
 
   
-    <article id="post-Java移位操作符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Java移位操作符/"> Java移位操作符</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/04/Java移位操作符/" class="archive-article-date">
-  	<time datetime="2019-08-04T10:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："><a href="#移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：" class="headerlink" title="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："></a>移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：</h3><p>1.左移位（&lt;&lt;）：将操作符左侧的操作数向左移动操作符右侧指定的位数。移动的规则是在二进制的低位补0。</p>
-<p>2.有符号右移位（&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，如果被操作数的符号为正，则在二进制的高位补0；如果被操作数的符号为负，则在二进制的高位补1。</p>
-<p>3.无符号右移位（&gt;&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，无论被操作数的符号是正是负，都在二进制位的高位补0。</p>
-        
-          <a class="article-more-a" href="/2019/08/04/Java移位操作符/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程思想</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移位操作符</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/Java移位操作符/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Integer和int的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Integer和int的区别/">Integer和int的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/04/Integer和int的区别/" class="archive-article-date">
-  	<time datetime="2019-08-04T08:46:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="内容转载于-https-www-cnblogs-com-guodongdidi-p-6953217-html"><a href="#内容转载于-https-www-cnblogs-com-guodongdidi-p-6953217-html" class="headerlink" title="内容转载于 https://www.cnblogs.com/guodongdidi/p/6953217.html"></a>内容转载于 <a href="https://www.cnblogs.com/guodongdidi/p/6953217.html" target="_blank" rel="noopener">https://www.cnblogs.com/guodongdidi/p/6953217.html</a></h4><ol>
-<li>Integer是int的包装类，int则是java的一种基本数据类型</li>
-<li>Integer变量必需实例化后才能使用，而int变量不需要</li>
-<li>Integer实际是对象的引用，当new一个integer时，实际上是生成一个指针指向对象；而int则是直接存储数据值</li>
-<li>Integer的默认值是null，int的默认值是0</li>
-</ol>
-        
-          <a class="article-more-a" href="/2019/08/04/Integer和int的区别/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Integer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">int</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/Integer和int的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1019,6 +1007,7 @@
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -1106,27 +1095,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">break</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">continue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1138,11 +1119,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">局部变量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">test2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1151,22 +1164,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据类型转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">test2</a>
               </li>
              
               <li class="article-tag-list-item">
