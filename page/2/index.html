@@ -170,6 +170,11 @@
   	<time datetime="2019-08-05T02:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -177,6 +182,15 @@
         <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class BitManipulation&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Random rand = new Random(47);</span><br><span class="line">		int i = rand.nextInt();</span><br><span class="line">		int j = rand.nextInt();</span><br><span class="line">		printBinaryInt(&quot;-1&quot;,-1);</span><br><span class="line">		printBinaryInt(&quot;+1&quot;,+1);</span><br><span class="line">		int maxpos = 2147483647;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxpos);</span><br><span class="line">		int maxneg = -2147483648;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxneg);</span><br><span class="line">		printBinaryInt(&quot;i&quot;,i);</span><br><span class="line">		printBinaryInt(&quot;~i&quot;,~i);</span><br><span class="line">		printBinaryInt(&quot;-i&quot;,-i);</span><br><span class="line">		printBinaryInt(&quot;j&quot;,j);</span><br><span class="line">		printBinaryInt(&quot;i&amp;j&quot;,i&amp;j);</span><br><span class="line">		printBinaryInt(&quot;i|j&quot;,i|j);</span><br><span class="line">		printBinaryInt(&quot;i^j&quot;,i^j); //不同为1，相同为0</span><br><span class="line">		printBinaryInt(&quot;i&lt;&lt;5&quot;,i&lt;&lt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;5&quot;,i&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;5&quot;,(~i)&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;&gt;5&quot;,i&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;&gt;5&quot;,(~i)&gt;&gt;&gt;5);</span><br><span class="line">		</span><br><span class="line">		long l = rand.nextLong();</span><br><span class="line">		long m = rand.nextLong();</span><br><span class="line">		printBinaryLong(&quot;-1L&quot;,-1L);</span><br><span class="line">		printBinaryLong(&quot;+1L&quot;,+1L);</span><br><span class="line">		long ll = 9223372036854775807L;</span><br><span class="line">		printBinaryLong(&quot;maxpos&quot;,ll);</span><br><span class="line">		long lln = -9223372036854775808L;</span><br><span class="line">		printBinaryLong(&quot;maxneg&quot;,lln);</span><br><span class="line">		printBinaryLong(&quot;l&quot;,l);</span><br><span class="line">		printBinaryLong(&quot;~l&quot;,~l);</span><br><span class="line">		printBinaryLong(&quot;-l&quot;,-l);</span><br><span class="line">		printBinaryLong(&quot;m&quot;,m);</span><br><span class="line">		printBinaryLong(&quot;l&amp;m&quot;,l&amp;m);</span><br><span class="line">		printBinaryLong(&quot;l|m&quot;,l|m);</span><br><span class="line">		printBinaryLong(&quot;l^m&quot;,l^m);</span><br><span class="line">		printBinaryLong(&quot;l&lt;&lt;5&quot;,l&lt;&lt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;5&quot;,l&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;5&quot;,(~l)&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;&gt;5&quot;,l&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;&gt;5&quot;,(~l)&gt;&gt;&gt;5);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	static void printBinaryInt(String s, int i) &#123;</span><br><span class="line">		System.out.println(s+&quot;,int: &quot;+i+&quot;.binary:\n &quot;+Integer.toBinaryString(i));</span><br><span class="line">	&#125;</span><br><span class="line">	static void printBinaryLong(String s, long l) &#123;</span><br><span class="line">		System.out.println(s+&quot;,long: &quot;+l+&quot;.binary:\n &quot;+Long.toBinaryString(l));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -256,6 +270,11 @@
   	<time datetime="2019-08-05T02:00:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -263,6 +282,15 @@
         <h3 id="内容转载于-https-blog-csdn-net-xy2204-article-details-50522075"><a href="#内容转载于-https-blog-csdn-net-xy2204-article-details-50522075" class="headerlink" title="内容转载于 https://blog.csdn.net/xy2204/article/details/50522075"></a>内容转载于 <a href="https://blog.csdn.net/xy2204/article/details/50522075" target="_blank" rel="noopener">https://blog.csdn.net/xy2204/article/details/50522075</a></h3><p>如果你是搞网络的，我觉得你一定要记住以下几种二进制数的转换值。你是一个网络工程 师，当看到一串二进制数时，你不要告诉我你会拿出笔纸或掰手指算半天才知道它转化成十进制的数值。要想快，那就记下下面几种常见的二进制–十进制转换：</p>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -338,6 +366,11 @@
   	<time datetime="2019-08-04T10:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -347,6 +380,15 @@
 <p>3.无符号右移位（&gt;&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，无论被操作数的符号是正是负，都在二进制位的高位补0。</p>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -422,6 +464,11 @@
   	<time datetime="2019-08-04T08:46:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -435,6 +482,15 @@
 </ol>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -510,6 +566,11 @@
   	<time datetime="2019-08-04T08:45:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -533,6 +594,15 @@
 <p>-2的二进制为11111111 11111111 11111111 11111110</p>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -604,6 +674,11 @@
   	<time datetime="2019-08-04T04:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -611,6 +686,15 @@
         <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -682,6 +766,11 @@
   	<time datetime="2019-08-04T01:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -694,6 +783,15 @@
 </blockquote>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -765,6 +863,11 @@
   	<time datetime="2019-08-03T09:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -773,6 +876,15 @@
 <p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -844,6 +956,11 @@
   	<time datetime="2019-08-02T08:16:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -854,6 +971,15 @@
 <p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -925,6 +1051,11 @@
   	<time datetime="2019-07-21T05:22:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
 </a>
         
+		
+		
+		
+		
+		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -938,6 +1069,15 @@
 <pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre>
         
       
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
 
       
     </div>
@@ -1023,10 +1163,29 @@
   </div>
   
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 <span id="busuanzi_container_site_pv""> 本站总访问量<span id="busuanzi_value_site_pv"></span>次 | 
-<span id="busuanzi_container_site_uv""> 本站总访客数<span id="busuanzi_value_site_uv"></span>人
+<span id="busuanzi_container_site_uv""> 本站总访客数<span id="busuanzi_value_site_uv"></span>人 |
+
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+	var now = new Date(); 
+	function createtime() { 
+		var grt= new Date("07/18/2019 20:00:00");//此处修改你的建站时间或者网站上线时间 
+		now.setTime(now.getTime()+250); 
+		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+		mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+		snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+		document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+	setInterval("createtime()",250);
+</script>
 
 
 
@@ -1115,15 +1274,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Integer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">break</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">continue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">赋值</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1139,11 +1306,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1159,11 +1326,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">break</a>
+                <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">continue</a>
+                <a href="javascript:void(0)" class="js-tag color4">十进制</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1175,19 +1342,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">二进制</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">按位操作符</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
             
             <div class="clearfix"></div>
