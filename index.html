@@ -154,6 +154,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-编程思想第七章练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/04/编程思想第七章练习/">编程思想第七章练习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/04/编程思想第七章练习/" class="archive-article-date">
+  	<time datetime="2019-09-04T09:06:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+        
+		
+		
+		
+		
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>编程思想第七章练习</p>
+        
+      
+
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/04/编程思想第七章练习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java惰性初始化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -179,13 +273,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在书中第七章中提到了引用的初始化，编译器并不是简单地为每一个引用都创建默认对象，减少不必要的负担</p>
-<p>1、在定义对象的地方。这意味着它们总是能够在构造器被调用之前被初始化。<br>2、在类的构造器中。<br>3、就在正要使用这些对象之前，这种方式称为惰性初始化。在生成对象不值得及不必每次都生成对象的情况下，这种方式可以减少额外的负担。<br>4、使用实例初始化。</p>
-<p>惰性初始化的目的是延迟对象的初始化，直到程序真正使用它，同时确保它只初始化一次。</p>
-<p>/*<br>惰性初始化：当需要一个实例的时候才初始化一个对象。<br>新建两个简单的类，第二个类中包含第一个类的一个引用，当<br>需要第一个类的对象是调用Lazy()方法即可获得第一个类的对象。<br>*/</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class First&#123;</span><br><span class="line">	 First()&#123;</span><br><span class="line">		 System.out.print(&quot;First()&quot;);</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Lazy&#123;</span><br><span class="line">	 First f;</span><br><span class="line">	 public void print()&#123;</span><br><span class="line">		 if(f==null)</span><br><span class="line">			 f = new First();</span><br><span class="line">	 &#125;</span><br><span class="line">	 public static void main(String[] args)&#123;</span><br><span class="line">		 Lazy z = new Lazy();</span><br><span class="line">		 z.print();</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">First()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
-
-
+        <p>Java惰性初始化</p>
+        
       
 
 
@@ -278,8 +367,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h2><p>创建一个类,它包含一个未初始化的String引用.验证该引用被Java初始化成null</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Test&#123;</span><br><span class="line">	public String string;</span><br><span class="line">&#125;</span><br><span class="line">public class E1 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Test test = new Test();</span><br><span class="line">		System.out.println((test.string == null));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>编程思想第五章练习</p>
         
       
 
@@ -373,10 +461,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int[] a1 = &#123;1,2,3,4,5&#125;;</span><br><span class="line">		int[] a2;</span><br><span class="line">		a2=a1;</span><br><span class="line">		for(int i =0;i&lt;a2.length;i++)</span><br><span class="line">			a2[i]=a2[i]+1;</span><br><span class="line">		for(int i =0;i&lt;a2.length;i++)</span><br><span class="line">			System.out.print(a1[i]+&quot; &quot;);</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		for(int i =0;i&lt;a2.length;i++)</span><br><span class="line">			System.out.print(a2[i]+&quot; &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">2 3 4 5 6 </span><br><span class="line">2 3 4 5 6 </span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
-
-<p>a1赋值给了a2，a2赋值后，发现a1数组改变，输出a1和a2后发现相等</p>
-
+        <h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2>
+        
       
 
 
@@ -465,9 +551,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一个java文件里可以存在多个class，但是只能有一个public class</p>
-<p>你可以创建一个String对象数组，将其传递给另一个main（）方法，以提供参数，用来替换传递给该main（）方法的命令行参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class DynamicArray&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Other.main(new String[] &#123;&quot;fiddle&quot;,&quot;de&quot;,&quot;dum&quot;&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Other&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(String s:args) &#123;</span><br><span class="line">			System.out.println(s+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">fiddle </span><br><span class="line">de </span><br><span class="line">dum </span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+        <p>Java主函数的调用</p>
+        
       
 
 
@@ -556,7 +641,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h2><h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+        <p>构造器初始化</p>
         
       
 
@@ -650,9 +735,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="圣经第五章5-4中-这一段代码看着有点懵逼，记下来"><a href="#圣经第五章5-4中-这一段代码看着有点懵逼，记下来" class="headerlink" title="圣经第五章5.4中,这一段代码看着有点懵逼，记下来"></a>圣经第五章5.4中,这一段代码看着有点懵逼，记下来</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">	void eat(Apple apple) &#123;</span><br><span class="line">		Apple peeled =apple.getPeeled();</span><br><span class="line">		System.out.println(&quot;Yummy&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Peeler&#123;</span><br><span class="line">	static Apple peel(Apple apple) &#123;</span><br><span class="line">		return apple;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Apple&#123;</span><br><span class="line">	Apple getPeeled() &#123;</span><br><span class="line">		return Peeler.peel(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Leaf &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new Person().eat(new Apple());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>Apple需要调用Peeler.peel（）方法，它是一个外部的工具方法，将执行由于某种原因而必须放在Apple外部的操作。为了将自身传递给外部方法，Apple必须使用this关键字。</em></strong></p>
+        <h2 id="编程思想第五章5-4中-这一段代码看着有点懵逼，记下来"><a href="#编程思想第五章5-4中-这一段代码看着有点懵逼，记下来" class="headerlink" title="编程思想第五章5.4中,这一段代码看着有点懵逼，记下来"></a>编程思想第五章5.4中,这一段代码看着有点懵逼，记下来</h2>
         
       
 
@@ -746,7 +829,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="示范重载构造器和重载的方法"><a href="#示范重载构造器和重载的方法" class="headerlink" title="示范重载构造器和重载的方法"></a>示范重载构造器和重载的方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class Tree&#123;</span><br><span class="line">	int height;</span><br><span class="line">	Tree()&#123;</span><br><span class="line">		System.out.println(&quot;Planting a seedling&quot;);</span><br><span class="line">		height= 0;</span><br><span class="line">	&#125;</span><br><span class="line">	Tree(int initialHeight)&#123;</span><br><span class="line">		height = initialHeight;</span><br><span class="line">		System.out.println(&quot;Creating new Tree that is &quot;+height+&quot; feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info() &#123;</span><br><span class="line">		System.out.println(&quot;Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	void info(String s) &#123;</span><br><span class="line">		System.out.println(s+&quot;:Tree is &quot;+height+&quot;feet tall&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Overloading &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=0;i&lt;5;i++) &#123;</span><br><span class="line">			Tree t = new Tree(i);</span><br><span class="line">			t.info();</span><br><span class="line">			t.info(&quot;overloaded method&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		new Tree();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;/*Output:</span><br><span class="line">Creating new Tree that is 0 feet tall</span><br><span class="line">Tree is 0feet tall</span><br><span class="line">overloaded method:Tree is 0feet tall</span><br><span class="line">Creating new Tree that is 1 feet tall</span><br><span class="line">Tree is 1feet tall</span><br><span class="line">overloaded method:Tree is 1feet tall</span><br><span class="line">Creating new Tree that is 2 feet tall</span><br><span class="line">Tree is 2feet tall</span><br><span class="line">overloaded method:Tree is 2feet tall</span><br><span class="line">Creating new Tree that is 3 feet tall</span><br><span class="line">Tree is 3feet tall</span><br><span class="line">overloaded method:Tree is 3feet tall</span><br><span class="line">Creating new Tree that is 4 feet tall</span><br><span class="line">Tree is 4feet tall</span><br><span class="line">overloaded method:Tree is 4feet tall</span><br><span class="line">Planting a seedling</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+        <p>Java方法重载</p>
         
       
 
@@ -775,11 +858,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">重载</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">重载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		
 		</ul>
@@ -844,7 +927,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java标签-博文内容剽窃于Thinking-in-Java第四版四章4-7-●’◡’●"><a href="#Java标签-博文内容剽窃于Thinking-in-Java第四版四章4-7-●’◡’●" class="headerlink" title="Java标签,博文内容剽窃于Thinking in Java第四版四章4.7  (●’◡’●)"></a>Java标签,博文内容剽窃于Thinking in Java第四版四章4.7  (●’◡’●)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">label1:</span><br><span class="line">outer-iteration&#123;</span><br><span class="line">    inner-iteration&#123;</span><br><span class="line">        //...</span><br><span class="line">        break; //(1)</span><br><span class="line">        //...</span><br><span class="line">        continue; //(2)</span><br><span class="line">        //...</span><br><span class="line">        continue label1; //(3)</span><br><span class="line">        //...</span><br><span class="line">        break label1; //(4)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Java标签</p>
         
       
 
@@ -938,8 +1021,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h3><p>写一个程序，打印从1到100的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=100;i++) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Java编程思想第四章练习</p>
         
       
 
@@ -979,105 +1061,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/07/Java编程思想第四章练习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java中break和continue的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/07/Java中break和continue的区别/">Java中break和continue的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/07/Java中break和continue的区别/" class="archive-article-date">
-  	<time datetime="2019-08-07T07:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        
-		
-		
-		
-		
-		
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
-<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
-        
-      
-
-
-
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">break</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">continue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/07/Java中break和continue的区别/">展开全文 >></a>
         </p>
       
 
@@ -1237,19 +1220,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1265,15 +1236,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1281,7 +1248,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1293,19 +1272,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

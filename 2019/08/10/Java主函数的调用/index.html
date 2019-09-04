@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>Java主函数的调用 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个java文件里可以存在多个class，但是只能有一个public class 你可以创建一个String对象数组，将其传递给另一个main（）方法，以提供参数，用来替换传递给该main（）方法的命令行参数。 12345678910111213141516public class DynamicArray&amp;#123;	public static void main(String[] args)">
+  <meta name="description" content="Java主函数的调用">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java主函数的调用">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/10/Java主函数的调用/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="一个java文件里可以存在多个class，但是只能有一个public class 你可以创建一个String对象数组，将其传递给另一个main（）方法，以提供参数，用来替换传递给该main（）方法的命令行参数。 12345678910111213141516public class DynamicArray&amp;#123;	public static void main(String[] args)">
+<meta property="og:description" content="Java主函数的调用">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.459Z">
+<meta property="og:updated_time" content="2019-09-04T09:14:54.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java主函数的调用">
-<meta name="twitter:description" content="一个java文件里可以存在多个class，但是只能有一个public class 你可以创建一个String对象数组，将其传递给另一个main（）方法，以提供参数，用来替换传递给该main（）方法的命令行参数。 12345678910111213141516public class DynamicArray&amp;#123;	public static void main(String[] args)">
+<meta name="twitter:description" content="Java主函数的调用">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,7 +186,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一个java文件里可以存在多个class，但是只能有一个public class</p>
+        <p>Java主函数的调用</p>
+<a id="more"></a>
+<p>一个java文件里可以存在多个class，但是只能有一个public class</p>
 <p>你可以创建一个String对象数组，将其传递给另一个main（）方法，以提供参数，用来替换传递给该main（）方法的命令行参数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class DynamicArray&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Other.main(new String[] &#123;&quot;fiddle&quot;,&quot;de&quot;,&quot;dum&quot;&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Other&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(String s:args) &#123;</span><br><span class="line">			System.out.println(s+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">fiddle </span><br><span class="line">de </span><br><span class="line">dum </span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
       
@@ -478,19 +480,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,15 +496,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -522,7 +508,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,19 +532,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

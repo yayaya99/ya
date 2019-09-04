@@ -154,6 +154,104 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java中break和continue的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/07/Java中break和continue的区别/">Java中break和continue的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/07/Java中break和continue的区别/" class="archive-article-date">
+  	<time datetime="2019-08-07T07:39:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
+</a>
+        
+		
+		
+		
+		
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java中break和continue的区别</p>
+        
+      
+
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">break</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">continue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/07/Java中break和continue的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Foreach语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -179,16 +277,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>0.72711575<br>0.39982635<br>0.5309454<br>0.0534122<br>0.16020656<br>0.57799757<br>0.18847865<br>0.4170137<br>0.51660204<br>0.73734957</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        for(char c:&quot;An African Swallow&quot;.toCharArray())</span><br><span class="line">        	System.out.print(c+&quot; &quot;);	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>A n   A f r i c a n   S w a l l o w </p>
-</blockquote>
+        <p>Foreach语句</p>
         
       
 
@@ -282,18 +371,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"><a href="#在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？" class="headerlink" title="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"></a>在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;(int)above: &quot;+(int)above);</span><br><span class="line">		System.out.println(&quot;(int)below: &quot;+(int)below);</span><br><span class="line">		System.out.println(&quot;(int)fabove: &quot;+(int)fabove);</span><br><span class="line">		System.out.println(&quot;(int)fbelow: &quot;+(int)fbelow);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>(int)above: 0<br>(int)below: 0<br>(int)fabove: 0<br>(int)fbelow: 0</p>
-</blockquote>
-<p><strong>运行结果发现，在将float和double转型为整数值时，总是对该数字执行截尾。如果想要得到舍入的结果，就需要使用java.lang.Math中的round()方法。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class CastingNumbers &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double above = 0.7,below = 0.4;</span><br><span class="line">		float fabove = 0.7f,fbelow = 0.4f;</span><br><span class="line">		System.out.println(&quot;Math.round(above): &quot;+Math.round(above));</span><br><span class="line">		System.out.println(&quot;Math.round(below): &quot;+Math.round(below));</span><br><span class="line">		System.out.println(&quot;Math.round(fabove): &quot;+Math.round(fabove));</span><br><span class="line">		System.out.println(&quot;Math.round(fbelow): &quot;+Math.round(fbelow));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果:<br>Math.round(above): 1<br>Math.round(below): 0<br>Math.round(fabove): 1<br>Math.round(fbelow): 0</p>
-</blockquote>
-<p><strong>由于round()是java.lang的一部分，因此在使用它时不需要额外地导入。</strong></p>
+        <h2 id="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"><a href="#在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？" class="headerlink" title="在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？"></a>在执行窄化转换时，必须注意截尾与舍入问题。例如：如果将一个浮点值转换整形值，Java会如何处理？</h2>
         
       
 
@@ -391,7 +469,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class BitManipulation&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Random rand = new Random(47);</span><br><span class="line">		int i = rand.nextInt();</span><br><span class="line">		int j = rand.nextInt();</span><br><span class="line">		printBinaryInt(&quot;-1&quot;,-1);</span><br><span class="line">		printBinaryInt(&quot;+1&quot;,+1);</span><br><span class="line">		int maxpos = 2147483647;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxpos);</span><br><span class="line">		int maxneg = -2147483648;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxneg);</span><br><span class="line">		printBinaryInt(&quot;i&quot;,i);</span><br><span class="line">		printBinaryInt(&quot;~i&quot;,~i);</span><br><span class="line">		printBinaryInt(&quot;-i&quot;,-i);</span><br><span class="line">		printBinaryInt(&quot;j&quot;,j);</span><br><span class="line">		printBinaryInt(&quot;i&amp;j&quot;,i&amp;j);</span><br><span class="line">		printBinaryInt(&quot;i|j&quot;,i|j);</span><br><span class="line">		printBinaryInt(&quot;i^j&quot;,i^j); //不同为1，相同为0</span><br><span class="line">		printBinaryInt(&quot;i&lt;&lt;5&quot;,i&lt;&lt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;5&quot;,i&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;5&quot;,(~i)&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;&gt;5&quot;,i&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;&gt;5&quot;,(~i)&gt;&gt;&gt;5);</span><br><span class="line">		</span><br><span class="line">		long l = rand.nextLong();</span><br><span class="line">		long m = rand.nextLong();</span><br><span class="line">		printBinaryLong(&quot;-1L&quot;,-1L);</span><br><span class="line">		printBinaryLong(&quot;+1L&quot;,+1L);</span><br><span class="line">		long ll = 9223372036854775807L;</span><br><span class="line">		printBinaryLong(&quot;maxpos&quot;,ll);</span><br><span class="line">		long lln = -9223372036854775808L;</span><br><span class="line">		printBinaryLong(&quot;maxneg&quot;,lln);</span><br><span class="line">		printBinaryLong(&quot;l&quot;,l);</span><br><span class="line">		printBinaryLong(&quot;~l&quot;,~l);</span><br><span class="line">		printBinaryLong(&quot;-l&quot;,-l);</span><br><span class="line">		printBinaryLong(&quot;m&quot;,m);</span><br><span class="line">		printBinaryLong(&quot;l&amp;m&quot;,l&amp;m);</span><br><span class="line">		printBinaryLong(&quot;l|m&quot;,l|m);</span><br><span class="line">		printBinaryLong(&quot;l^m&quot;,l^m);</span><br><span class="line">		printBinaryLong(&quot;l&lt;&lt;5&quot;,l&lt;&lt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;5&quot;,l&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;5&quot;,(~l)&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;&gt;5&quot;,l&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;&gt;5&quot;,(~l)&gt;&gt;&gt;5);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	static void printBinaryInt(String s, int i) &#123;</span><br><span class="line">		System.out.println(s+&quot;,int: &quot;+i+&quot;.binary:\n &quot;+Integer.toBinaryString(i));</span><br><span class="line">	&#125;</span><br><span class="line">	static void printBinaryLong(String s, long l) &#123;</span><br><span class="line">		System.out.println(s+&quot;,long: &quot;+l+&quot;.binary:\n &quot;+Long.toBinaryString(l));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2>
         
       
 
@@ -573,7 +651,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/04/Java移位操作符/"> Java移位操作符</a>
+      <a class="article-title" href="/2019/08/04/Java移位操作符/">Java移位操作符</a>
     </h1>
   
 
@@ -591,9 +669,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："><a href="#移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：" class="headerlink" title="移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种："></a>移位运算符和按位运算符一样，同属于位运算符，因此移位运算符的位指的也是二进制位。它包括以下几种：</h3><p>1.左移位（&lt;&lt;）：将操作符左侧的操作数向左移动操作符右侧指定的位数。移动的规则是在二进制的低位补0。</p>
-<p>2.有符号右移位（&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，如果被操作数的符号为正，则在二进制的高位补0；如果被操作数的符号为负，则在二进制的高位补1。</p>
-<p>3.无符号右移位（&gt;&gt;&gt;）：将操作符左侧的操作数向右移动操作符右侧指定的位数。移动的规则是，无论被操作数的符号是正是负，都在二进制位的高位补0。</p>
+        <p>Java移位操作符</p>
         
       
 
@@ -622,11 +698,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移位操作符</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移位操作符</a>
         		</li>
       		
 		</ul>
@@ -691,13 +767,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>内容转载于 <a href="https://www.cnblogs.com/guodongdidi/p/6953217.html" target="_blank" rel="noopener">https://www.cnblogs.com/guodongdidi/p/6953217.html</a></p>
-<ol>
-<li>Integer是int的包装类，int则是java的一种基本数据类型</li>
-<li>Integer变量必需实例化后才能使用，而int变量不需要</li>
-<li>Integer实际是对象的引用，当new一个integer时，实际上是生成一个指针指向对象；而int则是直接存储数据值</li>
-<li>Integer的默认值是null，int的默认值是0</li>
-</ol>
+        <p>Integer和int的区别</p>
         
       
 
@@ -796,22 +866,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>了解负数的二进制表示</p>
-<p>计算机中，负数以其正值的补码形式表示</p>
-<p>比如2的二进制为10，但int类型的数占用4字节（32位），就写为00000000 00000000 00000000 00000010</p>
-<p>求-2的二进制就要求出原码、补码、反码</p>
-<p>原码：将整数的绝对值大小转换为二进制，称为原码。</p>
-<blockquote>
-<p>00000000 00000000 00000000 00000010</p>
-</blockquote>
-<p>反码：将原码按位取反，所得为反码。（1变0，0变1）。</p>
-<blockquote>
-<p>11111111 11111111 11111111 11111101</p>
-</blockquote>
-<p>补码：反码加1为补码。</p>
-<blockquote>
-<p>11111111 11111111 11111111 11111110</p>
-</blockquote>
-<p>-2的二进制为11111111 11111111 11111111 11111110</p>
         
       
 
@@ -905,7 +959,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Java短路与</p>
         
       
 
@@ -999,12 +1053,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h3><p>创建一个名为Dogde类，它包含两个String域：name和scruffy（它的叫声为“Ruff!”）,另一个名为scruffy（它的叫声为“Wurf！”）。然后显示它们的名字和叫声。<br>练习6：<br>创建一个新的Dog索引，并对其赋值为spot对象。测试用==和equals()方法比较所有引用的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Dog&#123;</span><br><span class="line">	String name;</span><br><span class="line">	String says;</span><br><span class="line">	</span><br><span class="line">	void shows() &#123;</span><br><span class="line">		System.out.println(&quot;name: &quot;+name+&quot; Says: &quot;+says);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog spot = new Dog();</span><br><span class="line">		spot.name=&quot;Spot&quot;;</span><br><span class="line">		spot.says=&quot;Ruff!&quot;;</span><br><span class="line">		Dog scruffy = new Dog();</span><br><span class="line">		scruffy.name=&quot;Sruffy&quot;;</span><br><span class="line">		scruffy.says=&quot;Wufrf!&quot;;</span><br><span class="line">		</span><br><span class="line">		spot.shows();</span><br><span class="line">		scruffy.shows();</span><br><span class="line">		</span><br><span class="line">		Dog newDog = new Dog();</span><br><span class="line">		newDog = spot;</span><br><span class="line">		System.out.println(newDog==spot);</span><br><span class="line">		System.out.println(newDog.equals(spot));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>运行及结果：<br>name: Spot Says: Ruff!<br>name: Sruffy Says: Wufrf!<br>true<br>true</p>
-</blockquote>
+        <p>Java编程思想第三章练习</p>
         
       
 
@@ -1044,101 +1093,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/04/Java编程思想第三章练习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java中对象的赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/03/Java中对象的赋值/">Java中对象的赋值</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/03/Java中对象的赋值/" class="archive-article-date">
-  	<time datetime="2019-08-03T09:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
-</a>
-        
-		
-		
-		
-		
-		
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
-<p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
-        
-      
-
-
-
-
-
-  <div class="declare" hidden="hidden"></div>
-
-
-
-
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">赋值</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/03/Java中对象的赋值/">展开全文 >></a>
         </p>
       
 
@@ -1298,19 +1252,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1326,15 +1268,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1342,7 +1280,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1354,19 +1304,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

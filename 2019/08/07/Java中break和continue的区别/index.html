@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>Java中break和continue的区别 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代">
+  <meta name="description" content="Java中break和continue的区别">
 <meta name="keywords" content="Java,break,continue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中break和continue的区别">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/07/Java中break和continue的区别/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代">
+<meta property="og:description" content="Java中break和continue的区别">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.454Z">
+<meta property="og:updated_time" content="2019-09-04T09:15:36.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中break和continue的区别">
-<meta name="twitter:description" content="在任何迭代语句的主体部分，都可用break和continue控制循环的流程break1、break用于强行退出循环。2、退出后不执行循环中剩余的语句 continue1、停止执行当前的迭代2、退回循环起始处，开始下一次迭代">
+<meta name="twitter:description" content="Java中break和continue的区别">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,10 +186,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
-<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
+        <p>Java中break和continue的区别</p>
 <a id="more"></a>
-
+<h2 id="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"><a href="#在任何迭代语句的主体部分，都可用break和continue控制循环的流程" class="headerlink" title="在任何迭代语句的主体部分，都可用break和continue控制循环的流程"></a>在任何迭代语句的主体部分，都可用break和continue控制循环的流程</h2><h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><p>1、break用于强行退出循环。<br>2、退出后不执行循环中剩余的语句</p>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><p>1、停止执行当前的迭代<br>2、退回循环起始处，开始下一次迭代</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			break;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	System.out.println(&quot;===============&quot;);</span><br><span class="line">    	for(int i=0;i&lt;=5;i++) &#123;</span><br><span class="line">    		if(i==3) &#123;</span><br><span class="line">    			continue;</span><br><span class="line">    		&#125;</span><br><span class="line">    		System.out.println(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -493,19 +493,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,15 +509,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,7 +521,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,19 +545,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>Java中对象的赋值 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java中对象赋值出现的问题在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。">
+  <meta name="description" content="Java中对象赋值出现的问题">
 <meta name="keywords" content="Java,赋值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中对象的赋值">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/03/Java中对象的赋值/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="Java中对象赋值出现的问题在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。">
+<meta property="og:description" content="Java中对象赋值出现的问题">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.457Z">
+<meta property="og:updated_time" content="2019-09-04T09:15:18.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中对象的赋值">
-<meta name="twitter:description" content="Java中对象赋值出现的问题在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。">
+<meta name="twitter:description" content="Java中对象赋值出现的问题">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,10 +186,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
-<p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
-<a id="more"></a>
+        <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2><a id="more"></a>
 
+<p>在java中赋值使用操作符“=”。意思是“取右边的值，把它赋值给左边”。右值可以是任何常数、变量或者表达式（只要能生成一个值）。但左边必须是一个明确的、已命名的变量。<br>但是不能把任何东西赋值给一个常数，常数不能作为左值（比如不能4=a;）。<br>基本数据类型的赋值是直接将一个地方的内容复制到了另一个地方。例如，a=b,b的内容复制给a。接着又修改了a，而b并不会受a修改的影响。</p>
+<p>但在为对象赋值的时候，情况却不一样。<br>对一个对象进行操作时，我们真正操作的是对对象的引用。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Tank&#123;</span><br><span class="line">	int level;</span><br><span class="line">&#125;</span><br><span class="line">public class Test&#123;</span><br><span class="line">	public static void main(String[] arg) &#123;</span><br><span class="line">		Tank t1 = new Tank();</span><br><span class="line">		Tank t2 = new Tank();</span><br><span class="line">		t1.level = 9;</span><br><span class="line">		t2.level = 47;</span><br><span class="line">		System.out.println(&quot;1: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1 = t2;</span><br><span class="line">		System.out.println(&quot;2: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">		t1.level = 27;</span><br><span class="line">		System.out.println(&quot;3: t1.level: &quot; + t1.level + &quot;,t2.level: &quot; + t2.level);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">1: t1.level: 9,t2.level: 47</span><br><span class="line">2: t1.level: 47,t2.level: 47</span><br><span class="line">3: t1.level: 27,t2.level: 27</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
 
 <p>每个Tank类对象的level域都赋予了一个不同的值，然后，将t2赋给t1。<br>我们可能会期望t1和t2总是相互独立的。<br>但由于赋值操作的是一个对象的引用，t1和t2包含的引用相同,所以修改t1的同时也改变了t2。<br>这种特殊现象称为”别名现象“。</p>
@@ -497,19 +497,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,15 +513,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,7 +525,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,19 +549,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

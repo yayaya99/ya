@@ -154,6 +154,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java中对象的赋值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/03/Java中对象的赋值/">Java中对象的赋值</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/03/Java中对象的赋值/" class="archive-article-date">
+  	<time datetime="2019-08-03T09:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-03</time>
+</a>
+        
+		
+		
+		
+		
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java中对象赋值出现的问题"><a href="#Java中对象赋值出现的问题" class="headerlink" title="Java中对象赋值出现的问题"></a>Java中对象赋值出现的问题</h2>
+        
+      
+
+
+
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
+
+
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">赋值</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/03/Java中对象的赋值/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java中局部变量的初始化问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -179,10 +273,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中局部变量必须初始化但成员变量不必须初始化"><a href="#Java中局部变量必须初始化但成员变量不必须初始化" class="headerlink" title="Java中局部变量必须初始化但成员变量不必须初始化"></a>Java中局部变量必须初始化但成员变量不必须初始化</h2><p>其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。</p>
-<p>JVM在初始化对象时就可以初始化成员变量。</p>
-<p>在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。<br>而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。</p>
-<p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
+        <p>java中局部变量的初始化问题</p>
         
       
 
@@ -276,13 +367,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><h2 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h2></li>
-</ul>
-<p>1.整库备份<br>    利用mysqldump进行sql备份<br>    语法：mysqldump.exe -hPup 数据库名字 &gt; 备份路径</p>
-<pre><code>mysqldump.exe -hlocalhost -P3306 -uroot -proot mydatabase C:/server/mydatabase.sql</code></pre><p>2.单表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 &gt; 备份路径</p>
-<pre><code>mysqldump -uroot -proot mydatabase my_int &gt; c:/server/int.sql</code></pre><p>3.多表备份<br>    语法：mysqldump.exe -hPup 数据库名字 表名 表名 .. &gt; 备份路径</p>
-<pre><code>mysqldump -uroot -proot mydatabase my_student my_int &gt; c:/server/student_int.sq</code></pre>
+        <p>Mysql数据备份与还原</p>
         
       
 
@@ -383,8 +468,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="首先修改配置-config-yml"><a href="#首先修改配置-config-yml" class="headerlink" title="首先修改配置_config.yml"></a>首先修改配置_config.yml</h2><p> 将post_asset_folder: false改为post_asset_folder: true</p>
-<h2 id="然后安装一个图片插件"><a href="#然后安装一个图片插件" class="headerlink" title="然后安装一个图片插件"></a>然后安装一个图片插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+        <p>博客文章添加图片、音乐、视频</p>
         
       
 
@@ -474,8 +558,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="今天天气真好"><a href="#今天天气真好" class="headerlink" title="今天天气真好"></a>今天天气真好</h2><p> 好就好在好个锤子</p>
-<p> <img src="https://www.bing.com/th?id=OGC.56352ff9bbbcdc091caccbf25f224961&pid=1.7&rurl=http%3a%2f%2fwx4.sinaimg.cn%2fmw690%2f006HJgYYgy1fo3p3supnng308r08rnnc.gif&ehk=owCBmHH4kjoZ6jGhvNLrzA" alt="图片描述"></p>
+        <p>今天天气真好</p>
         
       
 
@@ -659,19 +742,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -687,15 +758,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -703,7 +770,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -715,19 +794,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

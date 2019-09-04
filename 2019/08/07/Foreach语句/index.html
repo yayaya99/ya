@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>Foreach语句 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。123456789101112import java.util.Random;public class ForEachFloat&amp;#123;    public static void main(String[] args)&amp;">
+  <meta name="description" content="Foreach语句">
 <meta name="keywords" content="Java,Foreach">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Foreach语句">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/07/Foreach语句/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。123456789101112import java.util.Random;public class ForEachFloat&amp;#123;    public static void main(String[] args)&amp;">
+<meta property="og:description" content="Foreach语句">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.446Z">
+<meta property="og:updated_time" content="2019-09-04T09:19:25.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Foreach语句">
-<meta name="twitter:description" content="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。123456789101112import java.util.Random;public class ForEachFloat&amp;#123;    public static void main(String[] args)&amp;">
+<meta name="twitter:description" content="Foreach语句">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,7 +186,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Foreach语句</p>
+<a id="more"></a>
+<h2 id="java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"><a href="#java-SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。" class="headerlink" title="java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。"></a>java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class ForEachFloat&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Random rand = new Random(47);</span><br><span class="line">        float f[] = new float[10];</span><br><span class="line">        for(int i = 0;i &lt; 10;i++)</span><br><span class="line">            f[i]=rand.nextFloat();</span><br><span class="line">        for(float x:f)</span><br><span class="line">            System.out.println(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>运行及结果：<br>0.72711575<br>0.39982635<br>0.5309454<br>0.0534122<br>0.16020656<br>0.57799757<br>0.18847865<br>0.4170137<br>0.51660204<br>0.73734957</p>
@@ -196,7 +198,6 @@
 <blockquote>
 <p>运行及结果：<br>A n   A f r i c a n   S w a l l o w </p>
 </blockquote>
-<a id="more"></a>
 
       
 
@@ -491,19 +492,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,15 +508,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,7 +520,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -547,19 +544,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

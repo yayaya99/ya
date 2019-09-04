@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>Java短路与 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java中使用逻辑操作符时遇到的短路现象123456789101112131415161718192021222324// &amp;amp;&amp;amp;短路与public class ShortCircuit&amp;#123;	static boolean test1(int val) &amp;#123;		System.out.println(&amp;quot;test(&amp;quot;+val+&amp;quot;)&amp;quot;)">
+  <meta name="description" content="Java短路与">
 <meta name="keywords" content="Java,Java编程思想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java短路与">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/04/Java短路与/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="Java中使用逻辑操作符时遇到的短路现象123456789101112131415161718192021222324// &amp;amp;&amp;amp;短路与public class ShortCircuit&amp;#123;	static boolean test1(int val) &amp;#123;		System.out.println(&amp;quot;test(&amp;quot;+val+&amp;quot;)&amp;quot;)">
+<meta property="og:description" content="Java短路与">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.466Z">
+<meta property="og:updated_time" content="2019-09-04T09:17:27.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java短路与">
-<meta name="twitter:description" content="Java中使用逻辑操作符时遇到的短路现象123456789101112131415161718192021222324// &amp;amp;&amp;amp;短路与public class ShortCircuit&amp;#123;	static boolean test1(int val) &amp;#123;		System.out.println(&amp;quot;test(&amp;quot;+val+&amp;quot;)&amp;quot;)">
+<meta name="twitter:description" content="Java短路与">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,9 +186,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <p>Java短路与</p>
 <a id="more"></a>
+<h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>运行及结果：<br>test(0)<br>result: true<br>test(2)<br>result: false<br>expression is false</p>
@@ -488,19 +488,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -516,15 +504,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -532,7 +516,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,19 +540,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

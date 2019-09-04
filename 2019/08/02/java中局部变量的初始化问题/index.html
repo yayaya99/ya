@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://yayaya99.github.io">
   <title>java中局部变量的初始化问题 | yayaya99</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java中局部变量必须初始化但成员变量不必须初始化其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。 JVM在初始化对象时就可以初始化成员变量。 在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。 还有种情况为：定义的局部变量没有赋值，">
+  <meta name="description" content="java中局部变量的初始化问题">
 <meta name="keywords" content="Java,局部变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java中局部变量的初始化问题">
 <meta property="og:url" content="https://yayaya99.github.io/2019/08/02/java中局部变量的初始化问题/index.html">
 <meta property="og:site_name" content="yayaya99">
-<meta property="og:description" content="Java中局部变量必须初始化但成员变量不必须初始化其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。 JVM在初始化对象时就可以初始化成员变量。 在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。 还有种情况为：定义的局部变量没有赋值，">
+<meta property="og:description" content="java中局部变量的初始化问题">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-11T01:30:48.485Z">
+<meta property="og:updated_time" content="2019-09-04T09:15:08.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中局部变量的初始化问题">
-<meta name="twitter:description" content="Java中局部变量必须初始化但成员变量不必须初始化其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。 JVM在初始化对象时就可以初始化成员变量。 在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。 还有种情况为：定义的局部变量没有赋值，">
+<meta name="twitter:description" content="java中局部变量的初始化问题">
   
     <link rel="alternative" href="/atom.xml" title="yayaya99" type="application/atom+xml">
   
@@ -186,11 +186,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中局部变量必须初始化但成员变量不必须初始化"><a href="#Java中局部变量必须初始化但成员变量不必须初始化" class="headerlink" title="Java中局部变量必须初始化但成员变量不必须初始化"></a>Java中局部变量必须初始化但成员变量不必须初始化</h2><p>其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。</p>
+        <p>java中局部变量的初始化问题</p>
+<a id="more"></a> 
+<h2 id="Java中局部变量必须初始化但成员变量不必须初始化"><a href="#Java中局部变量必须初始化但成员变量不必须初始化" class="headerlink" title="Java中局部变量必须初始化但成员变量不必须初始化"></a>Java中局部变量必须初始化但成员变量不必须初始化</h2><p>其实无论成员变量还是局部变量都要初始化，只是JVM帮我们初始化了成员变量。</p>
 <p>JVM在初始化对象时就可以初始化成员变量。</p>
 <p>在类的加载中，我们定义的成员变量进行了两次初始化，一次赋默认初值（0值，boolean赋为false），一次赋自定义的初值。<br>而对于方法中的局部变量，需要进栈执行，这个过程是没有赋初值过程的。</p>
 <p>还有种情况为：定义的局部变量没有赋值，也没有报错，是因为局部变量没有被调用</p>
-<a id="more"></a> 
 
       
 
@@ -485,19 +486,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">int</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Foreach</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -513,15 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+                <a href="javascript:void(0)" class="js-tag color4">初始化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+                <a href="javascript:void(0)" class="js-tag color3">重载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -529,7 +514,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">重载</a>
+                <a href="javascript:void(0)" class="js-tag color3">标签</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">移位操作符</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Java编程思想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">this</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,19 +538,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">int</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">二进制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">十进制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">this</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
