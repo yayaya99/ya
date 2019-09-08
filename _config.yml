@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
   
 # Site
-title: yayaya99
+title: hongxigua
 subtitle:
-description:
+description: 年年敬天地，岁岁保平安
 keywords:
-author: 狗屎泡酒
-language:
+author: 红西瓜
+language: zh-Hans
 timezone:
 
 # URL
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -102,3 +102,9 @@ jsonContent:
       categories: false
       tags: true
 
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

@@ -6,6 +6,8 @@ tags:
 abbrlink: 56535
 date: 2019-08-04 12:12:01
 ---
+Java短路与
+<!--more-->
 ## Java中使用逻辑操作符时遇到的短路现象
 ```
 // &&短路与
@@ -34,7 +36,7 @@ public class ShortCircuit{
 }
 ```
 
-<!--more-->
+
 
 >运行及结果：
 >test(0)

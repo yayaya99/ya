@@ -7,6 +7,8 @@ tags:
 abbrlink: 59837
 date: 2019-08-07 15:39:50
 ---
+Java中break和continue的区别
+<!--more-->
 ## 在任何迭代语句的主体部分，都可用break和continue控制循环的流程
 
 ## break
@@ -16,7 +18,7 @@ date: 2019-08-07 15:39:50
 1、停止执行当前的迭代
 2、退回循环起始处，开始下一次迭代
 
-<!--more-->
+
 
 ```
 public class Test{

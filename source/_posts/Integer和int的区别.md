@@ -7,6 +7,8 @@ tags:
 abbrlink: 50872
 date: 2019-08-04 16:46:36
 ---
+Integer和int的区别
+<!--more-->
 内容转载于 https://www.cnblogs.com/guodongdidi/p/6953217.html
 
 1. Integer是int的包装类，int则是java的一种基本数据类型
@@ -14,7 +16,7 @@ date: 2019-08-04 16:46:36
 3. Integer实际是对象的引用，当new一个integer时，实际上是生成一个指针指向对象；而int则是直接存储数据值
 4. Integer的默认值是null，int的默认值是0
 
-<!--more-->
+
 
 延伸： 
 关于Integer和int的比较 

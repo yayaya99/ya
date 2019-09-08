@@ -6,6 +6,8 @@ tags:
 abbrlink: 53890
 date: 2019-08-07 18:56:44
 ---
+Java标签
+<!--more-->
 ## Java标签,博文内容剽窃于Thinking in Java第四版四章4.7  (●'◡'●)
 
 ```
@@ -23,7 +25,7 @@ outer-iteration{
     }
 }
 ```
-<!--more-->
+
 
 在（1）中，break中断内部迭代。
 在（2）中，continue使执行点移回内部迭代的起始值。

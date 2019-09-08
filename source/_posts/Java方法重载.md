@@ -7,6 +7,8 @@ tags:
 abbrlink: 16008
 date: 2019-08-08 11:37:05
 ---
+Java方法重载
+<!--more-->
 ## 示范重载构造器和重载的方法
 
 ```
@@ -56,7 +58,6 @@ overloaded method:Tree is 4feet tall
 Planting a seedling
 *///:~
 ```
-<!--more-->
 
 ## 涉及基本类型的重载
 ```

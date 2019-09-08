@@ -6,7 +6,8 @@ tags:
 abbrlink: 3213
 date: 2019-08-07 14:28:57
 ---
-
+Foreach语句
+<!--more-->
 ## java SE5引入了一种新的更加简洁的for语法用于数组和容器，即foreach语法，表示不必创建int变量去对由访问项构成的序列进行计数，foreach将自动产生每一项。
 
 ```
@@ -49,4 +50,4 @@ public class ForEachFloat{
 >运行及结果：
 >A n   A f r i c a n   S w a l l o w 
 
-<!--more-->
+

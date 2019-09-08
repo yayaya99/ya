@@ -6,7 +6,8 @@ tags:
 abbrlink: 15374
 date: 2019-07-21 13:22:26
 ---
-
+Mysql数据备份与还原
+<!--more-->
 - ## 数据备份
 1.整库备份
 	利用mysqldump进行sql备份
@@ -25,7 +26,6 @@ date: 2019-07-21 13:22:26
 	
 	mysqldump -uroot -proot mydatabase my_student my_int > c:/server/student_int.sq
 	
-<!--more-->
 
 - ## 数据还原
 1.利用mysql.exe客户端 
