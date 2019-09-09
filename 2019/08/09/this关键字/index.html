@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="hongxigua">
 <meta property="og:description" content="编程思想第五章5.4中,这一段代码看着有点懵逼，记下来">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-04T09:13:42.738Z">
+<meta property="og:updated_time" content="2019-09-09T05:38:33.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this关键字">
 <meta name="twitter:description" content="编程思想第五章5.4中,这一段代码看着有点懵逼，记下来">
@@ -335,6 +335,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -362,7 +384,9 @@
       
 
       
-        <h2 id="编程思想第五章5-4中-这一段代码看着有点懵逼，记下来"><a href="#编程思想第五章5-4中-这一段代码看着有点懵逼，记下来" class="headerlink" title="编程思想第五章5.4中,这一段代码看着有点懵逼，记下来"></a>编程思想第五章5.4中,这一段代码看着有点懵逼，记下来</h2><a id="more"></a> 
+        <p>编程思想第五章5.4中,这一段代码看着有点懵逼，记下来</p>
+<a id="more"></a> 
+
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">	void eat(Apple apple) &#123;</span><br><span class="line">		Apple peeled =apple.getPeeled();</span><br><span class="line">		System.out.println(&quot;Yummy&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Peeler&#123;</span><br><span class="line">	static Apple peel(Apple apple) &#123;</span><br><span class="line">		return apple;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Apple&#123;</span><br><span class="line">	Apple getPeeled() &#123;</span><br><span class="line">		return Peeler.peel(this);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Leaf &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		new Person().eat(new Apple());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong><em>Apple需要调用Peeler.peel（）方法，它是一个外部的工具方法，将执行由于某种原因而必须放在Apple外部的操作。为了将自身传递给外部方法，Apple必须使用this关键字。</em></strong></p>
@@ -573,7 +597,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -651,7 +675,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编程思想第五章5-4中-这一段代码看着有点懵逼，记下来"><span class="nav-number">1.</span> <span class="nav-text">编程思想第五章5.4中,这一段代码看着有点懵逼，记下来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在构造器中调用构造器"><span class="nav-number">2.</span> <span class="nav-text">在构造器中调用构造器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在构造器中调用构造器"><span class="nav-number">1.</span> <span class="nav-text">在构造器中调用构造器</span></a></li></ol></div>
             
 
           </div>

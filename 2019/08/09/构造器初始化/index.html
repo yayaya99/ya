@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="hongxigua">
 <meta property="og:description" content="构造器初始化">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-04T09:20:31.182Z">
+<meta property="og:updated_time" content="2019-09-09T05:32:05.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构造器初始化">
 <meta name="twitter:description" content="构造器初始化">
@@ -335,6 +335,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,7 +386,8 @@
       
         <p>构造器初始化</p>
 <a id="more"></a> 
-<h2 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h2><h2 id="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><a href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。" class="headerlink" title="在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"></a>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+<h2 id="初始化顺序"><a href="#初始化顺序" class="headerlink" title="初始化顺序"></a>初始化顺序</h2><p>在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Window&#123;</span><br><span class="line">	Window(int marker)&#123;</span><br><span class="line">		System.out.println(&quot;Window(&quot;+marker+&quot;)&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class House&#123;</span><br><span class="line">	Window w1 = new Window(1);</span><br><span class="line">	House()&#123;</span><br><span class="line">		System.out.println(&quot;House()&quot;);</span><br><span class="line">		w3 = new Window(33);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w2 = new Window(2);</span><br><span class="line">	void f() &#123;</span><br><span class="line">		System.out.println(&quot;f()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	Window w3 = new Window(3);</span><br><span class="line">&#125;</span><br><span class="line">public class Flower&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		House h = new House();</span><br><span class="line">		h.f();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Window(1)</span><br><span class="line">Window(2)</span><br><span class="line">Window(3)</span><br><span class="line">House()</span><br><span class="line">Window(33)</span><br><span class="line">f()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
 
 <p><strong><em>w3这个引用会被初始化两次：一次在调用构造器前，一次在调用期间（第一次引用的对象将被丢弃，并作为垃圾回收）</em></strong></p>
 <h2 id="静态数据的初始化"><a href="#静态数据的初始化" class="headerlink" title="静态数据的初始化"></a>静态数据的初始化</h2><p>1、无论创建多少个对象，静态数据都只占用一份存储区域。<br>2、static关键字不能应用于局部变量。</p>
@@ -578,7 +601,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -656,7 +679,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化顺序"><span class="nav-number">1.</span> <span class="nav-text">初始化顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。"><span class="nav-number">2.</span> <span class="nav-text">在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散布于方法定义之间，它们仍会在任何方法（包括构造器）被调用之前得到初始化。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态数据的初始化"><span class="nav-number">3.</span> <span class="nav-text">静态数据的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结对象的创建过程"><span class="nav-number">4.</span> <span class="nav-text">总结对象的创建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）"><span class="nav-number">5.</span> <span class="nav-text">显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化顺序"><span class="nav-number">1.</span> <span class="nav-text">初始化顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态数据的初始化"><span class="nav-number">2.</span> <span class="nav-text">静态数据的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结对象的创建过程"><span class="nav-number">3.</span> <span class="nav-text">总结对象的创建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）"><span class="nav-number">4.</span> <span class="nav-text">显式的静态初始化（代码不理解，这里先做下标记把，有空再慢慢看）</span></a></li></ol></div>
             
 
           </div>

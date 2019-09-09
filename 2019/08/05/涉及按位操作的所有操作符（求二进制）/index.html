@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="hongxigua">
 <meta property="og:description" content="涉及按位操作的所有操作符（求二进制）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-04T09:12:22.964Z">
+<meta property="og:updated_time" content="2019-09-09T05:39:51.321Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="涉及按位操作的所有操作符（求二进制）">
 <meta name="twitter:description" content="涉及按位操作的所有操作符（求二进制）">
@@ -335,6 +335,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -362,8 +384,9 @@
       
 
       
-        <h2 id="涉及按位操作的所有操作符（求二进制）"><a href="#涉及按位操作的所有操作符（求二进制）" class="headerlink" title="涉及按位操作的所有操作符（求二进制）"></a>涉及按位操作的所有操作符（求二进制）</h2><a id="more"></a>
-
+        <p>涉及按位操作的所有操作符（求二进制）</p>
+<a id="more"></a>
+<p>代码以下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Random;</span><br><span class="line"></span><br><span class="line">public class BitManipulation&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Random rand = new Random(47);</span><br><span class="line">		int i = rand.nextInt();</span><br><span class="line">		int j = rand.nextInt();</span><br><span class="line">		printBinaryInt(&quot;-1&quot;,-1);</span><br><span class="line">		printBinaryInt(&quot;+1&quot;,+1);</span><br><span class="line">		int maxpos = 2147483647;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxpos);</span><br><span class="line">		int maxneg = -2147483648;</span><br><span class="line">		printBinaryInt(&quot;maxpos&quot;,maxneg);</span><br><span class="line">		printBinaryInt(&quot;i&quot;,i);</span><br><span class="line">		printBinaryInt(&quot;~i&quot;,~i);</span><br><span class="line">		printBinaryInt(&quot;-i&quot;,-i);</span><br><span class="line">		printBinaryInt(&quot;j&quot;,j);</span><br><span class="line">		printBinaryInt(&quot;i&amp;j&quot;,i&amp;j);</span><br><span class="line">		printBinaryInt(&quot;i|j&quot;,i|j);</span><br><span class="line">		printBinaryInt(&quot;i^j&quot;,i^j); //不同为1，相同为0</span><br><span class="line">		printBinaryInt(&quot;i&lt;&lt;5&quot;,i&lt;&lt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;5&quot;,i&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;5&quot;,(~i)&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;i&gt;&gt;&gt;5&quot;,i&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryInt(&quot;(~i)&gt;&gt;&gt;5&quot;,(~i)&gt;&gt;&gt;5);</span><br><span class="line">		</span><br><span class="line">		long l = rand.nextLong();</span><br><span class="line">		long m = rand.nextLong();</span><br><span class="line">		printBinaryLong(&quot;-1L&quot;,-1L);</span><br><span class="line">		printBinaryLong(&quot;+1L&quot;,+1L);</span><br><span class="line">		long ll = 9223372036854775807L;</span><br><span class="line">		printBinaryLong(&quot;maxpos&quot;,ll);</span><br><span class="line">		long lln = -9223372036854775808L;</span><br><span class="line">		printBinaryLong(&quot;maxneg&quot;,lln);</span><br><span class="line">		printBinaryLong(&quot;l&quot;,l);</span><br><span class="line">		printBinaryLong(&quot;~l&quot;,~l);</span><br><span class="line">		printBinaryLong(&quot;-l&quot;,-l);</span><br><span class="line">		printBinaryLong(&quot;m&quot;,m);</span><br><span class="line">		printBinaryLong(&quot;l&amp;m&quot;,l&amp;m);</span><br><span class="line">		printBinaryLong(&quot;l|m&quot;,l|m);</span><br><span class="line">		printBinaryLong(&quot;l^m&quot;,l^m);</span><br><span class="line">		printBinaryLong(&quot;l&lt;&lt;5&quot;,l&lt;&lt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;5&quot;,l&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;5&quot;,(~l)&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;l&gt;&gt;&gt;5&quot;,l&gt;&gt;&gt;5);</span><br><span class="line">		printBinaryLong(&quot;(~l)&gt;&gt;&gt;5&quot;,(~l)&gt;&gt;&gt;5);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	static void printBinaryInt(String s, int i) &#123;</span><br><span class="line">		System.out.println(s+&quot;,int: &quot;+i+&quot;.binary:\n &quot;+Integer.toBinaryString(i));</span><br><span class="line">	&#125;</span><br><span class="line">	static void printBinaryLong(String s, long l) &#123;</span><br><span class="line">		System.out.println(s+&quot;,long: &quot;+l+&quot;.binary:\n &quot;+Long.toBinaryString(l));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>运行及结果：</strong></p>
@@ -540,17 +563,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,7 +592,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -646,22 +660,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#涉及按位操作的所有操作符（求二进制）"><span class="nav-number">1.</span> <span class="nav-text">涉及按位操作的所有操作符（求二进制）</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="hongxigua">
 <meta property="og:description" content="编程思想第七章练习">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-04T09:10:59.364Z">
+<meta property="og:updated_time" content="2019-09-09T05:30:53.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程思想第七章练习">
 <meta name="twitter:description" content="编程思想第七章练习">
@@ -335,6 +335,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,7 +386,6 @@
       
         <p>编程思想第七章练习</p>
 <a id="more"></a>
-
 <h2 id="练习1"><a href="#练习1" class="headerlink" title="练习1:"></a>练习1:</h2><p>创建一个简单的类。第二个类中，将一个引用定义为第一个类的对象。运用惰性初始化来实例化 这个对象</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">     Second second  = new Second(&quot;Init String&quot;);</span><br><span class="line">     second.chenked();</span><br><span class="line">     System.out.println(second.getSimple());</span><br><span class="line">     second.chenked();</span><br><span class="line">     System.out.println(second);</span><br><span class="line">     second.setSimple(&quot;New String&quot;);</span><br><span class="line">     System.out.println(second);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Simple&#123;</span><br><span class="line">	String s;</span><br><span class="line">	public Simple(String si) &#123;</span><br><span class="line">		s = si;</span><br><span class="line">	&#125;</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return s;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setString(String sNew) &#123;</span><br><span class="line">		s = sNew;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Second&#123;</span><br><span class="line">	Simple simple;</span><br><span class="line">	String s;</span><br><span class="line">	public Second(String si) &#123;</span><br><span class="line">		s = si;</span><br><span class="line">	&#125;</span><br><span class="line">	public void chenked() &#123;</span><br><span class="line">		if(simple==null) &#123;</span><br><span class="line">			System.out.println(&quot;not initialized&quot;);</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			System.out.println(&quot;initialized&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private Simple lazy() &#123;</span><br><span class="line">		if(simple==null) &#123;</span><br><span class="line">			System.out.println(&quot;Creating simple&quot;);</span><br><span class="line">			simple = new Simple(s);</span><br><span class="line">		&#125;</span><br><span class="line">		return simple;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public Simple getSimple() &#123;</span><br><span class="line">		return lazy();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public String toString() &#123;</span><br><span class="line">		return lazy().toString();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public void setSimple(String sNew) &#123;</span><br><span class="line">		lazy().setString(sNew);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">not initialized</span><br><span class="line">Creating simple</span><br><span class="line">Init String</span><br><span class="line">initialized</span><br><span class="line">Init String</span><br><span class="line">New String</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
 
@@ -629,7 +650,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
