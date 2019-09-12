@@ -88,7 +88,7 @@
 <meta property="og:description" content="Python是一种跨平台的计算机程序设计语言。是一种面向对象的动态类型语言，最初被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越来越多被用于独立的、大型项目的开发。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://note.youdao.com/yws/api/personal/file/5D074E03E1A14F468FFFE7717370B64E?method=download&shareKey=af6f177fd5891cd1abe66e7436f3f007">
-<meta property="og:updated_time" content="2019-09-12T11:41:42.939Z">
+<meta property="og:updated_time" content="2019-09-12T11:42:17.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Python命令下载视频">
 <meta name="twitter:description" content="Python是一种跨平台的计算机程序设计语言。是一种面向对象的动态类型语言，最初被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越来越多被用于独立的、大型项目的开发。">
@@ -362,6 +362,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/12/利用Python命令下载视频/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/12/利用Python命令下载视频/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -555,6 +565,9 @@ var jiathis_config={
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -876,6 +889,28 @@ var jiathis_config={
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'qrFausEiw2UwobgkMnAMcigl-gzGzoHsz',
+        appKey: 'vXh2mXar6vWhSET15T5c02It',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
