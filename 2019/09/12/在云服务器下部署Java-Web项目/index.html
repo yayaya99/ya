@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6089846-66ccc6c4134336b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/854/format/webp">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6089846-adacb39c1796acf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6089846-1919ee11f2bba7a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/922/format/webp">
-<meta property="og:updated_time" content="2019-09-12T04:21:22.161Z">
+<meta property="og:updated_time" content="2019-09-12T04:30:53.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在云服务器下部署Java Web项目">
 <meta name="twitter:description" content="在服务器下手动部署Java Web项目">
@@ -397,6 +397,7 @@
         <p>在服务器下手动部署Java Web项目</p>
 <a id="more"></a>
 
+<p>在服务器下手动部署Java Web项目</p>
 <h2 id="在云服务下部署Java的三种方法"><a href="#在云服务下部署Java的三种方法" class="headerlink" title="在云服务下部署Java的三种方法"></a>在云服务下部署Java的三种方法</h2><ul>
 <li>Java镜像部署</li>
 <li>一键安装包部署</li>
@@ -404,54 +405,54 @@
 </ul>
 <h2 id="手动部署的准备"><a href="#手动部署的准备" class="headerlink" title="手动部署的准备"></a>手动部署的准备</h2><p>Java jdk:<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">Java jdk官方</a>（下载“jdk-序号-linux-x64.tar.gz”版本）</p>
 <p>Tomcat：<a href="http://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">Tomcat官方下载链接</a>（点击首页左侧Tomcat 8，下载“tar.gz (pgp, md5, sha1)”）</p>
-<h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2><p>打开Xshell和Xftp，用Xftp在云服务器创建文件夹</p>
+<h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2><p>1、打开Xshell和Xftp，用Xftp在云服务器创建文件夹</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-9c0ab37c7f566143.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt></p>
-<p>将jdk安装包和tomcat安装包复制粘贴到云服务器对应的文件夹下</p>
-<p>在Xshell输入指令，解压jdk安装包到指定文件夹</p>
+<p>2、将jdk安装包和tomcat安装包复制粘贴到云服务器对应的文件夹下</p>
+<p>3、在Xshell输入指令，解压jdk安装包到指定文件夹</p>
 <blockquote>
 <p>#tar-zxvf jdk-版本编号-linux-x64.tar.gz-C/usr/java/jdk/</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-60aea858d317c8ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/681/format/webp" alt></p>
-<p>解压完毕后jdk文件夹里会有对应文件，开始配置环境变量</p>
+<p>4、解压完毕后jdk文件夹里会有对应文件，开始配置环境变量</p>
 <blockquote>
 <p>#vi /etc/profile<br>export JAVA_HOME=/usr/java/jdk/jdk版本编号_121<br>export JRE_HOME=/usr/java/jdk/jdk版本编号_121/jre<br>export CLASSPATH=.:$JAVA_HOME/lib$:JRE_HOME/lib:$CLASSPATH<br>export PATH=$JAVA_HOME/bin:$JRE_HOME/bin/$JAVA_HOME:$PATH</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-1b2e66251be5b64a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/519/format/webp" alt></p>
-<p>编辑完内容后，按下Esc键，并输入“:wq”，然后回车可以保存退出</p>
-<p>保存完毕后输入下面指令</p>
+<p>5、编辑完内容后，按下Esc键，并输入“:wq”，然后回车可以保存退出</p>
+<p>6、保存完毕后输入下面指令</p>
 <blockquote>
 <p>#source /etc/profile</p>
 </blockquote>
-<p>验证是否成功</p>
+<p>7、验证是否成功</p>
 <blockquote>
 <p>#java -version</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-9d6b1ed45549eb66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/666/format/webp" alt></p>
-<h2 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h2><p>解压tomcat，解压指令如下：</p>
+<h2 id="安装Tomcat"><a href="#安装Tomcat" class="headerlink" title="安装Tomcat"></a>安装Tomcat</h2><p>1、解压tomcat，解压指令如下：</p>
 <blockquote>
 <p>#tar -xvf apache-tomcat-版本编号.tar.gz -C /usr/java/tomcat/</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-5ca276a70bb29aa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/852/format/webp" alt></p>
-<p>进入解压文件夹下的bin文件夹，指令如下：</p>
+<p>2、进入解压文件夹下的bin文件夹，指令如下：</p>
 <blockquote>
 <p>#cd/usr/java/tomcat/apache-tomcat-版本编号/bin/</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-41050295e6db549c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/725/format/webp" alt></p>
-<p>编辑setclasspath.sh 脚本，指令如下：</p>
+<p>3、编辑setclasspath.sh 脚本，指令如下：</p>
 <blockquote>
 <p>#vi setclasspath.sh</p>
 </blockquote>
-<p>添写如下内容：</p>
+<p>4、添写如下内容：</p>
 <blockquote>
 <p>export JAVA_HOME=/usr/java/jdk/jdk版本编号<br>export JRE_HOME=/usr/java/jdk/jdk版本编号/jre</p>
 </blockquote>
-<p>保存编辑内容，按下Esc键，并输入“:wq”，然后回车可以保存退出。</p>
-<p>启动tomcat，指令如下：</p>
+<p>5、保存编辑内容，按下Esc键，并输入“:wq”，然后回车可以保存退出。</p>
+<p>6、启动tomcat，指令如下：</p>
 <blockquote>
 <p> #./startup.sh</p>
 </blockquote>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-66ccc6c4134336b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/854/format/webp" alt></p>
-<p>jdk和tomcat都弄好了，接下来可以用浏览器访问我的云服务器吗？</p>
+<p>7、jdk和tomcat都弄好了，接下来可以用浏览器访问我的云服务器吗？</p>
 <p>当然可以！你可以从浏览器访问，输入http://云服务器的ip:8080就能访问啦！</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/6089846-adacb39c1796acf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt></p>
 <h2 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h2><p>将项目上传到 Tomcat文件夹下的 Webapps 文件夹里就行。上传好了后，浏览器访问即可。例如：http://云服务器ip地址:8080/index/one.html等。</p>
