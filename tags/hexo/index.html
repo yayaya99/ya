@@ -82,7 +82,7 @@
 <meta name="description" content="年年敬天地，岁岁保平安">
 <meta property="og:type" content="website">
 <meta property="og:title" content="hongxigua">
-<meta property="og:url" content="https://yayaya99.github.io/tags/Hexo/index.html">
+<meta property="og:url" content="https://yayaya99.github.io/tags/hexo/index.html">
 <meta property="og:site_name" content="hongxigua">
 <meta property="og:description" content="年年敬天地，岁岁保平安">
 <meta property="og:locale" content="zh-Hans">
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://yayaya99.github.io/tags/Hexo/">
+  <link rel="canonical" href="https://yayaya99.github.io/tags/hexo/">
 
 
 
 
 
-  <title>标签: Hexo | hongxigua</title>
+  <title>标签: hexo | hongxigua</title>
   
 
 
@@ -286,7 +286,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Hexo<small>标签</small>
+        <h1>hexo<small>标签</small>
         </h1>
       </div>
 
@@ -298,43 +298,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/09/13/Hexo博客next主题添加文章阅读量统计功能/" itemprop="url">
+            <a class="post-title-link" href="/2019/07/19/博客文章添加图片/" itemprop="url">
               
-                <span itemprop="name">Hexo博客next主题添加文章阅读量统计功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-13T15:23:37+08:00" content="2019-09-13">
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/12/Hexo博客添加Valine评论系统/" itemprop="url">
-              
-                <span itemprop="name">Hexo博客添加Valine评论系统</span>
+                <span itemprop="name">博客文章添加图片、音乐、视频</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-12T20:44:40+08:00" content="2019-09-12">
-          09-12
+        <time class="post-time" itemprop="dateCreated" datetime="2019-07-19T14:30:45+08:00" content="2019-07-19">
+          07-19
         </time>
       </div>
 
@@ -1103,6 +1077,48 @@
             newcounter.save(null, {
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+d(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
