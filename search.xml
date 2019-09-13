@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客next主题添加文章阅读量统计功能]]></title>
+    <url>%2F2019%2F09%2F13%2FHexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[添加文章阅读量统计有很多方法，因为我已经注册了LeanCloud，所以就直接采用了LeanCloud。 注册LeanCloud 创建应用储存-&gt;数据-&gt;创建Class 创建名为Counter的class用来存储访问博客的数据，例如：访问次数，最新访问时间等信息。class类名必须为Counter，主要为了与next主题相兼容，否则无法接收到相关数据。为了避免后续因为权限的问题导致次数统计显示不正常，ACL权限选择无限制。 获取ID和Key设置-&gt;应用Key 会得到App ID和App Key 修改next主题配置文件打开_config.yml，搜索leancloud_visitors，更改为true，并添加id和key 保存文件 最后生成部署hexo博客 效果如图： 参考 Hexo博客next主题添加文章阅读量统计功能]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[从多层嵌套类中访问外部类的成员]]></title>
     <url>%2F2019%2F09%2F13%2F%E4%BB%8E%E5%A4%9A%E5%B1%82%E5%B5%8C%E5%A5%97%E7%B1%BB%E4%B8%AD%E8%AE%BF%E9%97%AE%E5%A4%96%E9%83%A8%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%2F</url>
     <content type="text"><![CDATA[一个内部类被嵌套多少层并不重要—它能透明地访问所有它所嵌入地外围类的所有成员，如下所示： 1234567891011121314151617181920class MNA&#123; private void f() &#123;&#125; class A&#123; private void g() &#123;&#125; public class B&#123; void h() &#123; g(); f(); &#125; &#125; &#125;&#125;public class MultiNetingAccess&#123; public static void main(String[] args) &#123; MNA mna = new MNA(); MNA.A mnaa = mna.new A(); MNA.A.B mnaab = mnaa.new B(); mnaab.h(); &#125;&#125; 可以看到在MNA.A.B中，调用方法g()和f()不需要任何条件（即使它们被定义为private）。这个例子同时展示了如何从不同的类里创建多层嵌套类的内部类对象的基本语法。“.new”语法能产生正确的作用域，所以不必在调用构造器时限定类名。 内容取自《Java编程思想》]]></content>
@@ -19,8 +31,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>next</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
