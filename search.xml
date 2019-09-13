@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Sublime Text汉化教程]]></title>
+    <url>%2F2019%2F09%2F13%2FSublime-Text%E6%B1%89%E5%8C%96%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[发现一款Sublime Text编辑器，界面非常简洁，官方简介“A sophisticated text editor forcode, markup and prose” 应用界面： 安装Sublime Text官网点击DOWNLOAD下载 汉化英文界面用着不习惯那就汉化，另外Sublime Text也支持很多语言 打开Sublime Text的控制台（Ctrl+~） 粘贴代码到控制台进入Package Control官方网站 打开后，将适用于您的Sublime Text版本的Python代码粘贴到控制台中。 可以直接粘贴下面的代码： SUBLIME TEST 3 1import urllib.request,os,hashlib; h = &apos;6f4c264a24d933ce70df5dedcf1dcaee&apos; + &apos;ebe013ee18cced0ef93d5f746d80ef60&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by) SUBLIME TEST 2 1import urllib2,os,hashlib; h = &apos;6f4c264a24d933ce70df5dedcf1dcaee&apos; + &apos;ebe013ee18cced0ef93d5f746d80ef60&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), &apos;wb&apos; ).write(by) if dh == h else None; print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h) if dh != h else &apos;Please restart Sublime Text to finish installation&apos;) 粘贴后回车 选择语言 稍微等一会就会出现中文界面 切换语言 Help-&gt;Language 参考 Sublime text如何汉化]]></content>
+      <categories>
+        <category>Sublime Test</category>
+      </categories>
+      <tags>
+        <tag>汉化</tag>
+        <tag>Sublime Test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我要上班]]></title>
     <url>%2F2019%2F09%2F13%2F%E6%88%91%E8%A6%81%E4%B8%8A%E7%8F%AD%2F</url>
     <content type="text"><![CDATA[中秋节到了，又不能好好工作了。 什么！！三天小长假！！ No 没有工作的我该怎么活！！ 看来只能用电影音乐游戏苹果香蕉巧克力来减轻没有工作的痛苦了 、]]></content>
