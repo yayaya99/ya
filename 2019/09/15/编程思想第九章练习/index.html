@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,Java编程思想,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="编程思想第九章练习">
+<meta name="keywords" content="Java,Java编程思想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程思想第九章练习">
+<meta property="og:url" content="https://yayaya99.github.io/2019/09/15/编程思想第九章练习/index.html">
+<meta property="og:site_name" content="hongxigua">
+<meta property="og:description" content="编程思想第九章练习">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-15T05:04:07.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编程思想第九章练习">
+<meta name="twitter:description" content="编程思想第九章练习">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yayaya99.github.io/2019/09/15/编程思想第九章练习/">
+
+
+
+
+
+  <title>编程思想第九章练习 | hongxigua</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">hongxigua</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-notes">
+          <a href="/notes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>
+            
+            笔记
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yayaya99.github.io/2019/09/15/编程思想第九章练习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="红西瓜">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/h1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hongxigua">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">编程思想第九章练习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T12:35:32+08:00">
+                2019-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/15/编程思想第九章练习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/15/编程思想第九章练习/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/09/15/编程思想第九章练习/" class="leancloud_visitors" data-flag-title="编程思想第九章练习">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>编程思想第九章练习</p>
+<a id="more"></a>
+
+<h2 id="练习1："><a href="#练习1：" class="headerlink" title="练习1："></a>练习1：</h2><p>（1）修改第八章练习9中的Rodnet，使其成为一个抽象类。只要有能，就将Rodent的方法声明为抽象方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">         Rodent rodents[] = &#123;new Mouse(),new Gerbil(),new Hamster()&#125;;</span><br><span class="line">         for(Rodent r: rodents) &#123;</span><br><span class="line">             r.hop();</span><br><span class="line">             r.run();</span><br><span class="line">             System.out.println(r);</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class Rodent&#123;</span><br><span class="line">    public abstract void hop();</span><br><span class="line">    public abstract void run();</span><br><span class="line">    public String toString() &#123;return &quot;Rodent&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Mouse extends Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Mouse hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Mouse run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Mouse&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Gerbil extends Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Gerbil hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Gerbil run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Gernil&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Hamster extends Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Hamster hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Hamster run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Hamster&quot;;&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Mouse hop</span><br><span class="line">Mouse run</span><br><span class="line">Mouse</span><br><span class="line">Gerbil hop</span><br><span class="line">Gerbil run</span><br><span class="line">Gernil</span><br><span class="line">Hamster hop</span><br><span class="line">Hamster run</span><br><span class="line">Hamster</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习2："><a href="#练习2：" class="headerlink" title="练习2："></a>练习2：</h2><p>（1）创建一个不包含任何抽象方法的抽象类，并验证我们不能为该类创建任何实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">       Rodent r = new Rodent(); //不能实例化</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class Rodent&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习3："><a href="#练习3：" class="headerlink" title="练习3："></a>练习3：</h2><p>（2）创建一个基类，让它包含抽象方法print()，并在导出类中覆盖该方法。覆盖后的方法版本可以打印导出类中定义的某个整型变量的值。在定义该变量之处，赋予它非零值。在基类的构造器中调用这个方法。现在，在main()方法中，创建一个导出列对象，然后调用它的print()方法。请解释发生的情形。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">       B b =new B();</span><br><span class="line">       b.print();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class A&#123;</span><br><span class="line">	abstract void print();</span><br><span class="line">	A() &#123;</span><br><span class="line">		print();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class B extends A&#123;</span><br><span class="line">	int i = 2;</span><br><span class="line">	void print() &#123;</span><br><span class="line">		System.out.println(&quot;B.print() &quot;+i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">B.print() 0  //“构造器内部的多态方法的行为”一文中有解释</span><br><span class="line">B.print() 2</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习4："><a href="#练习4：" class="headerlink" title="练习4："></a>练习4：</h2><p>(3)创建一个不包含任何方法的抽象类，从它那里导出一个类，并添加一个方法。创建一个静态方法，它可以接受指向基类的引用，将其向下转型到导出类，然后再调用该静态方法。再main()中，展示它的运行情况。然后，为基类中的方法加上abstract声明，这样就不再需要进行向下转型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class TestAbstract &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog animal = new Dog();</span><br><span class="line">		aniamlShout(animal);</span><br><span class="line">	&#125;</span><br><span class="line">	static void aniamlShout(Animal animal) &#123;</span><br><span class="line">		Dog dog = (Dog)animal;</span><br><span class="line">		dog.eat();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class Animal &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">	void eat() &#123;</span><br><span class="line">		System.out.println(&quot;Dog.eat() food&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Dog.eat() food</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class TestAbstract &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Dog animal = new Dog();</span><br><span class="line">		aniamlShout(animal);</span><br><span class="line">	&#125;</span><br><span class="line">	static void aniamlShout(Animal animal) &#123;</span><br><span class="line">		animal.eat();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class Animal &#123;</span><br><span class="line">	abstract void eat();</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">	void eat() &#123;</span><br><span class="line">		System.out.println(&quot;Dog.eat() food&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Dog.eat() food</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习5："><a href="#练习5：" class="headerlink" title="练习5："></a>练习5：</h2><p>（2）在某个包内一个接口，内含三个方法，然后在另一个包中实现此接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package cn.testone;</span><br><span class="line"></span><br><span class="line">public interface A&#123;</span><br><span class="line">	void one();</span><br><span class="line">	void two();</span><br><span class="line">	void three();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package cn.testtwo;</span><br><span class="line">import cn.testone.*;</span><br><span class="line"></span><br><span class="line">public class Test implements A&#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void one() &#123;</span><br><span class="line">		// TODO 自动生成的方法存根</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public void two() &#123;</span><br><span class="line">		// TODO 自动生成的方法存根</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public void three() &#123;</span><br><span class="line">		// TODO 自动生成的方法存根</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习6："><a href="#练习6：" class="headerlink" title="练习6："></a>练习6：</h2><p>(2)证明接口内所有的方法都自动是public的。</p>
+<h2 id="练习7："><a href="#练习7：" class="headerlink" title="练习7："></a>练习7：</h2><p>(1)修改第8章中的练习9，使Rodent成为一个接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">interface Rodent&#123;</span><br><span class="line">    public void hop();</span><br><span class="line">    public void run();</span><br><span class="line">    public String toString();</span><br><span class="line">&#125;</span><br><span class="line">class Mouse implements Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Mouse hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Mouse run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Mouse&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Gerbil implements Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Gerbil hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Gerbil run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Gernil&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Hamster implements Rodent&#123;</span><br><span class="line">    public void hop() &#123;System.out.println(&quot;Hamster hop&quot;);&#125;</span><br><span class="line">    public void run() &#123;System.out.println(&quot;Hamster run&quot;);&#125;</span><br><span class="line">    public String toString() &#123;return &quot;Hamster&quot;;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">         Rodent rodents[] = &#123;new Mouse(),new Gerbil(),new Hamster()&#125;;</span><br><span class="line">         for(Rodent r: rodents) &#123;</span><br><span class="line">             r.hop();</span><br><span class="line">             r.run();</span><br><span class="line">             System.out.println(r);</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Mouse hop</span><br><span class="line">Mouse run</span><br><span class="line">Mouse</span><br><span class="line">Gerbil hop</span><br><span class="line">Gerbil run</span><br><span class="line">Gernil</span><br><span class="line">Hamster hop</span><br><span class="line">Hamster run</span><br><span class="line">Hamster</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习8："><a href="#练习8：" class="headerlink" title="练习8："></a>练习8：</h2><p>(2)在polymorphism.Sandwich.java中，创建接口FastFood并添加合适的方法，然后修改Sandwith以实现FastFood接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">class Meal &#123;</span><br><span class="line">	Meal() &#123;</span><br><span class="line">		System.out.println(&quot;Meal()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Bread &#123;</span><br><span class="line">	Bread() &#123;</span><br><span class="line">		System.out.println(&quot;Bread()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Cheese &#123;</span><br><span class="line">	Cheese() &#123;</span><br><span class="line">		System.out.println(&quot;Cheese()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Lettuce &#123;</span><br><span class="line">	Lettuce() &#123;</span><br><span class="line">		System.out.println(&quot;Lettuce()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Lunch extends Meal &#123;</span><br><span class="line">	Lunch() &#123;</span><br><span class="line">		System.out.println(&quot;Lunch()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class PortableLunch extends Lunch &#123;</span><br><span class="line">	PortableLunch() &#123;</span><br><span class="line">		System.out.println(&quot;PortableLunch()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">interface FastFood &#123;</span><br><span class="line">	void first();</span><br><span class="line">	void second();</span><br><span class="line">	void third();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test extends PortableLunch implements FastFood &#123;</span><br><span class="line">	private Bread b = new Bread();</span><br><span class="line">	private Cheese c = new Cheese();</span><br><span class="line">	private Lettuce l = new Lettuce();</span><br><span class="line"></span><br><span class="line">	// public Sandwich() &#123; print(&quot;Sandwich()&quot;); &#125;</span><br><span class="line">	public void first() &#123;</span><br><span class="line">		System.out.println(&quot;first()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	public void second() &#123;</span><br><span class="line">		System.out.println(&quot;second()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	public void third() &#123;</span><br><span class="line">		System.out.println(&quot;third()&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Test ja = new Test();</span><br><span class="line">		ja.first();</span><br><span class="line">		ja.second();</span><br><span class="line">		ja.third();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Meal()</span><br><span class="line">Lunch()</span><br><span class="line">PortableLunch()</span><br><span class="line">Bread()</span><br><span class="line">Cheese()</span><br><span class="line">Lettuce()</span><br><span class="line">first()</span><br><span class="line">second()</span><br><span class="line">third()</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习9："><a href="#练习9：" class="headerlink" title="练习9："></a>练习9：</h2><p>(3)重构Music5.java，将在Wind、Percussion和Stringed中的公共方法移入一个抽象类中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">enum Note &#123;</span><br><span class="line">    MIDDLE_C, C_SHARP, B_FLAT;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">abstract class Instrument &#123;</span><br><span class="line">    public void play(Note n) &#123;</span><br><span class="line">        System.out.println(this + &quot;.play() &quot; + n);</span><br><span class="line">    &#125;</span><br><span class="line">    public void adjust() &#123;</span><br><span class="line">        System.out.println(this + &quot;.adjust()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public abstract String toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Wind extends Instrument &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Wind&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Percussion extends Instrument &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Percussion&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Stringed extends Instrument &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Stringed&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Brass extends Wind &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Brass&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Woodwind extends Wind &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Woodwind&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">    static void tune(Instrument i) &#123;</span><br><span class="line">        i.adjust();</span><br><span class="line">        i.play(Note.MIDDLE_C);</span><br><span class="line">    &#125;</span><br><span class="line">    static void tuneAll(Instrument[] e) &#123;</span><br><span class="line">        for (Instrument instrument : e) &#123;</span><br><span class="line">            tune(instrument);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Instrument[] ins = &#123;</span><br><span class="line">                new Wind(),</span><br><span class="line">                new Percussion(),</span><br><span class="line">                new Stringed(),</span><br><span class="line">                new Brass(),</span><br><span class="line">                new Woodwind()</span><br><span class="line">        &#125;;</span><br><span class="line">        tuneAll(ins);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Wind.adjust()</span><br><span class="line">Wind.play() MIDDLE_C</span><br><span class="line">Percussion.adjust()</span><br><span class="line">Percussion.play() MIDDLE_C</span><br><span class="line">Stringed.adjust()</span><br><span class="line">Stringed.play() MIDDLE_C</span><br><span class="line">Brass.adjust()</span><br><span class="line">Brass.play() MIDDLE_C</span><br><span class="line">Woodwind.adjust()</span><br><span class="line">Woodwind.play() MIDDLE_C</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习10："><a href="#练习10：" class="headerlink" title="练习10："></a>练习10：</h2><p>(3)修改Music5.java，添加Playable接口。将play()的声明从Instrument中移到Playable中。通过将Playable包括在implements列表中，把Playable添加到导出类中。修改tune()，使它接受Playable而不是Instrumnet作为参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">enum Note &#123;</span><br><span class="line">    MIDDLE_C, C_SHARP, B_FLAT;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Instrument &#123;</span><br><span class="line">    void adjust();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Playable &#123;</span><br><span class="line">    void play(Note n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Wind implements Instrument, Playable &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void play(Note n) &#123;</span><br><span class="line">        System.out.println(this + &quot;.play() &quot; + n);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void adjust() &#123;</span><br><span class="line">        System.out.println(this + &quot;.adjust()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Wind&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Percussion implements Instrument, Playable &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void play(Note n) &#123;</span><br><span class="line">        System.out.println(this + &quot;.play() &quot; + n);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void adjust() &#123;</span><br><span class="line">        System.out.println(this + &quot;.adjust()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Percussion&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Stringed implements Instrument, Playable &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void play(Note n) &#123;</span><br><span class="line">        System.out.println(this + &quot;.play() &quot; + n);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void adjust() &#123;</span><br><span class="line">        System.out.println(this + &quot;.adjust()&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Stringed&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Brass extends Wind &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Brass&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Woodwind extends Wind &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public String toString() &#123;</span><br><span class="line">        return &quot;Woodwind&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Test &#123;</span><br><span class="line">    static void tune(Playable p) &#123;</span><br><span class="line">        p.play(Note.MIDDLE_C);</span><br><span class="line">    &#125;</span><br><span class="line">    static void tuneAll(Playable[] e) &#123;</span><br><span class="line">        for (Playable playable : e) &#123;</span><br><span class="line">            tune(playable);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Playable[] ps = &#123;</span><br><span class="line">                new Wind(),</span><br><span class="line">                new Percussion(),</span><br><span class="line">                new Stringed(),</span><br><span class="line">                new Brass(),</span><br><span class="line">                new Woodwind()</span><br><span class="line">        &#125;;</span><br><span class="line">        tuneAll(ps);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">Wind.play() MIDDLE_C</span><br><span class="line">Percussion.play() MIDDLE_C</span><br><span class="line">Stringed.play() MIDDLE_C</span><br><span class="line">Brass.play() MIDDLE_C</span><br><span class="line">Woodwind.play() MIDDLE_C</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习12："><a href="#练习12：" class="headerlink" title="练习12："></a>练习12：</h2><p>(2)在Adventure.java中，按照其他接口的样式，增加一个CanClimb接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">interface CanFight&#123;</span><br><span class="line">	void fight();</span><br><span class="line">&#125;</span><br><span class="line">interface CanSwim&#123;</span><br><span class="line">	void swim();</span><br><span class="line">&#125;</span><br><span class="line">interface CanFly&#123;</span><br><span class="line">	void fly();</span><br><span class="line">&#125;</span><br><span class="line">interface CanClimb&#123;</span><br><span class="line">	void play();</span><br><span class="line">&#125;</span><br><span class="line">class ActionCharacter&#123;</span><br><span class="line">	public void fight() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Hero extends ActionCharacter implements CanFight,CanSwim,CanFly,CanClimb&#123;</span><br><span class="line">	public void swim() &#123;&#125;</span><br><span class="line">	public void fly() &#123;&#125;</span><br><span class="line">	public void play() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Adventure&#123;</span><br><span class="line">	public static void t(CanFight x) &#123;x.fight();&#125;</span><br><span class="line">	public static void u(CanSwim x) &#123;x.swim();&#125;</span><br><span class="line">	public static void v(CanFly x) &#123;x.fly();&#125;</span><br><span class="line">	public static void w(ActionCharacter x) &#123;x.fight();&#125;</span><br><span class="line">	public static void p(CanClimb x) &#123;x.play();&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Hero h = new Hero();</span><br><span class="line">		t(h);</span><br><span class="line">		u(h);</span><br><span class="line">		v(h);</span><br><span class="line">		w(h);</span><br><span class="line">		p(h);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习13："><a href="#练习13：" class="headerlink" title="练习13："></a>练习13：</h2><p>(2)创建一个接口，并从该接口继承两个接口，然后从后面两个接口多重继承第三个接口。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">interface A&#123;</span><br><span class="line">	void aa();</span><br><span class="line">&#125;</span><br><span class="line">interface B extends A&#123;</span><br><span class="line">	void bb();</span><br><span class="line">&#125;</span><br><span class="line">interface C extends A&#123;</span><br><span class="line">	void cc();</span><br><span class="line">&#125;</span><br><span class="line">interface D extends B,C&#123;</span><br><span class="line">	void dd();</span><br><span class="line">&#125;</span><br><span class="line">public class Test implements D&#123;</span><br><span class="line">	public void bb() &#123;System.out.println(&quot;bb&quot;);&#125;</span><br><span class="line">	public void aa() &#123;System.out.println(&quot;aa&quot;);&#125;</span><br><span class="line">	public void cc() &#123;System.out.println(&quot;cc&quot;);&#125;</span><br><span class="line">	public void dd() &#123;System.out.println(&quot;dd&quot;);&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Test test = new Test();</span><br><span class="line">		test.bb();</span><br><span class="line">		test.aa();</span><br><span class="line">		test.cc();</span><br><span class="line">		test.dd();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">bb</span><br><span class="line">aa</span><br><span class="line">cc</span><br><span class="line">dd</span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习14："><a href="#练习14：" class="headerlink" title="练习14："></a>练习14：</h2><p>(2)创建三个接口，每个接口都包含两个方法。继承出一个接口，它组了这三个接口并添加了一个新方法。创建一个实现了该新接口并且继承了某个具体类的类。现在编写四个方法，每一个狗接受这四个接口之一作为参数。在main()方法中，创建这个类的对象，并将其传递给这四个方法。</p>
+<h2 id="练习15："><a href="#练习15：" class="headerlink" title="练习15："></a>练习15：</h2><p>(2)将前一个练习修改为：创建一个抽象类，并将其继承到一个导出类中。</p>
+<h2 id="练习16："><a href="#练习16：" class="headerlink" title="练习16："></a>练习16：</h2><p>(3)创建一个类，它将生成一个char序列，适配这个类，使其可以称为Scanner对象的一种输入。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import java.nio.CharBuffer;</span><br><span class="line">import java.util.Random;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">class RandomChars&#123;</span><br><span class="line">	private static Random rd = new Random();</span><br><span class="line">	public char next() &#123;</span><br><span class="line">		return (char)(rd.nextInt(100)+2);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Test extends RandomChars implements Readable&#123;</span><br><span class="line"></span><br><span class="line">	private int count;</span><br><span class="line">	public Test(int count) &#123;this.count=count;&#125;</span><br><span class="line">	public int read(CharBuffer cb) &#123;</span><br><span class="line">		if(count--==0) &#123;return -1;&#125;</span><br><span class="line">		String result=Character.toString(next())+&quot; &quot;;</span><br><span class="line">		cb.append(result);</span><br><span class="line">		return result.length();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner s = new Scanner(new Test(7));</span><br><span class="line">		while(s.hasNext()) &#123;</span><br><span class="line">			System.out.println(s.next()+&quot; &quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习17："><a href="#练习17：" class="headerlink" title="练习17："></a>练习17：</h2><p>(2)证明在接口中的域隐式地为static和final的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface A&#123;</span><br><span class="line">	int a = 1,b =2;</span><br><span class="line">&#125;</span><br><span class="line">public class Test implements A&#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(a+&quot; &quot;+b);</span><br><span class="line">		//a=2; //不能对final字段 A.a 赋值</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习18"><a href="#练习18" class="headerlink" title="练习18:"></a>练习18:</h2><p>(2)创建一个Cycle接口及其Unicycle、Bicycle和Tricycle实现。对每种类型的Cycle都创建相应的工厂，然后编写代码使用这些工厂。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">interface Cycle&#123;</span><br><span class="line">	void f();</span><br><span class="line">&#125;</span><br><span class="line">interface CycleFactory&#123;</span><br><span class="line">	Cycle getCycle();</span><br><span class="line">&#125;</span><br><span class="line">class Unicycle implements Cycle&#123;</span><br><span class="line">	public void f() &#123;</span><br><span class="line">		System.out.println(&quot;Unicycle.f() &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class UnicycleFactory implements CycleFactory&#123;</span><br><span class="line">	public Cycle getCycle() &#123;</span><br><span class="line">		return new Unicycle();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Bicycle implements Cycle&#123;</span><br><span class="line">	public void f() &#123;</span><br><span class="line">		System.out.println(&quot;Bicycle.f() &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class BicycleFactory implements CycleFactory&#123;</span><br><span class="line">	public Cycle getCycle() &#123;</span><br><span class="line">		return new Bicycle();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Tricycle implements Cycle&#123;</span><br><span class="line">	public void f() &#123;</span><br><span class="line">		System.out.println(&quot;Tricycle.f() &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class TricycleFactory implements CycleFactory&#123;</span><br><span class="line">	public Cycle getCycle() &#123;</span><br><span class="line">		return new Tricycle();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Games&#123;</span><br><span class="line">	public static void playGame(CycleFactory factory) &#123;</span><br><span class="line">		Cycle s = factory.getCycle();</span><br><span class="line">		s.f();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		playGame(new UnicycleFactory());</span><br><span class="line">		playGame(new BicycleFactory());</span><br><span class="line">		playGame(new TricycleFactory());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Outpur:</span><br><span class="line">Unicycle.f() </span><br><span class="line">Bicycle.f() </span><br><span class="line">Tricycle.f() </span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+<h2 id="练习19："><a href="#练习19：" class="headerlink" title="练习19："></a>练习19：</h2><p>(3)使用工厂方法来创建一个框架，它可以执行抛硬币和掷骰子功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">interface Game&#123;</span><br><span class="line">	void print();</span><br><span class="line">&#125;</span><br><span class="line">interface GameFactory&#123;</span><br><span class="line">	Game getGame();</span><br><span class="line">&#125;</span><br><span class="line">class Coin implements Game&#123;</span><br><span class="line">	public void print() &#123;</span><br><span class="line">		System.out.println(&quot;toss a coin &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class CoinFactory implements GameFactory&#123;</span><br><span class="line">	public Game getGame() &#123;</span><br><span class="line">		return new Coin();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dice implements Game&#123;</span><br><span class="line">	public void print() &#123;</span><br><span class="line">		System.out.println(&quot;dice &quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class DiceFactory implements GameFactory&#123;</span><br><span class="line">	public Game getGame() &#123;</span><br><span class="line">		return new Dice();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Games&#123;</span><br><span class="line">	public static void playGame(GameFactory factory) &#123;</span><br><span class="line">		Game s = factory.getGame();</span><br><span class="line">		s.print();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		playGame(new CoinFactory());</span><br><span class="line">		playGame(new DiceFactory());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;/*Output:</span><br><span class="line">toss a coin </span><br><span class="line">dice </span><br><span class="line">*///:~</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+	
+	
+	
+	<div>
+
+<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------已经到底了-------------</div>
+
+</div>
+
+
+</div>
+
+	
+	
+	
+	
+	
+	
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="红西瓜 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Java编程思想/" rel="tag"># Java编程思想</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/15/抽象类和抽象方法/" rel="next" title="抽象类和抽象方法">
+                <i class="fa fa-chevron-left"></i> 抽象类和抽象方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/15/class-getName-和class-getSimpleName-的区别/" rel="prev" title="class.getName()和class.getSimpleName()的区别">
+                class.getName()和class.getSimpleName()的区别 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/h1.jpg" alt="红西瓜">
+            
+              <p class="site-author-name" itemprop="name">红西瓜</p>
+              <p class="site-description motion-element" itemprop="description">年年敬天地，岁岁保平安</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yayaya99" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://go.yuxuantech.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-paperclip"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://music.163.com/#" title="网易云音乐" target="_blank">网易云音乐</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iyunv.com/thread-135490-1-1.html" title="Google镜像" target="_blank">Google镜像</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#练习1："><span class="nav-number">1.</span> <span class="nav-text">练习1：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习2："><span class="nav-number">2.</span> <span class="nav-text">练习2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习3："><span class="nav-number">3.</span> <span class="nav-text">练习3：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习4："><span class="nav-number">4.</span> <span class="nav-text">练习4：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习5："><span class="nav-number">5.</span> <span class="nav-text">练习5：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习6："><span class="nav-number">6.</span> <span class="nav-text">练习6：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习7："><span class="nav-number">7.</span> <span class="nav-text">练习7：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习8："><span class="nav-number">8.</span> <span class="nav-text">练习8：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习9："><span class="nav-number">9.</span> <span class="nav-text">练习9：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习10："><span class="nav-number">10.</span> <span class="nav-text">练习10：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习12："><span class="nav-number">11.</span> <span class="nav-text">练习12：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习13："><span class="nav-number">12.</span> <span class="nav-text">练习13：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习14："><span class="nav-number">13.</span> <span class="nav-text">练习14：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习15："><span class="nav-number">14.</span> <span class="nav-text">练习15：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习16："><span class="nav-number">15.</span> <span class="nav-text">练习16：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习17："><span class="nav-number">16.</span> <span class="nav-text">练习17：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习18"><span class="nav-number">17.</span> <span class="nav-text">练习18:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习19："><span class="nav-number">18.</span> <span class="nav-text">练习19：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">红西瓜</span>
+
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+-->
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+	var now = new Date(); 
+	function createtime() { 
+		var grt= new Date("07/18/2019 20:00:00");//此处修改你的建站时间或者网站上线时间 
+		now.setTime(now.getTime()+250); 
+		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+		mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+		snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+		document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+	setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'qrFausEiw2UwobgkMnAMcigl-gzGzoHsz',
+        appKey: 'vXh2mXar6vWhSET15T5c02It',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("qrFausEiw2UwobgkMnAMcigl-gzGzoHsz", "vXh2mXar6vWhSET15T5c02It");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
