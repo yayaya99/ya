@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,Java编程思想,">
+  <meta name="keywords" content="Java,Override,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Java短路与">
-<meta name="keywords" content="Java,Java编程思想">
+<meta name="description" content="转自 https://blog.csdn.net/zht666/article/details/7869383">
+<meta name="keywords" content="Java,Override">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中使用逻辑操作符时遇到的短路现象">
-<meta property="og:url" content="https://yayaya99.github.io/2019/08/04/Java短路与/index.html">
+<meta property="og:title" content="Java中@Override的作用">
+<meta property="og:url" content="https://yayaya99.github.io/2019/09/15/Java中-Override的作用/index.html">
 <meta property="og:site_name" content="hongxigua">
-<meta property="og:description" content="Java短路与">
+<meta property="og:description" content="转自 https://blog.csdn.net/zht666/article/details/7869383">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-15T05:14:33.141Z">
+<meta property="og:updated_time" content="2019-09-15T05:16:51.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中使用逻辑操作符时遇到的短路现象">
-<meta name="twitter:description" content="Java短路与">
+<meta name="twitter:title" content="Java中@Override的作用">
+<meta name="twitter:description" content="转自 https://blog.csdn.net/zht666/article/details/7869383">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yayaya99.github.io/2019/08/04/Java短路与/">
+  <link rel="canonical" href="https://yayaya99.github.io/2019/09/15/Java中-Override的作用/">
 
 
 
 
 
-  <title>Java中使用逻辑操作符时遇到的短路现象 | hongxigua</title>
+  <title>Java中@Override的作用 | hongxigua</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yayaya99.github.io/2019/08/04/Java短路与/">
+    <link itemprop="mainEntityOfPage" href="https://yayaya99.github.io/2019/09/15/Java中-Override的作用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="红西瓜">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java中使用逻辑操作符时遇到的短路现象</h1>
+          <h1 class="post-title" itemprop="name headline">Java中@Override的作用</h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-04T12:12:01+08:00">
-                2019-08-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T12:14:45+08:00">
+                2019-09-15
               </time>
             
 
@@ -365,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/04/Java短路与/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/04/Java短路与/" itemprop="commentCount"></span>
+                <a href="/2019/09/15/Java中-Override的作用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/15/Java中-Override的作用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,7 +374,7 @@
 
           
           
-             <span id="/2019/08/04/Java短路与/" class="leancloud_visitors" data-flag-title="Java中使用逻辑操作符时遇到的短路现象">
+             <span id="/2019/09/15/Java中-Override的作用/" class="leancloud_visitors" data-flag-title="Java中@Override的作用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -405,14 +405,17 @@
       
 
       
-        <p>Java短路与</p>
+        <p>转自 <a href="https://blog.csdn.net/zht666/article/details/7869383" target="_blank" rel="noopener">https://blog.csdn.net/zht666/article/details/7869383</a></p>
 <a id="more"></a>
-<h2 id="Java中使用逻辑操作符时遇到的短路现象"><a href="#Java中使用逻辑操作符时遇到的短路现象" class="headerlink" title="Java中使用逻辑操作符时遇到的短路现象"></a>Java中使用逻辑操作符时遇到的短路现象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// &amp;&amp;短路与</span><br><span class="line"></span><br><span class="line">public class ShortCircuit&#123;</span><br><span class="line">	static boolean test1(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;1));</span><br><span class="line">		return val&lt;1;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test2(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;2));</span><br><span class="line">		return val&lt;2;</span><br><span class="line">	&#125;</span><br><span class="line">	static boolean test3(int val) &#123;</span><br><span class="line">		System.out.println(&quot;test(&quot;+val+&quot;)&quot;);</span><br><span class="line">		System.out.println(&quot;result: &quot;+(val&lt;3));</span><br><span class="line">		return val&lt;3;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		boolean b=test1(0)&amp;&amp;test2(2)&amp;&amp;test3(2);</span><br><span class="line">		System.out.println(&quot;expression is &quot;+b);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>运行及结果：<br>test(0)<br>result: true<br>test(2)<br>result: false<br>expression is false</p>
-</blockquote>
-<p>可以发现test1与test2比较后直接输出，不会对test3进行比较，这就是&amp;和&amp;&amp;的不同之处。</p>
+<p>@Override是伪代码,表示重写(当然不写也可以)，不过写上有如下好处: </p>
+<p>1、可以当注释用,方便阅读；</p>
+<p>2、编译器可以给你验证@Override下面的方法名是否是你父类中所有的，如果没有则报错。例如，你如果没写@Override，而你下面的方法名又写错了，这时你的编译器是可以编译通过的，因为编译器以为这个方法是你的子类中自己增加的方法。</p>
+<p>举例：在重写父类的onCreate时，在方法前面加上@Override 系统可以帮你检查方法的正确性。</p>
+<p>@Override<br>public void onCreate(Bundle savedInstanceState)</p>
+<p>{…….}<br>这种写法是正确的，如果你写成：</p>
+<p>@Override<br>public void oncreate(Bundle savedInstanceState)<br>{…….}</p>
+<p>编译器会报如下错误：The method oncreate(Bundle) of type HelloWorld must override or implement a supertype method，以确保你正确重写onCreate方法（因为oncreate应该为onCreate）。而如果你不加@Override，则编译器将不会检测出错误，而是会认为你为子类定义了一个新方法：oncreate</p>
 
       
     </div>
@@ -476,7 +479,7 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/Java编程思想/" rel="tag"># Java编程思想</a>
+            <a href="/tags/Override/" rel="tag"># Override</a>
           
         </div>
       
@@ -489,8 +492,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/04/Java编程思想第三章练习/" rel="next" title="Java编程思想第三章练习">
-                <i class="fa fa-chevron-left"></i> Java编程思想第三章练习
+              <a href="/2019/09/15/空白fianl/" rel="next" title="空白fianl">
+                <i class="fa fa-chevron-left"></i> 空白fianl
               </a>
             
           </div>
@@ -499,8 +502,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/04/负数的二进制表示/" rel="prev" title="负数的二进制表示">
-                负数的二进制表示 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/15/Java继承与初始化/" rel="prev" title="Java继承与初始化">
+                Java继承与初始化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -582,17 +585,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -688,22 +682,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中使用逻辑操作符时遇到的短路现象"><span class="nav-number">1.</span> <span class="nav-text">Java中使用逻辑操作符时遇到的短路现象</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
